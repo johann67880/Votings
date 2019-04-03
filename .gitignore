@@ -1,0 +1,17 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Votings/v16/.suo
+/.vs/ProjectSettings.json
+/.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json
+/Votings/.vs/Votings/v16
+/Votings/Voting.Web/bin/Debug/netcoreapp2.1
+/Votings/Votings.Common/bin/Debug/netstandard2.0
+/Votings/Votings.Common/obj
+/Votings/Voting.Web/obj
+/Votings/Votings.UI/Votings.UI/obj
+/Votings/Votings.UI/Votings.UI/bin/Debug/netstandard2.0
+/Votings/Votings.UI/Votings.UI.Android/bin/Debug
+/Votings/Votings.UI/Votings.UI.Android/obj
