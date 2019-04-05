@@ -28,7 +28,7 @@
         public string Gender { get; set; }
 
         [Display(Name = "Stratum")]
-        [MaxLength(50, ErrorMessage = "The field {0} only can contain {1} characters length.")]
+        [MaxLength(2, ErrorMessage = "The field {0} only can contain {1} characters length.")]
         public string Stratum { get; set; }
 
         [Display(Name = "Birthdate")]
