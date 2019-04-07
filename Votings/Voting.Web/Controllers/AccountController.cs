@@ -145,7 +145,7 @@
                         token = myToken
                     }, protocol: HttpContext.Request.Scheme);
 
-                    this.mailHelper.SendMail(model.Username, "Shop Email confirmation", $"<h1>Shop Email Confirmation</h1>" +
+                    this.mailHelper.SendMail(model.Username, "Voting Email Confirmation", $"<h1>Voting Email Confirmation</h1>" +
                         $"To allow the user, " +
                         $"plase click in this link:</br></br><a href = \"{tokenLink}\">Confirm Email</a>");
                     this.ViewBag.Message = "The instructions to allow your user has been sent to email.";
@@ -154,6 +154,11 @@
 
                 this.ModelState.AddModelError(string.Empty, "The username is already registered.");
             }
+
+            //Reload countries and cities.
+            model.Countries = this.countryRepository.GetComboCountries();
+            model.Cities = this.countryRepository.GetComboCities(model.CountryId);
+            model.Genders = this.GetComboGenders();
 
             return this.View(model);
         }
