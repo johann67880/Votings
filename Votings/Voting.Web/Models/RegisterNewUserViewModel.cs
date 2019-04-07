@@ -22,11 +22,16 @@
         [MaxLength(100, ErrorMessage = "The field {0} only can contain {1} characters length.")]
         public string Occupation { get; set; }
 
-        public IEnumerable<SelectListItem> Gender { get; set; }
+        [Display(Name = "Gender")]
+        [Range(1, int.MaxValue, ErrorMessage = "You must select a gender.")]
+        public int GenderId { get; set; }
+
+        public IEnumerable<SelectListItem> Genders { get; set; }
 
         [MaxLength(2, ErrorMessage = "The field {0} only can contain {1} characters length.")]
         public string Stratum { get; set; }
 
+        [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Birthdate { get; set; }
 

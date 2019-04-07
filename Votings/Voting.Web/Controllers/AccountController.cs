@@ -3,9 +3,11 @@
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.Extensions.Configuration;
     using Microsoft.IdentityModel.Tokens;
     using System;
+    using System.Collections.Generic;
     using System.IdentityModel.Tokens.Jwt;
     using System.Linq;
     using System.Security.Claims;
@@ -77,10 +79,33 @@
             var model = new RegisterNewUserViewModel
             {
                 Countries = this.countryRepository.GetComboCountries(),
-                Cities = this.countryRepository.GetComboCities(0)
+                Cities = this.countryRepository.GetComboCities(0),
+                Genders = this.GetComboGenders()
             };
 
             return this.View(model);
+        }
+
+        private IEnumerable<SelectListItem> GetComboGenders()
+        {
+            List<GenderViewModel> genderList = new List<GenderViewModel> {
+                new GenderViewModel { Name="Male",   Id = 1},
+                new GenderViewModel { Name="Female", Id = 2}
+            };
+
+            var list = genderList.Select(c => new SelectListItem
+            {
+                Text = c.Name,
+                Value = c.Id.ToString()
+            }).OrderBy(l => l.Text).ToList();
+
+            list.Insert(0, new SelectListItem
+            {
+                Text = "(Select...)",
+                Value = "0"
+            });
+
+            return list;
         }
 
         [HttpPost]
