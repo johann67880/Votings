@@ -60,6 +60,8 @@
 
         private async Task<User> AddUser(string userName, string firstName, string lastName, string role)
         {
+            var city = this.context.Countries.FirstOrDefault();
+
             var user = new User
             {
                 FirstName = firstName,

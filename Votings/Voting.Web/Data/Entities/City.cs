@@ -10,5 +10,7 @@
         [Display(Name = "City")]
         [MaxLength(50, ErrorMessage = "The field {0} can only contain {1} characters length.")]
         public string Name { get; set; }
+
+        public int CountryId { get; set; }
     }
 }

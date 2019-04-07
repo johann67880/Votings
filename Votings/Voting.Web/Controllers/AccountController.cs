@@ -15,6 +15,7 @@
     using System.Threading.Tasks;
     using Voting.Web.Data.Entities;
     using Voting.Web.Data.Repositories;
+    using Voting.Web.Enums;
     using Voting.Web.Helpers;
     using Voting.Web.Models;
 
@@ -89,8 +90,8 @@
         private IEnumerable<SelectListItem> GetComboGenders()
         {
             List<GenderViewModel> genderList = new List<GenderViewModel> {
-                new GenderViewModel { Name="Male",   Id = 1},
-                new GenderViewModel { Name="Female", Id = 2}
+                new GenderViewModel { Name= GenderType.Male.ToString(),   Id = (int) GenderType.Male},
+                new GenderViewModel { Name= GenderType.Female.ToString(), Id = (int) GenderType.Female }
             };
 
             var list = genderList.Select(c => new SelectListItem
@@ -167,6 +168,14 @@
                 model.FirstName = user.FirstName;
                 model.LastName = user.LastName;
                 model.PhoneNumber = user.PhoneNumber;
+                model.Occupation = user.Occupation;
+                model.Stratum = user.Stratum;
+                model.Birthdate = user.Birthdate;
+
+                if (user.Gender != null)
+                {
+                    model.GenderId = (int)Enum.Parse(typeof(GenderType), user.Gender);
+                }
 
                 var city = await this.countryRepository.GetCityAsync(user.CityId);
                 if (city != null)
@@ -184,6 +193,7 @@
 
             model.Cities = this.countryRepository.GetComboCities(model.CountryId);
             model.Countries = this.countryRepository.GetComboCountries();
+            model.Genders = this.GetComboGenders();
             return this.View(model);
         }
 
@@ -202,6 +212,10 @@
                     user.PhoneNumber = model.PhoneNumber;
                     user.CityId = model.CityId;
                     user.City = city;
+                    user.Stratum = model.Stratum;
+                    user.Birthdate = model.Birthdate;
+                    user.Occupation = model.Occupation;
+                    user.Gender = ((GenderType)model.GenderId).ToString();
 
                     var respose = await this.userHelper.UpdateUserAsync(user);
                     if (respose.Succeeded)
@@ -218,6 +232,10 @@
                     this.ModelState.AddModelError(string.Empty, "User no found.");
                 }
             }
+
+            model.Countries = this.countryRepository.GetComboCountries();
+            model.Cities = this.countryRepository.GetComboCities(model.CountryId);
+            model.Genders = this.GetComboGenders();
 
             return this.View(model);
         }

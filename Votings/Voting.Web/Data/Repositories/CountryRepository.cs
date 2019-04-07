@@ -94,13 +94,15 @@ namespace Voting.Web.Data.Repositories
             return list;
         }
 
-        public IEnumerable<SelectListItem> GetComboCities(int conuntryId)
+        public IEnumerable<SelectListItem> GetComboCities(int countryId)
         {
-            var country = this.context.Countries.Find(conuntryId);
+            var country = this.context.Countries.Where(x => x.Id == countryId).FirstOrDefault();
             var list = new List<SelectListItem>();
+
             if (country != null)
             {
-                list = country.Cities.Select(c => new SelectListItem
+                list = this.context.Cities.Where(x => x.CountryId == countryId)
+                .Select(c => new SelectListItem
                 {
                     Text = c.Name,
                     Value = c.Id.ToString()
