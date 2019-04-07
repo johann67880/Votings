@@ -17,6 +17,7 @@
     using Microsoft.IdentityModel.Tokens;
     using Voting.Web.Data;
     using Voting.Web.Data.Entities;
+    using Voting.Web.Helpers;
 
     public class Startup
     {
@@ -65,6 +66,8 @@
 
             ////TODO: Inject repositories
             services.AddTransient<SeedDB>();
+            services.AddScoped<IUserHelper, UserHelper>();
+            services.AddScoped<IMailHelper, MailHelper>();
 
             services.Configure<CookiePolicyOptions>(options =>
             {
