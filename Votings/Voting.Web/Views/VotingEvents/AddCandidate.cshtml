@@ -18,7 +18,7 @@
 
             <div class="form-group">
                 <label asp-for="Proposal">Proposal</label>
-                <textarea asp-for="Proposal" class="form-control" />
+                <textarea asp-for="Proposal" class="form-control"></textarea>
                 <span asp-validation-for="Proposal" class="text-warning"></span>
             </div>
 
@@ -30,7 +30,7 @@
 
             <div class="form-group">
                 <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Create</button>
-                <a asp-action="Details" class="btn btn-success"><i class="fa fa-chevron-left"></i> Back to List</a>
+                <a asp-action="Details" class="btn btn-success"><i class="fa fa-chevron-left"></i> Back</a>
             </div>
         </form>
     </div>

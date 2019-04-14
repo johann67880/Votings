@@ -46,6 +46,11 @@ namespace Voting.Web.Controllers
             return View();
         }
 
+        public IActionResult CreateCandidate()
+        {
+            return View("AddCandidate");
+        }
+
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -79,7 +84,7 @@ namespace Voting.Web.Controllers
             }
 
             var view = this.ToVotingEventViewModel(votingEvent);
-            return View(view);
+            return View("Details");
         }
 
         private VotingEventViewModel ToVotingEventViewModel(VotingEvent votingEvent)
@@ -169,7 +174,23 @@ namespace Voting.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(CandidateViewModel view)
+        public async Task<IActionResult> Create(VotingEventViewModel view)
+        {
+            if (ModelState.IsValid)
+            {
+                //TODO: Validate Voting event has candidates
+
+                var votingEvent = this.ToVotingEvent(view);
+                await this.votingEventRepository.CreateAsync(votingEvent);
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateCandidate(CandidateViewModel view)
         {
             if (ModelState.IsValid)
             {
