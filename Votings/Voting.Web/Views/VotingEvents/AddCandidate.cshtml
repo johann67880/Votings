@@ -1,0 +1,42 @@
+﻿@model Voting.Web.Models.CandidateViewModel
+@{
+    ViewData["Title"] = "Add Candidate";
+}
+
+<h2>Add Candidate</h2>
+
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly"></div>
+
+            <div class="form-group">
+                <label asp-for="Name">Name</label>
+                <input asp-for="Name" type="text" class="form-control" />
+                <span asp-validation-for="Name" class="text-warning"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Proposal">Proposal</label>
+                <textarea asp-for="Proposal" class="form-control" />
+                <span asp-validation-for="Proposal" class="text-warning"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ImageFile" class="control-label"></label>
+                <input asp-for="ImageFile" class="form-control" type="file" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Create</button>
+                <a asp-action="Details" class="btn btn-success"><i class="fa fa-chevron-left"></i> Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

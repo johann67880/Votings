@@ -65,11 +65,12 @@
                 cfg.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection"));
             });
 
-            ////TODO: Inject repositories
             services.AddTransient<SeedDB>();
             services.AddScoped<IUserHelper, UserHelper>();
             services.AddScoped<IMailHelper, MailHelper>();
             services.AddScoped<ICountryRepository, CountryRepository>();
+            services.AddScoped<ICandidateRepository, CandidateRepository>();
+            services.AddScoped<IVotingEventRepository, VotingEventRepository>();
 
             services.Configure<CookiePolicyOptions>(options =>
             {

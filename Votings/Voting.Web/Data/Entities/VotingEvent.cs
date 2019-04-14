@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.Linq;
 
     public class VotingEvent : IEntity
     {
@@ -25,5 +26,8 @@
         public DateTime EndDate { get; set; }
 
         public IEnumerable<Candidate> Candidates { get; set; }
+
+        [Display(Name = "# Candidates")]
+        public int TotalCandidates { get { return this.Candidates == null ? 0 : this.Candidates.Count(); } }
     }
 }
