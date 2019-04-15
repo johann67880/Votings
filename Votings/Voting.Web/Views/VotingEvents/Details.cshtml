@@ -9,6 +9,8 @@
     <div class="col-md-10 offset-md-10">
         <div asp-validation-summary="ModelOnly"></div>
 
+        <input type="hidden" asp-for="Id" />
+
         <div class="form-group">
             <label style="display:inline" asp-for="Name">Name: </label>
             <p style="display:inline">@Html.DisplayFor(m => m.Name)</p>

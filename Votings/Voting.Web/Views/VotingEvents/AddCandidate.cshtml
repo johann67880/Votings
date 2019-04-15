@@ -10,6 +10,8 @@
         <form asp-action="AddCandidate" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly"></div>
 
+            <input type="hidden" asp-for="VotingEventId" />
+
             <div class="form-group">
                 <label asp-for="Name">Name</label>
                 <input asp-for="Name" type="text" class="form-control" />
@@ -30,7 +32,7 @@
 
             <div class="form-group">
                 <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Create</button>
-                <a asp-action="CandidateDetails" class="btn btn-success"><i class="fa fa-chevron-left"></i> Back</a>
+                <a asp-action="Details" asp-route-id="@Model.VotingEventId" class="btn btn-success"><i class="fa fa-chevron-left"></i> Back</a>
             </div>
 
         </form>

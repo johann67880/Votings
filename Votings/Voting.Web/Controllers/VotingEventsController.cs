@@ -86,7 +86,12 @@ namespace Voting.Web.Controllers
                 return NotFound();
             }
 
-            return View();
+            var candidate = new Candidate();
+            candidate.VotingEventId = id.Value;
+
+            var view = this.ToCandidateViewModel(candidate);
+
+            return View(view);
         }
 
         [HttpPost]
@@ -111,7 +116,7 @@ namespace Voting.Web.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Details), new { id = view.Id});
             }
 
             return View(view);
