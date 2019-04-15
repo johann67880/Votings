@@ -14,5 +14,10 @@ namespace Voting.Web.Data.Repositories
         {
             this.context = context;
         }
+
+        public List<Candidate> GetByVotingEventId(int id)
+        {
+            return this.context.Candidates.Where(x => x.VotingEventId == id).ToList();
+        }
     }
 }

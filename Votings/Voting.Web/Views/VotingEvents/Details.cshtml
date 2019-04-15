@@ -6,48 +6,122 @@
 <h2>Details</h2>
 
 <div class="row">
-    <div class="col-md-4 offset-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly"></div>
+    <div class="col-md-8 offset-md-8">
+        <div asp-validation-summary="ModelOnly"></div>
 
-            <div class="form-group">
-                <label style="display:inline" asp-for="Name">Name: </label>
-                <p style="display:inline">@Html.DisplayFor(m => m.Name)</p>
-            </div>
+        <div class="form-group">
+            <label style="display:inline" asp-for="Name">Name: </label>
+            <p style="display:inline">@Html.DisplayFor(m => m.Name)</p>
+        </div>
 
-            <div class="form-group">
-                <label style="display:inline" asp-for="Description">Description: </label>
-                <p style="display:inline">@Html.DisplayFor(m => m.Description)</p>
-            </div>
+        <div class="form-group">
+            <label style="display:inline" asp-for="Description">Description: </label>
+            <p style="display:inline">@Html.DisplayFor(m => m.Description)</p>
+        </div>
 
-            <div class="form-group">
-                <label style="display:inline" asp-for="StartDate">Start Date: </label>
-                <p style="display:inline" asp-format="{0:yyyy-MM-dd}">@Html.DisplayFor(m => m.StartDate)</p>
-            </div>
+        <div class="form-group">
+            <label style="display:inline" asp-for="StartDate">Start Date: </label>
+            <p style="display:inline" asp-format="{0:yyyy-MM-dd}">@Html.DisplayFor(m => m.StartDate)</p>
+        </div>
 
-            <div class="form-group">
-                <label style="display:inline" asp-for="EndDate">End Date: </label>
-                <p style="display:inline" asp-format="{0:yyyy-MM-dd}">@Html.DisplayFor(m => m.EndDate)</p>
-            </div>
+        <div class="form-group">
+            <label style="display:inline" asp-for="EndDate">End Date: </label>
+            <p style="display:inline" asp-format="{0:yyyy-MM-dd}">@Html.DisplayFor(m => m.EndDate)</p>
+        </div>
 
+        <hr />
 
-            <hr />
+        <div class="form-group">
+            <a asp-action="Edit" class="btn btn-warning" asp-route-id="@Model.Id"><i class="fa fa-save"></i> Edit</a>
+            <a asp-action="AddCandidate" class="btn btn-primary" asp-route-id="@Model.Id"><i class="fa fa-save"></i> Add Candidate</a>
+            <a asp-action="Index" class="btn btn-success"> Back to List</a>
+        </div>
 
-            <h3>Candidates</h3>
+        <hr />
 
-            <div class="form-group">
+        <h3>Candidates</h3>
 
-            </div>
-
-
-            <hr />
-
-            <div class="form-group">
-                <a asp-action="Edit" class="btn btn-warning"><i class="fa fa-save"></i> Edit</a>
-                <a asp-action="AddCandidate" class="btn btn-primary" asp-route-id="@Model.Id"><i class="fa fa-save"></i> Add Candidate</a>
-                <a asp-action="Index" class="btn btn-success"> Back to List</a>
-            </div>
-
-        </form>
+        <div class="panel-body">
+            <table class="table table-hover table-responsive table-striped" id="CandidatesTable">
+                <thead>
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Proposal
+                        </th>
+                        <th>
+                            Image
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Candidates)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Proposal)
+                            </td>
+                            <td>
+                                @if (!string.IsNullOrEmpty(item.ImageUrl))
+                                {
+                                    <img src="@Url.Content(item.ImageUrl)" alt="Image" style="width:75px;height:75px;max-width: 100%; height: auto;" />
+                                }
+                            </td>
+                            <td>
+                                <a asp-action="EditCandidate" class="btn btn-default" asp-route-id="@item.Id"><i class="glyphicon glyphicon-edit"> </i> </a>
+                                <button data-id="@item.Id" class="btn btn-danger deleteItem" data-toggle="modal" data-target="#deleteDialog"><i class="glyphicon glyphicon-trash"></i></button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
+
+<!--Delete Item-->
+<div class="modal fade" id="deleteDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Delete Candidate</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Do you want to delete the candidate from Voting Event?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" id="btnYesDelete">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // Delete item
+            var item_to_delete;
+            $('.deleteItem').click((e) => {
+                item_to_delete = e.currentTarget.dataset.id;
+            });
+
+            $("#btnYesDelete").click(function () {
+                window.location.href = '/VotingEvents/DeleteCandidate/' + item_to_delete;
+            });
+        });
+    </script>
+}

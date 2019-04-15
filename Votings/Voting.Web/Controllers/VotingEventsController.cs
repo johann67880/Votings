@@ -41,18 +41,6 @@ namespace Voting.Web.Controllers
             return View();
         }
 
-        public async Task<IActionResult> AddCandidate(int? id)
-        {
-            var votingEvent = await this.votingEventRepository.GetByIdAsync(id.Value);
-
-            if (votingEvent == null)
-            {
-                return NotFound();
-            }
-
-            return View();
-        }
-
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -66,6 +54,9 @@ namespace Voting.Web.Controllers
             {
                 return new NotFoundViewResult("VotingEventNotFound");
             }
+
+            var candidates = this.candidateRepository.GetByVotingEventId(votingEvent.Id);
+            votingEvent.Candidates = candidates;
 
             return View(votingEvent);
         }
@@ -89,17 +80,16 @@ namespace Voting.Web.Controllers
             return View("Details", view);
         }
 
-        private VotingEventViewModel ToVotingEventViewModel(VotingEvent votingEvent)
+        public async Task<IActionResult> AddCandidate(int? id)
         {
-            return new VotingEventViewModel
+            var votingEvent = await this.votingEventRepository.GetByIdAsync(id.Value);
+
+            if (votingEvent == null)
             {
-                Id = votingEvent.Id,
-                Candidates = votingEvent.Candidates,
-                Description = votingEvent.Description,
-                EndDate = votingEvent.EndDate,
-                StartDate = votingEvent.StartDate,
-                Name = votingEvent.Name
-            };
+                return NotFound();
+            }
+
+            return View();
         }
 
         [HttpPost]
@@ -164,8 +154,8 @@ namespace Voting.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var product = await this.votingEventRepository.GetByIdAsync(id);
-            await this.votingEventRepository.DeleteAsync(product);
+            var votingEvent = await this.votingEventRepository.GetByIdAsync(id);
+            await this.votingEventRepository.DeleteAsync(votingEvent);
             return RedirectToAction(nameof(Index));
         }
 
@@ -180,8 +170,6 @@ namespace Voting.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                //TODO: Validate Voting event has candidates
-
                 var votingEvent = this.ToVotingEvent(view);
                 await this.votingEventRepository.CreateAsync(votingEvent);
                 return RedirectToAction(nameof(Index));
@@ -190,13 +178,47 @@ namespace Voting.Web.Controllers
             return View();
         }
 
+        public async Task<IActionResult> DeleteCandidate(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var candidate = await this.candidateRepository.GetByIdAsync(id.Value);
+            await this.candidateRepository.DeleteAsync(candidate);
+            var votingEvent = await this.votingEventRepository.GetByIdAsync(candidate.VotingEventId);
+            votingEvent.Candidates = this.candidateRepository.GetByVotingEventId(votingEvent.Id);
+
+            return View(nameof(Details), votingEvent);
+        }
+
+        public async Task<IActionResult> EditCandidate(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var candidate = await this.candidateRepository.GetByIdAsync(id.Value);
+
+            if (candidate == null)
+            {
+                return NotFound();
+            }
+
+            var viewModel = this.ToCandidateViewModel(candidate);
+
+            return View(viewModel);
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> EditCandidate(CandidateViewModel view, int? id)
         {
             if (ModelState.IsValid)
             {
-                var path = string.Empty;
+                var path = view.ImageUrl;
 
                 if (view.ImageFile != null && view.ImageFile.Length > 0)
                 {
@@ -265,12 +287,6 @@ namespace Voting.Web.Controllers
 
                 await this.candidateRepository.CreateAsync(candidate);
                 var votingEvent = await this.votingEventRepository.GetByIdAsync(id.Value);
-
-                if (votingEvent.Candidates == null)
-                {
-                    votingEvent.Candidates = new List<Candidate>();
-                }
-
                 votingEvent.Candidates.Append(candidate);
                 await this.votingEventRepository.UpdateAsync(votingEvent);
 
@@ -298,7 +314,21 @@ namespace Voting.Web.Controllers
                 Id = candidate.Id,
                 ImageUrl = candidate.ImageUrl,
                 Proposal = candidate.Proposal,
-                Name = candidate.Name
+                Name = candidate.Name,
+                VotingEventId = candidate.VotingEventId
+            };
+        }
+
+        private VotingEventViewModel ToVotingEventViewModel(VotingEvent votingEvent)
+        {
+            return new VotingEventViewModel
+            {
+                Id = votingEvent.Id,
+                Candidates = votingEvent.Candidates,
+                Description = votingEvent.Description,
+                EndDate = votingEvent.EndDate,
+                StartDate = votingEvent.StartDate,
+                Name = votingEvent.Name
             };
         }
     }

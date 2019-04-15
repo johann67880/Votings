@@ -8,6 +8,6 @@ namespace Voting.Web.Data.Repositories
 {
     public interface ICandidateRepository : IGenericRepository<Candidate>
     {
-
+        List<Candidate> GetByVotingEventId(int id);
     }
 }

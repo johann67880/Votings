@@ -28,7 +28,7 @@
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime EndDate { get; set; }
 
-        public IEnumerable<Candidate> Candidates { get; set; }
+        public IEnumerable<Candidate> Candidates { get; set; } = new List<Candidate>();
 
         [Display(Name = "# Candidates")]
         public int TotalCandidates { get { return this.Candidates == null ? 0 : this.Candidates.Count(); } }
