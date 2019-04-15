@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,6 +14,11 @@ namespace Voting.Web.Data.Repositories
         public VotingEventRepository(DataContext context) : base(context)
         {
             this.context = context;
+        }
+
+        public IQueryable GetAllVotingEventsWithCandidates()
+        {
+            return this.context.VotingEvents.Include(v => v.Candidates).OrderBy(v => v.StartDate);
         }
     }
 }

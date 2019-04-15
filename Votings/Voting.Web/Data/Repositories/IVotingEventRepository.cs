@@ -8,5 +8,6 @@ namespace Voting.Web.Data.Repositories
 {
     public interface IVotingEventRepository : IGenericRepository<VotingEvent>
     {
+        IQueryable GetAllVotingEventsWithCandidates();
     }
 }

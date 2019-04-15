@@ -31,7 +31,7 @@ namespace Voting.Web.Controllers
 
         public IActionResult Index()
         {
-            var result = this.votingEventRepository.GetAll().OrderByDescending(x => x.StartDate).ToList();
+            var result = this.votingEventRepository.GetAllVotingEventsWithCandidates();
             return View(result);
         }
 
