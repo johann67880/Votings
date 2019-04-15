@@ -1,6 +1,8 @@
 ﻿namespace Voting.Web.Data.Entities
 {
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.Linq;
 
     public class Candidate : IEntity
     {
@@ -20,5 +22,10 @@
         public string ImageUrl { get; set; }
 
         public int VotingEventId { get; set; }
+
+        public IEnumerable<Vote> Votes { get; set; } = new List<Vote>();
+
+        [Display(Name = "# Votes")]
+        public int TotalVotes { get { return this.Votes == null ? 0 : this.Votes.Count(); } }
     }
 }

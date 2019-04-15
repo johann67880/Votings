@@ -19,7 +19,7 @@ namespace Voting.Web.Controllers
         private readonly IVotingEventRepository votingEventRepository;
         private readonly IResultRepository resultRepository;
 
-        public VotingEventsController(ICandidateRepository candidateRepository, 
+        public VotingEventsController(ICandidateRepository candidateRepository,
             IVotingEventRepository votingEventRepository,
             IResultRepository resultRepository)
         {
@@ -74,7 +74,7 @@ namespace Voting.Web.Controllers
             }
 
             var view = this.ToVotingEventViewModel(votingEvent);
-            return View("Details", view);
+            return View(view);
         }
 
         public IActionResult AddCandidate(int? id)
@@ -139,20 +139,6 @@ namespace Voting.Web.Controllers
             }
 
             var votingEvent = await this.votingEventRepository.GetByIdAsync(id.Value);
-
-            if (votingEvent == null)
-            {
-                return NotFound();
-            }
-
-            return View(votingEvent);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var votingEvent = await this.votingEventRepository.GetByIdAsync(id);
             await this.votingEventRepository.DeleteAsync(votingEvent);
             return RedirectToAction(nameof(Index));
         }
@@ -185,8 +171,7 @@ namespace Voting.Web.Controllers
 
             var candidate = await this.candidateRepository.GetByIdAsync(id.Value);
             await this.candidateRepository.DeleteAsync(candidate);
-            var votingEvent = await this.votingEventRepository.GetByIdAsync(candidate.VotingEventId);
-            votingEvent.Candidates = this.candidateRepository.GetByVotingEventId(votingEvent.Id);
+            var votingEvent = this.votingEventRepository.GetVotingEvent(candidate.VotingEventId);
 
             return View(nameof(Details), votingEvent);
         }
@@ -212,7 +197,7 @@ namespace Voting.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditCandidate(CandidateViewModel view, int? id)
+        public async Task<IActionResult> EditCandidate(CandidateViewModel view)
         {
             if (ModelState.IsValid)
             {
@@ -239,15 +224,7 @@ namespace Voting.Web.Controllers
                 var candidate = this.ToCandidate(view, path);
                 await this.candidateRepository.UpdateAsync(candidate);
 
-                if (id.HasValue && id.Value > 0)
-                {
-                    var votingEvent = await this.votingEventRepository.GetByIdAsync(id.Value);
-                    votingEvent.Candidates.Append(candidate);
-
-                    await this.votingEventRepository.UpdateAsync(votingEvent);
-                }
-
-                return RedirectToAction("Details");
+                return RedirectToAction("Details", new { id = candidate.VotingEventId });
             }
 
             return View(view);
@@ -301,7 +278,8 @@ namespace Voting.Web.Controllers
                 Id = view.Id,
                 ImageUrl = path,
                 Proposal = view.Proposal,
-                Name = view.Name
+                Name = view.Name,
+                VotingEventId = view.VotingEventId
             };
         }
 

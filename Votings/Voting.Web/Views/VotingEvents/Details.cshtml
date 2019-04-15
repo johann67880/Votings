@@ -54,6 +54,9 @@
                         <th>
                             Image
                         </th>
+                        <th>
+                            # Votes
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -71,6 +74,9 @@
                                 {
                                     <img src="@Url.Content(item.ImageUrl)" alt="Image" style="width:75px;height:75px;max-width: 100%; height: auto;" />
                                 }
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TotalVotes)
                             </td>
                             <td>
                                 <a asp-action="EditCandidate" class="btn btn-default" asp-route-id="@item.Id"><i class="glyphicon glyphicon-edit"> </i> </a>

@@ -52,25 +52,31 @@
                         <th>
                             Image
                         </th>
+                        <th>
+                            # Votes
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach (var item in Model.Candidates)
                     {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Name)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Proposal)
-                            </td>
-                            <td>
-                                @if (!string.IsNullOrEmpty(item.ImageUrl))
-                                {
-                                    <img src="@Url.Content(item.ImageUrl)" alt="Image" style="width:75px;height:75px;max-width: 100%; height: auto;" />
-                                }
-                            </td>
-                        </tr>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Proposal)
+                        </td>
+                        <td>
+                            @if (!string.IsNullOrEmpty(item.ImageUrl))
+                            {
+                                <img src="@Url.Content(item.ImageUrl)" alt="Image" style="width:75px;height:75px;max-width: 100%; height: auto;" />
+                            }
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TotalVotes)
+                        </td>
+                    </tr>
                     }
                 </tbody>
             </table>
