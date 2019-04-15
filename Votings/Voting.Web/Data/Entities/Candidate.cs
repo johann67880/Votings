@@ -18,5 +18,7 @@
 
         [Display(Name = "Image")]
         public string ImageUrl { get; set; }
+
+        public int VotingEventId { get; set; }
     }
 }

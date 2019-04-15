@@ -29,11 +29,6 @@ namespace Voting.Web.Controllers
             return View("Results");
         }
 
-        public IActionResult Details()
-        {
-            return View("Details");
-        }
-
         public IActionResult Index()
         {
             var result = this.votingEventRepository.GetAll().OrderByDescending(x => x.StartDate).ToList();
@@ -46,9 +41,16 @@ namespace Voting.Web.Controllers
             return View();
         }
 
-        public IActionResult CreateCandidate()
+        public async Task<IActionResult> AddCandidate(int? id)
         {
-            return View("AddCandidate");
+            var votingEvent = await this.votingEventRepository.GetByIdAsync(id.Value);
+
+            if (votingEvent == null)
+            {
+                return NotFound();
+            }
+
+            return View();
         }
 
         public async Task<IActionResult> Details(int? id)
@@ -84,7 +86,7 @@ namespace Voting.Web.Controllers
             }
 
             var view = this.ToVotingEventViewModel(votingEvent);
-            return View("Details");
+            return View("Details", view);
         }
 
         private VotingEventViewModel ToVotingEventViewModel(VotingEvent votingEvent)
@@ -190,7 +192,7 @@ namespace Voting.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreateCandidate(CandidateViewModel view)
+        public async Task<IActionResult> EditCandidate(CandidateViewModel view, int? id)
         {
             if (ModelState.IsValid)
             {
@@ -203,7 +205,7 @@ namespace Voting.Web.Controllers
 
                     path = Path.Combine(
                         Directory.GetCurrentDirectory(),
-                        "wwwroot\\images\\Products",
+                        "wwwroot\\images\\Candidates",
                         file);
 
                     using (var stream = new FileStream(path, FileMode.Create))
@@ -211,12 +213,68 @@ namespace Voting.Web.Controllers
                         await view.ImageFile.CopyToAsync(stream);
                     }
 
-                    path = $"~/images/Products/{file}";
+                    path = $"~/images/Candidates/{file}";
                 }
 
                 var candidate = this.ToCandidate(view, path);
+                await this.candidateRepository.UpdateAsync(candidate);
+
+                if (id.HasValue && id.Value > 0)
+                {
+                    var votingEvent = await this.votingEventRepository.GetByIdAsync(id.Value);
+                    votingEvent.Candidates.Append(candidate);
+
+                    await this.votingEventRepository.UpdateAsync(votingEvent);
+                }
+
+                return RedirectToAction("Details");
+            }
+
+            return View(view);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddCandidate(CandidateViewModel view, int? id)
+        {
+            if (ModelState.IsValid)
+            {
+                var path = string.Empty;
+
+                if (view.ImageFile != null && view.ImageFile.Length > 0)
+                {
+                    var guid = Guid.NewGuid().ToString();
+                    var file = $"{guid}.jpg";
+
+                    path = Path.Combine(
+                        Directory.GetCurrentDirectory(),
+                        "wwwroot\\images\\Candidates",
+                        file);
+
+                    using (var stream = new FileStream(path, FileMode.Create))
+                    {
+                        await view.ImageFile.CopyToAsync(stream);
+                    }
+
+                    path = $"~/images/Candidates/{file}";
+                }
+
+                var candidate = this.ToCandidate(view, path);
+                candidate.Id = 0;
+                candidate.VotingEventId = id.Value;
+
                 await this.candidateRepository.CreateAsync(candidate);
-                return RedirectToAction(nameof(Index));
+                var votingEvent = await this.votingEventRepository.GetByIdAsync(id.Value);
+
+                if (votingEvent.Candidates == null)
+                {
+                    votingEvent.Candidates = new List<Candidate>();
+                }
+
+                votingEvent.Candidates.Append(candidate);
+                await this.votingEventRepository.UpdateAsync(votingEvent);
+
+                return RedirectToAction("Details", new { id = votingEvent.Id });
             }
 
             return View(view);
@@ -228,7 +286,19 @@ namespace Voting.Web.Controllers
             {
                 Id = view.Id,
                 ImageUrl = path,
-                Proposal = view.Proposal
+                Proposal = view.Proposal,
+                Name = view.Name
+            };
+        }
+
+        private CandidateViewModel ToCandidateViewModel(Candidate candidate)
+        {
+            return new CandidateViewModel
+            {
+                Id = candidate.Id,
+                ImageUrl = candidate.ImageUrl,
+                Proposal = candidate.Proposal,
+                Name = candidate.Name
             };
         }
     }

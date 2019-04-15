@@ -1,7 +1,53 @@
-﻿@model Voting.Web.Models.CandidateViewModel
+﻿@model Voting.Web.Data.Entities.VotingEvent
 @{
     ViewData["Title"] = "Details";
 }
 
 <h2>Details</h2>
 
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly"></div>
+
+            <div class="form-group">
+                <label style="display:inline" asp-for="Name">Name: </label>
+                <p style="display:inline">@Html.DisplayFor(m => m.Name)</p>
+            </div>
+
+            <div class="form-group">
+                <label style="display:inline" asp-for="Description">Description: </label>
+                <p style="display:inline">@Html.DisplayFor(m => m.Description)</p>
+            </div>
+
+            <div class="form-group">
+                <label style="display:inline" asp-for="StartDate">Start Date: </label>
+                <p style="display:inline" asp-format="{0:yyyy-MM-dd}">@Html.DisplayFor(m => m.StartDate)</p>
+            </div>
+
+            <div class="form-group">
+                <label style="display:inline" asp-for="EndDate">End Date: </label>
+                <p style="display:inline" asp-format="{0:yyyy-MM-dd}">@Html.DisplayFor(m => m.EndDate)</p>
+            </div>
+
+
+            <hr />
+
+            <h3>Candidates</h3>
+
+            <div class="form-group">
+
+            </div>
+
+
+            <hr />
+
+            <div class="form-group">
+                <a asp-action="Edit" class="btn btn-warning"><i class="fa fa-save"></i> Edit</a>
+                <a asp-action="AddCandidate" class="btn btn-primary" asp-route-id="@Model.Id"><i class="fa fa-save"></i> Add Candidate</a>
+                <a asp-action="Index" class="btn btn-success"> Back to List</a>
+            </div>
+
+        </form>
+    </div>
+</div>
