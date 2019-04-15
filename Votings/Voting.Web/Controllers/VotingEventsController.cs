@@ -17,21 +17,26 @@ namespace Voting.Web.Controllers
     {
         private readonly ICandidateRepository candidateRepository;
         private readonly IVotingEventRepository votingEventRepository;
+        private readonly IResultRepository resultRepository;
 
-        public VotingEventsController(ICandidateRepository candidateRepository, IVotingEventRepository votingEventRepository)
+        public VotingEventsController(ICandidateRepository candidateRepository, 
+            IVotingEventRepository votingEventRepository,
+            IResultRepository resultRepository)
         {
             this.candidateRepository = candidateRepository;
             this.votingEventRepository = votingEventRepository;
+            this.resultRepository = resultRepository;
         }
 
         public IActionResult Results()
         {
-            return View("Results");
+            var result = this.votingEventRepository.GetAllVotingEvents();
+            return View(result);
         }
 
         public IActionResult Index()
         {
-            var result = this.votingEventRepository.GetAllVotingEventsWithCandidates();
+            var result = this.votingEventRepository.GetAllVotingEvents();
             return View(result);
         }
 
@@ -41,35 +46,27 @@ namespace Voting.Web.Controllers
             return View();
         }
 
-        public async Task<IActionResult> Details(int? id)
+        public IActionResult Details(int? id)
         {
             if (id == null)
             {
-                return new NotFoundViewResult("VotingEventNotFound");
+                return new NotFoundViewResult("NotFound");
             }
 
-            var votingEvent = await this.votingEventRepository.GetByIdAsync(id.Value);
-
-            if (votingEvent == null)
-            {
-                return new NotFoundViewResult("VotingEventNotFound");
-            }
-
-            var candidates = this.candidateRepository.GetByVotingEventId(votingEvent.Id);
-            votingEvent.Candidates = candidates;
+            var votingEvent = this.votingEventRepository.GetVotingEvent(id.Value);
 
             return View(votingEvent);
         }
 
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Edit(int? id)
+        public IActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var votingEvent = await this.votingEventRepository.GetByIdAsync(id.Value);
+            var votingEvent = this.votingEventRepository.GetVotingEvent(id.Value);
 
             if (votingEvent == null)
             {
@@ -80,9 +77,9 @@ namespace Voting.Web.Controllers
             return View("Details", view);
         }
 
-        public async Task<IActionResult> AddCandidate(int? id)
+        public IActionResult AddCandidate(int? id)
         {
-            var votingEvent = await this.votingEventRepository.GetByIdAsync(id.Value);
+            var votingEvent = this.votingEventRepository.GetVotingEvent(id.Value);
 
             if (votingEvent == null)
             {
@@ -141,13 +138,14 @@ namespace Voting.Web.Controllers
                 return NotFound();
             }
 
-            var product = await this.votingEventRepository.GetByIdAsync(id.Value);
-            if (product == null)
+            var votingEvent = await this.votingEventRepository.GetByIdAsync(id.Value);
+
+            if (votingEvent == null)
             {
                 return NotFound();
             }
 
-            return View(product);
+            return View(votingEvent);
         }
 
         [HttpPost, ActionName("Delete")]
@@ -330,6 +328,18 @@ namespace Voting.Web.Controllers
                 StartDate = votingEvent.StartDate,
                 Name = votingEvent.Name
             };
+        }
+
+        public IActionResult ResultDetail(int? id)
+        {
+            if (id == null)
+            {
+                return new NotFoundViewResult("NotFound");
+            }
+
+            var votingEvent = this.votingEventRepository.GetVotingEvent(id.Value);
+
+            return View(votingEvent);
         }
     }
 }

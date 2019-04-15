@@ -16,9 +16,21 @@ namespace Voting.Web.Data.Repositories
             this.context = context;
         }
 
-        public IQueryable GetAllVotingEventsWithCandidates()
+        public VotingEvent GetVotingEvent(int id)
         {
-            return this.context.VotingEvents.Include(v => v.Candidates).OrderBy(v => v.StartDate);
+            return this.context.VotingEvents
+                .Include(v => v.Candidates)
+                .Include(v => v.Votes)
+                .Where(v => v.Id == id)
+                .FirstOrDefault();
+        }
+
+        public IQueryable GetAllVotingEvents()
+        {
+            return this.context.VotingEvents
+                .Include(v => v.Candidates)
+                .Include(v => v.Votes)
+                .OrderBy(v => v.StartDate);
         }
     }
 }

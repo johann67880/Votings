@@ -30,7 +30,12 @@
 
         public IEnumerable<Candidate> Candidates { get; set; } = new List<Candidate>();
 
+        public IEnumerable<Vote> Votes { get; set; } = new List<Vote>();
+
         [Display(Name = "# Candidates")]
         public int TotalCandidates { get { return this.Candidates == null ? 0 : this.Candidates.Count(); } }
+
+        [Display(Name = "# Votes")]
+        public int TotalVotes { get { return this.Votes == null ? 0 : this.Votes.Count(); } }
     }
 }

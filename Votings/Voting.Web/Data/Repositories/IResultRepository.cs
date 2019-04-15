@@ -6,9 +6,8 @@ using Voting.Web.Data.Entities;
 
 namespace Voting.Web.Data.Repositories
 {
-    public interface IVotingEventRepository : IGenericRepository<VotingEvent>
+    public interface IResultRepository : IGenericRepository<Vote>
     {
-        IQueryable GetAllVotingEvents();
-        VotingEvent GetVotingEvent(int id);
+        Vote GetResult();
     }
 }

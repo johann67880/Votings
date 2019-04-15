@@ -71,6 +71,7 @@
             services.AddScoped<ICountryRepository, CountryRepository>();
             services.AddScoped<ICandidateRepository, CandidateRepository>();
             services.AddScoped<IVotingEventRepository, VotingEventRepository>();
+            services.AddScoped<IResultRepository, ResultRepository>();
 
             services.Configure<CookiePolicyOptions>(options =>
             {
