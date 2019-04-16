@@ -10,9 +10,9 @@ namespace Votings.UI.ViewModels
 {
     public class VotingEventItemViewModel : VotingEvent
     {
-        public ICommand SelectProductCommand => new RelayCommand(this.SelectProduct);
+        public ICommand SelectVotingEventCommand => new RelayCommand(this.SelectVotingEvent);
 
-        private async void SelectProduct()
+        private async void SelectVotingEvent()
         {
             MainViewModel.GetInstance().VotingEventDetail = new VotingEventDetailViewModel((VotingEvent)this);
             await App.Navigator.PushAsync(new VotingEventDetailPage());

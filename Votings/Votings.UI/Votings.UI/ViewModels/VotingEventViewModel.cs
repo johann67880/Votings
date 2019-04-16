@@ -60,10 +60,10 @@ namespace Votings.UI.ViewModels
             }
 
             this.myEvents = (List<VotingEvent>)response.Result;
-            this.RefresProductsList();
+            this.RefreshProductsList();
         }
 
-        private void RefresProductsList()
+        private void RefreshProductsList()
         {
             this.Items = new ObservableCollection<VotingEventItemViewModel>(
                 this.myEvents.Select(p => new VotingEventItemViewModel
