@@ -27,5 +27,18 @@
 
         [Display(Name = "# Votes")]
         public int TotalVotes { get { return this.Votes == null ? 0 : this.Votes.Count(); } }
+
+        public string ImageFullPath
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(this.ImageUrl))
+                {
+                    return null;
+                }
+
+                return $"https://betoappservice.azurewebsites.net/{this.ImageUrl.Substring(1)}";
+            }
+        }
     }
 }

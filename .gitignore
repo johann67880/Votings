@@ -15,3 +15,5 @@
 /Votings/Votings.UI/Votings.UI/bin/Debug/netstandard2.0
 /Votings/Votings.UI/Votings.UI.Android/bin/Debug
 /Votings/Votings.UI/Votings.UI.Android/obj
+/Votings/Voting.Web/bin/Release/netcoreapp2.1
+/Votings/Votings.Common/bin/Release/netstandard2.0

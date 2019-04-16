@@ -21,6 +21,7 @@ namespace Voting.Web.Data.Repositories
         public async Task AddCityAsync(CityViewModel model)
         {
             var country = await this.GetCountryWithCitiesAsync(model.CountryId);
+
             if (country == null)
             {
                 return;
@@ -34,6 +35,7 @@ namespace Voting.Web.Data.Repositories
         public async Task<int> DeleteCityAsync(City city)
         {
             var country = await this.context.Countries.Where(c => c.Cities.Any(ci => ci.Id == city.Id)).FirstOrDefaultAsync();
+
             if (country == null)
             {
                 return 0;
@@ -62,6 +64,7 @@ namespace Voting.Web.Data.Repositories
         public async Task<int> UpdateCityAsync(City city)
         {
             var country = await this.context.Countries.Where(c => c.Cities.Any(ci => ci.Id == city.Id)).FirstOrDefaultAsync();
+
             if (country == null)
             {
                 return 0;
