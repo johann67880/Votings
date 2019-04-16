@@ -15,6 +15,9 @@ namespace Votings.UI.ViewModels
         public RememberPasswordViewModel RememberPassword { get; set; }
         public ChangePasswordViewModel ChangePassword { get; set; }
         public ProfileViewModel Profile { get; set; }
+        public CandidatesViewModel Candidates { get; set; }
+        public VotingEventViewModel VotingEvents { get; set; }
+        public VotingEventDetailViewModel VotingEventDetail { get; set; }
 
         public ObservableCollection<MenuItemViewModel> Menus { get; set; }
 

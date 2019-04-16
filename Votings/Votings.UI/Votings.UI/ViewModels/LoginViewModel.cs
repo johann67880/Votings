@@ -114,6 +114,7 @@ namespace Votings.UI.ViewModels
             mainViewModel.UserEmail = this.Email;
             mainViewModel.UserPassword = this.Password;
             mainViewModel.Token = token;
+            mainViewModel.VotingEvents = new VotingEventViewModel();
 
             Settings.IsRemember = this.IsRemember;
             Settings.UserEmail = this.Email;
