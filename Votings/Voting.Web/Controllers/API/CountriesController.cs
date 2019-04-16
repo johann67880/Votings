@@ -18,6 +18,7 @@ namespace Voting.Web.Controllers.API
         }
 
         [HttpGet]
+        [Route("getAll")]
         public IActionResult GetCountries()
         {
             return Ok(this.countryRepository.GetCountriesWithCities());

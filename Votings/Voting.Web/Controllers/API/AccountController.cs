@@ -28,6 +28,7 @@
         }
 
         [HttpPost]
+        [Route("saveUser")]
         public async Task<IActionResult> PostUser([FromBody] NewUserRequest request)
         {
             if (!ModelState.IsValid)
@@ -99,7 +100,7 @@
         }
 
         [HttpPost]
-        [Route("RecoverPassword")]
+        [Route("recoverPassword")]
         public async Task<IActionResult> RecoverPassword([FromBody] RecoverPasswordRequest request)
         {
             if (!ModelState.IsValid)
@@ -135,7 +136,7 @@
         }
 
         [HttpPost]
-        [Route("GetUserByEmail")]
+        [Route("getUserByEmail")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> GetUserByEmail([FromBody] RecoverPasswordRequest request)
         {
@@ -202,7 +203,7 @@
         }
 
         [HttpPost]
-        [Route("ChangePassword")]
+        [Route("changePassword")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordRequest request)
         {
