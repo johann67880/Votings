@@ -73,8 +73,7 @@ namespace Voting.Web.Controllers
                 return NotFound();
             }
 
-            var view = this.ToVotingEventViewModel(votingEvent);
-            return View(view);
+            return View(votingEvent);
         }
 
         public IActionResult AddCandidate(int? id)
@@ -96,18 +95,17 @@ namespace Voting.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(VotingEventViewModel view)
+        public async Task<IActionResult> Edit(VotingEvent votingEvent)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
-                    var votingEvent = this.ToVotingEvent(view);
                     await this.votingEventRepository.UpdateAsync(votingEvent);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!await this.votingEventRepository.ExistAsync(view.Id))
+                    if (!await this.votingEventRepository.ExistAsync(votingEvent.Id))
                     {
                         return NotFound();
                     }
@@ -116,22 +114,22 @@ namespace Voting.Web.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Details), new { id = view.Id});
+                return RedirectToAction(nameof(Details), new { id = votingEvent.Id});
             }
 
-            return View(view);
+            return View(votingEvent);
         }
 
-        private VotingEvent ToVotingEvent(VotingEventViewModel viewModel)
+        private VotingEvent ToVotingEvent(VotingEvent votingEvent)
         {
             return new VotingEvent()
             {
-                Id = viewModel.Id,
-                Name = viewModel.Name,
-                Description = viewModel.Description,
-                Candidates = viewModel.Candidates,
-                EndDate = viewModel.EndDate,
-                StartDate = viewModel.StartDate
+                Id = votingEvent.Id,
+                Name = votingEvent.Name,
+                Description = votingEvent.Description,
+                Candidates = votingEvent.Candidates,
+                EndDate = votingEvent.EndDate,
+                StartDate = votingEvent.StartDate
             };
         }
 
@@ -155,11 +153,10 @@ namespace Voting.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(VotingEventViewModel view)
+        public async Task<IActionResult> Create(VotingEvent votingEvent)
         {
             if (ModelState.IsValid)
             {
-                var votingEvent = this.ToVotingEvent(view);
                 await this.votingEventRepository.CreateAsync(votingEvent);
                 return RedirectToAction(nameof(Index));
             }
@@ -297,19 +294,6 @@ namespace Voting.Web.Controllers
                 Proposal = candidate.Proposal,
                 Name = candidate.Name,
                 VotingEventId = candidate.VotingEventId
-            };
-        }
-
-        private VotingEventViewModel ToVotingEventViewModel(VotingEvent votingEvent)
-        {
-            return new VotingEventViewModel
-            {
-                Id = votingEvent.Id,
-                Candidates = votingEvent.Candidates,
-                Description = votingEvent.Description,
-                EndDate = votingEvent.EndDate,
-                StartDate = votingEvent.StartDate,
-                Name = votingEvent.Name
             };
         }
 
