@@ -41,28 +41,28 @@ namespace Votings.UI.ViewModels
             {
                 new Menu
                 {
-                    Icon = "ic_info",
+                    Icon = "",
                     PageName = "AboutPage",
                     Title = "About"
                 },
 
                 new Menu
                 {
-                    Icon = "ic_person",
+                    Icon = "",
                     PageName = "ProfilePage",
                     Title = "Modify User"
                 },
 
                 new Menu
                 {
-                    Icon = "ic_phonelink_setup",
+                    Icon = "",
                     PageName = "SetupPage",
                     Title = "Setup"
                 },
 
                 new Menu
                 {
-                    Icon = "ic_exit_to_app",
+                    Icon = "",
                     PageName = "LoginPage",
                     Title = "Close session"
                 }
