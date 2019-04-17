@@ -23,7 +23,7 @@
                     <Entry
                         Grid.Column="1"
                         Grid.Row="0"
-                        Placeholder="Enter your first name..."
+                        Placeholder="First name..."
                         Text="{Binding FirstName}">
                     </Entry>
                     <Label
@@ -35,7 +35,7 @@
                     <Entry
                         Grid.Column="1"
                         Grid.Row="1"
-                        Placeholder="Enter your last name..."
+                        Placeholder="Last name..."
                         Text="{Binding LastName}">
                     </Entry>
                     <Label
@@ -48,7 +48,7 @@
                         Grid.Column="1"
                         Grid.Row="2"
                         Keyboard="Email"
-                        Placeholder="Enter your email..."
+                        Placeholder="Email..."
                         Text="{Binding Email}">
                     </Entry>
                     <Label
@@ -89,7 +89,7 @@
                         Grid.Column="1"
                         Grid.Row="5"
                         Keyboard="Email"
-                        Placeholder="Enter your address..."
+                        Placeholder="Address..."
                         Text="{Binding Address}">
                     </Entry>
                     <Label
@@ -102,33 +102,70 @@
                         Grid.Column="1"
                         Grid.Row="6"
                         Keyboard="Telephone"
-                        Placeholder="Enter your phone number..."
+                        Placeholder="Phone number..."
                         Text="{Binding Phone}">
                     </Entry>
                     <Label
                         Grid.Column="0"
                         Grid.Row="7"
-                        Text="Password"
+                        Text="Occupation"
                         VerticalOptions="Center">
                     </Label>
                     <Entry
                         Grid.Column="1"
                         Grid.Row="7"
-                        IsPassword="True"
-                        Placeholder="Enter your password..."
-                        Text="{Binding Password}">
+                        Placeholder="Occupation..."
+                        Text="{Binding Occupation}">
                     </Entry>
                     <Label
                         Grid.Column="0"
                         Grid.Row="8"
-                        Text="Password confirm"
+                        Text="Stratum"
                         VerticalOptions="Center">
                     </Label>
                     <Entry
                         Grid.Column="1"
                         Grid.Row="8"
+                        Keyboard="Numeric"
+                        Placeholder="Stratum..."
+                        Text="{Binding Stratum}">
+                    </Entry>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="9"
+                        Text="Gender"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="1"
+                        Grid.Row="9"
+                        Placeholder="Gender..."
+                        Text="{Binding Gender}">
+                    </Entry>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="10"
+                        Text="Password"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="1"
+                        Grid.Row="10"
                         IsPassword="True"
-                        Placeholder="Enter your password confirm..."
+                        Placeholder="Password..."
+                        Text="{Binding Password}">
+                    </Entry>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="11"
+                        Text="Password confirm"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="1"
+                        Grid.Row="11"
+                        IsPassword="True"
+                        Placeholder="Confirm Password..."
                         Text="{Binding Confirm}">
                     </Entry>
                 </Grid>
