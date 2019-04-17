@@ -14,7 +14,7 @@ namespace Votings.UI.Helpers
     public class TranslateExtension : IMarkupExtension
     {
         private readonly CultureInfo ci;
-        private const string ResourceId = "Shop.UIForms.Resources.Resource";
+        private const string ResourceId = "Votings.UI.Resources.Resource";
         private static readonly Lazy<ResourceManager> ResMgr =
             new Lazy<ResourceManager>(() => new ResourceManager(
                 ResourceId,

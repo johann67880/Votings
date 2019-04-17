@@ -13,6 +13,7 @@ using Android.Widget;
 using Votings.UI.Helpers;
 using Votings.UI.Interfaces;
 
+[assembly: Xamarin.Forms.Dependency(typeof(Votings.UI.Droid.Implementations.Localize))]
 namespace Votings.UI.Droid.Implementations
 {
     public class Localize : ILocalize

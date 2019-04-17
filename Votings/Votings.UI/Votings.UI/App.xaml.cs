@@ -7,6 +7,7 @@ using Votings.UI.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Votings.UI
 {
     public partial class App : Application
