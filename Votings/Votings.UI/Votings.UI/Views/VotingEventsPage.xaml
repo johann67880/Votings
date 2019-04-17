@@ -38,11 +38,11 @@
                                         TextColor="Black">
                                     </Label>
                                     <Label
-                                        Text="{Binding StartDate, StringFormat='Started-\{0:d}'}"
+                                        Text="{Binding StartDate, StringFormat='Started: \{0:d}'}"
                                         TextColor="Blue">
                                     </Label>
                                     <Label
-                                        Text="{Binding EndDate, StringFormat='Started-\{0:d}'}"
+                                        Text="{Binding EndDate, StringFormat='Finished: \{0:d}'}"
                                         TextColor="Blue">
                                     </Label>
                                 </StackLayout>
