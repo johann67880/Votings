@@ -9,9 +9,9 @@
             BindingContext="{Binding VotingEvents}"
             Padding="8">
             <ListView
-                IsRefreshing="{Binding IsRefreshing}"
+                IsRefreshing="{Binding VotingEvents}"
                 HasUnevenRows="True"
-                ItemsSource="{Binding VotingEvents}">
+                ItemsSource="{Binding Items}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -38,11 +38,11 @@
                                         TextColor="Black">
                                     </Label>
                                     <Label
-                                        Text="{Binding StartDate, StringFormat='Stock: {0:N2}'}"
+                                        Text="{Binding StartDate, StringFormat='Started-\{0:d}'}"
                                         TextColor="Blue">
                                     </Label>
                                     <Label
-                                        Text="{Binding EndDate, StringFormat='Stock: {0:N2}'}"
+                                        Text="{Binding EndDate, StringFormat='Started-\{0:d}'}"
                                         TextColor="Blue">
                                     </Label>
                                 </StackLayout>

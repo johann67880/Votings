@@ -372,7 +372,7 @@
                 var myToken = await this.userHelper.GeneratePasswordResetTokenAsync(user);
                 var link = this.Url.Action("ResetPassword", "Account", new { token = myToken }, protocol: HttpContext.Request.Scheme);
                 var mailSender = new MailHelper(configuration);
-                mailSender.SendMail(model.Email, "Shop Password Reset", $"<h1>Shop Recover Password</h1>" +
+                mailSender.SendMail(model.Email, "Votings Password Reset", $"<h1>Votings Recover Password</h1>" +
                     $"To reset the password click in this link:</br></br>" +
                     $"<a href = \"{link}\">Reset Password</a>");
                 this.ViewBag.Message = "The instructions to recover your password has been sent to email.";

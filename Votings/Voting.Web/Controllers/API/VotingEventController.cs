@@ -33,10 +33,9 @@ namespace Voting.Web.Controllers.API
         }
 
         [HttpGet]
-        [Route("getAll")]
         public IActionResult GetVotingEvents()
         {
-            return Ok(this.votingEventRepository.GetAllVotingEvents());
+            return Ok(this.votingEventRepository.GetAll());
         }
 
         [HttpPost]
