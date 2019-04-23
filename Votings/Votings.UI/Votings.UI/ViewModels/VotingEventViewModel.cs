@@ -1,8 +1,10 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Command;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Windows.Input;
 using Votings.Common.Models;
 using Votings.Common.Services;
 using Xamarin.Forms;
@@ -17,6 +19,15 @@ namespace Votings.UI.ViewModels
         private List<VotingEvent> myEvents;
         private ObservableCollection<VotingEventItemViewModel> items;
         private bool isRefreshing;
+
+        public ICommand SelectRefreshCommand => new RelayCommand(this.RefreshCommand);
+
+        private void RefreshCommand()
+        {
+            this.IsRefreshing = true;
+            this.LoadVotingEvents();
+            this.IsRefreshing = false;
+        }
 
         public ObservableCollection<VotingEventItemViewModel> Items
         {

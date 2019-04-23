@@ -3,13 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              Title="Voting Events"
+             x:Name="body"
              x:Class="Votings.UI.Views.VotingEventsPage">
+    <ContentPage.ToolbarItems>
+        
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout
             BindingContext="{Binding VotingEvents}"
             Padding="8">
             <ListView
-                IsRefreshing="{Binding VotingEvents}"
+                IsRefreshing="{Binding IsRefreshing}"
+                RefreshCommand="{Binding SelectRefreshCommand}"
                 HasUnevenRows="True"
                 ItemsSource="{Binding Items}">
                 <ListView.ItemTemplate>
