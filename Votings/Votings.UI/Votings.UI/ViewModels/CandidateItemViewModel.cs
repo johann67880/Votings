@@ -68,6 +68,8 @@ namespace Votings.UI.ViewModels
                 "Confirmation",
                 $"Your vote has been registered.",
                 Languages.Accept);
+
+            await App.Navigator.PopAsync();
         }
     }
 }

@@ -8,5 +8,6 @@ namespace Voting.Web.Data.Repositories
 {
     public interface IVoteRepository : IGenericRepository<Vote>
     {
+        Vote GetUserVoteByVotingEvent(int votingEventId, string userId);
     }
 }

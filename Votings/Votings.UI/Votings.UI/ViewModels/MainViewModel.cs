@@ -17,6 +17,7 @@ namespace Votings.UI.ViewModels
         public ProfileViewModel Profile { get; set; }
         public VotingEventViewModel VotingEvents { get; set; }
         public VotingEventDetailViewModel VotingEventDetail { get; set; }
+        public UserVoteViewModel UserVoteDetail { get; set; }
 
         public ObservableCollection<MenuItemViewModel> Menus { get; set; }
 

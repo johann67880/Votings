@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="You already vote for"
+             x:Class="Votings.UI.Views.UserVotePage">
+    <ContentPage.Content>
+        <StackLayout
+            BindingContext="{Binding UserVoteDetail}"
+            Padding="8">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Column="1" VerticalOptions="Center" Spacing="1">
+                    <Image
+                        Margin="0,20,0,0"
+                        VerticalOptions="StartAndExpand"
+                        HeightRequest="100"
+                        Source="{Binding vote.Candidate.ImageFullPath}">
+                    </Image>
+
+                    <Label
+                        VerticalOptions="StartAndExpand"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        Text="{Binding vote.Candidate.Name}"
+                        TextColor="Black">
+                    </Label>
+
+                    <Label
+                        VerticalOptions="StartAndExpand"
+                        FontSize="Small"
+                        Margin="0,0,0,20"
+                        Text="{Binding vote.Candidate.Proposal}"
+                        TextColor="Black">
+                    </Label>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

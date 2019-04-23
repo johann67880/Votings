@@ -68,9 +68,23 @@ namespace Voting.Web.Controllers.API
             userVote.User = await this.userHelper.GetUserByIdAsync(vote.User.Id);
             userVote.Id = 0;
             userVote.RegistrationDate = DateTime.UtcNow;
-            
+
             var newVote = await this.voteRepository.CreateAsync(userVote);
             return Ok(newVote);
+        }
+
+        [HttpGet]
+        [Route("UserVote/{id:int}/{userId}")]
+        public IActionResult GetUserVoteByVotingEventId(int id, string userId)
+        {
+            var result = this.voteRepository.GetUserVoteByVotingEvent(id, userId);
+
+            if (result == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(result);
         }
     }
 }
