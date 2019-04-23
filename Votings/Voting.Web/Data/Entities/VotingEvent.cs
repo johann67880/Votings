@@ -7,6 +7,12 @@
 
     public class VotingEvent : IEntity
     {
+        public VotingEvent()
+        {
+            this.Votes = new List<Vote>();
+            this.Candidates = new List<Candidate>();
+        }
+
         public int Id { get; set; }
 
         [Required]
@@ -28,9 +34,9 @@
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime EndDate { get; set; }
 
-        public IEnumerable<Candidate> Candidates { get; set; } = new List<Candidate>();
+        public IEnumerable<Candidate> Candidates { get; set; }
 
-        public IEnumerable<Vote> Votes { get; set; } = new List<Vote>();
+        public IEnumerable<Vote> Votes { get; set; }
 
         [Display(Name = "# Candidates")]
         public int TotalCandidates { get { return this.Candidates == null ? 0 : this.Candidates.Count(); } }

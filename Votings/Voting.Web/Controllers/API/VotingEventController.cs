@@ -40,9 +40,11 @@ namespace Voting.Web.Controllers.API
         }
 
         [HttpGet]
-        public IActionResult GetVotingEvent(int votingId)
+        [Route("{id:int}")]
+        public IActionResult GetVotingEvent(int id)
         {
-            return Ok(this.votingEventRepository.GetVotingEvent(votingId));
+            var result = this.votingEventRepository.GetVotingEvent(id);
+            return Ok(result);
         }
 
         [HttpPost]

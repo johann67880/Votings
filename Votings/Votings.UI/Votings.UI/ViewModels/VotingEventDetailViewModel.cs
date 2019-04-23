@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Votings.Common.Models;
 using Votings.Common.Services;
+using Xamarin.Forms;
 
 namespace Votings.UI.ViewModels
 {
@@ -35,7 +36,23 @@ namespace Votings.UI.ViewModels
 
         private async void GetEventWithCandidates(VotingEvent votingEvent)
         {
+            var url = Application.Current.Resources["UrlAPI"].ToString();
 
+            var response = await this.apiService.GetListAsync<VotingEvent>(
+                url,
+                "/api",
+                "/VotingEvent/",
+                "bearer",
+                MainViewModel.GetInstance().Token.Token);
+
+            if (!response.IsSuccess)
+            {
+                await Application.Current.MainPage.DisplayAlert(
+                    "Error",
+                    response.Message,
+                    "Accept");
+                return;
+            }
         }
     }
 }

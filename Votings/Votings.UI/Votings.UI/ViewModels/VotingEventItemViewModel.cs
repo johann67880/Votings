@@ -19,6 +19,7 @@ namespace Votings.UI.ViewModels
             var votingEvent = (VotingEvent)this;
             var currentDate = DateTime.UtcNow.ToLocalTime();
 
+            /*
             if (currentDate < votingEvent.StartDate.ToLocalTime())
             {
                 await Application.Current.MainPage.DisplayAlert(
@@ -38,6 +39,7 @@ namespace Votings.UI.ViewModels
 
                 return;
             }
+            */
 
             MainViewModel.GetInstance().VotingEventDetail = new VotingEventDetailViewModel((VotingEvent)this);
             await App.Navigator.PushAsync(new VotingEventDetailPage());
