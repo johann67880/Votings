@@ -43,8 +43,7 @@ namespace Voting.Web.Controllers.API
         [Route("{id:int}")]
         public IActionResult GetVotingEvent(int id)
         {
-            var result = this.votingEventRepository.GetVotingEvent(id);
-            return Ok(result);
+            return Ok(this.votingEventRepository.GetVotingEvent(id));
         }
 
         [HttpPost]

@@ -19,7 +19,6 @@ namespace Votings.UI.ViewModels
             var votingEvent = (VotingEvent)this;
             var currentDate = DateTime.UtcNow.ToLocalTime();
 
-            /*
             if (currentDate < votingEvent.StartDate.ToLocalTime())
             {
                 await Application.Current.MainPage.DisplayAlert(
@@ -34,12 +33,11 @@ namespace Votings.UI.ViewModels
             {
                 await Application.Current.MainPage.DisplayAlert(
                     Languages.Error,
-                    "Event has finished. You are not able to vote for this event.",
+                    "Event has finished. You are not allowed to vote for this event.",
                     Languages.Accept);
 
                 return;
             }
-            */
 
             MainViewModel.GetInstance().VotingEventDetail = new VotingEventDetailViewModel((VotingEvent)this);
             await App.Navigator.PushAsync(new VotingEventDetailPage());

@@ -12,6 +12,7 @@ namespace Votings.UI.ViewModels
         private bool isRunning;
         private bool isEnabled;
         private readonly ApiService apiService;
+        private VotingEvent myVotingEvent;
 
         public VotingEvent votingEvent { get; set; }
 
@@ -32,16 +33,17 @@ namespace Votings.UI.ViewModels
             this.votingEvent = votingEvent;
             this.apiService = new ApiService();
             this.IsEnabled = true;
+            this.GetEventWithCandidates(votingEvent);
         }
 
         private async void GetEventWithCandidates(VotingEvent votingEvent)
         {
             var url = Application.Current.Resources["UrlAPI"].ToString();
 
-            var response = await this.apiService.GetListAsync<VotingEvent>(
+            var response = await this.apiService.GetSingleAsync<VotingEvent>(
                 url,
                 "/api",
-                "/VotingEvent/",
+                $"/VotingEvent/{votingEvent.Id}",
                 "bearer",
                 MainViewModel.GetInstance().Token.Token);
 
@@ -53,6 +55,8 @@ namespace Votings.UI.ViewModels
                     "Accept");
                 return;
             }
+
+            this.myVotingEvent = (VotingEvent)response.Result;
         }
     }
 }
