@@ -38,6 +38,12 @@ namespace Voting.Web.Controllers.API
             return Ok(this.votingEventRepository.GetAll());
         }
 
+        [HttpGet]
+        public IActionResult GetVotingEvent(int votingId)
+        {
+            return Ok(this.votingEventRepository.GetVotingEvent(votingId));
+        }
+
         [HttpPost]
         [Route("save")]
         public async Task<IActionResult> SaveUserVote([FromBody] Vote vote)

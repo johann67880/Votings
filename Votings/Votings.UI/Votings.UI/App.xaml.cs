@@ -32,6 +32,7 @@ namespace Votings.UI
                     mainViewModel.Token = token;
                     mainViewModel.UserEmail = Settings.UserEmail;
                     mainViewModel.UserPassword = Settings.UserPassword;
+                    mainViewModel.VotingEvents = new VotingEventViewModel();
                     this.MainPage = new MasterPage();
                     return;
                 }
@@ -54,6 +55,11 @@ namespace Votings.UI
         protected override void OnResume()
         {
             // Handle when your app resumes
+            if(Settings.IsRemember)
+            {
+                var mainViewModel = MainViewModel.GetInstance();
+                mainViewModel.VotingEvents = new VotingEventViewModel();
+            }
         }
     }
 }

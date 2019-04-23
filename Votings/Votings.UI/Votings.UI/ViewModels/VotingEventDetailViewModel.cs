@@ -32,5 +32,10 @@ namespace Votings.UI.ViewModels
             this.apiService = new ApiService();
             this.IsEnabled = true;
         }
+
+        private async void GetEventWithCandidates(VotingEvent votingEvent)
+        {
+
+        }
     }
 }

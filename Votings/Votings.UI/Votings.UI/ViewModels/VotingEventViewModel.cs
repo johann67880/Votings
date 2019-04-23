@@ -18,15 +18,24 @@ namespace Votings.UI.ViewModels
         private readonly ApiService apiService;
         private List<VotingEvent> myEvents;
         private ObservableCollection<VotingEventItemViewModel> items;
-        private bool isRefreshing;
+        private bool isRefreshing = false;
+
+        public bool IsRefreshing
+        {
+            get => this.isRefreshing;
+            set => this.SetValue(ref this.isRefreshing, value);
+        }
 
         public ICommand SelectRefreshCommand => new RelayCommand(this.RefreshCommand);
 
         private void RefreshCommand()
         {
-            this.IsRefreshing = true;
+            if (this.IsRefreshing)
+            {
+                this.IsRefreshing = false;
+            }
+
             this.LoadVotingEvents();
-            this.IsRefreshing = false;
         }
 
         public ObservableCollection<VotingEventItemViewModel> Items
@@ -35,20 +44,20 @@ namespace Votings.UI.ViewModels
             set => this.SetValue(ref this.items, value);
         }
 
-        public bool IsRefreshing
-        {
-            get => this.isRefreshing;
-            set => this.SetValue(ref this.isRefreshing, value);
-        }
-
         public VotingEventViewModel()
         {
             this.apiService = new ApiService();
             this.LoadVotingEvents();
+            this.IsRefreshing = false;
         }
 
         private async void LoadVotingEvents()
         {
+            if(this.IsRefreshing)
+            {
+                this.IsRefreshing = false;
+            }
+
             this.IsRefreshing = true;
 
             var url = Application.Current.Resources["UrlAPI"].ToString();
