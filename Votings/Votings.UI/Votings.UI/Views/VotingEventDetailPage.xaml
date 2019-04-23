@@ -5,30 +5,47 @@
              Title="Details"
              x:Class="Votings.UI.Views.VotingEventDetailPage">
     <ContentPage.Content>
-        <ScrollView
-            BindingContext="{Binding VotingEventDetail}">
-            <StackLayout Padding="10">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+        <StackLayout
+            BindingContext="{Binding VotingEventDetail}"
+            Padding="8">
+            <ListView
+                HasUnevenRows="True"
+                ItemsSource="{Binding Items}">
+                <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SelectCandidateCommand}"/>
+                            </Grid.GestureRecognizers>
 
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="0"
-                        Text="{Binding Name}"
-                        VerticalOptions="Center">
-                    </Label>
-
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="0"
-                        Text="{Binding Description}"
-                        VerticalOptions="Center">
-                    </Label>
-                </Grid>
-            </StackLayout>
-        </ScrollView>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="1" VerticalOptions="Center">
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="Medium"
+                                    Text="{Binding Name}"
+                                    TextColor="Black">
+                                </Label>
+                                <Label
+                                    FontSize="Small"
+                                    Text="{Binding Proposal}"
+                                    TextColor="Black">
+                                </Label>
+                                <Image
+                                    HeightRequest="150"
+                                    Source="{Binding ImageFullPath}">
+                                </Image>
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

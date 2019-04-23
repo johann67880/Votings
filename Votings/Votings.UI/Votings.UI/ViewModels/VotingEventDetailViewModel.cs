@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using Votings.Common.Models;
 using Votings.Common.Services;
@@ -13,8 +15,15 @@ namespace Votings.UI.ViewModels
         private bool isEnabled;
         private readonly ApiService apiService;
         private VotingEvent myVotingEvent;
+        private ObservableCollection<CandidateItemViewModel> items;
 
         public VotingEvent votingEvent { get; set; }
+
+        public ObservableCollection<CandidateItemViewModel> Items
+        {
+            get => this.items;
+            set => this.SetValue(ref this.items, value);
+        }
 
         public bool IsRunning
         {
@@ -57,6 +66,22 @@ namespace Votings.UI.ViewModels
             }
 
             this.myVotingEvent = (VotingEvent)response.Result;
+            this.RefreshCandidatesList();
+        }
+
+        private void RefreshCandidatesList()
+        {
+            this.Items = new ObservableCollection<CandidateItemViewModel>(
+                this.myVotingEvent.Candidates.Select(p => new CandidateItemViewModel
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    ImageFullPath = p.ImageFullPath,
+                    ImageArray = p.ImageArray,
+                    Proposal = p.Proposal
+                })
+            .OrderBy(p => p.Name)
+            .ToList());
         }
     }
 }
