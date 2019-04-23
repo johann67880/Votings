@@ -117,8 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
   <data name="Accept" xml:space="preserve">
     <value>Accept</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CityError" xml:space="preserve">
+    <value>You must select a city.</value>
+  </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="ConfirmPasswordError" xml:space="preserve">
+    <value>You must enter the password confirm.</value>
+  </data>
+  <data name="CountryError" xml:space="preserve">
+    <value>You must select a country.</value>
+  </data>
+  <data name="CurrentPasswordError" xml:space="preserve">
+    <value>You must enter the current password.</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
@@ -132,8 +153,26 @@
   <data name="Error" xml:space="preserve">
     <value>Error</value>
   </data>
+  <data name="EventConfirmation" xml:space="preserve">
+    <value>Are you sure you want to vote for:</value>
+  </data>
+  <data name="EventFinished" xml:space="preserve">
+    <value>Event has finished. You are not allowed to vote for this event.</value>
+  </data>
+  <data name="EventNotStarted" xml:space="preserve">
+    <value>Event has not started yet</value>
+  </data>
+  <data name="FirstNameError" xml:space="preserve">
+    <value>You must enter the first name.</value>
+  </data>
   <data name="Forgot" xml:space="preserve">
     <value>Forgot my password?</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>The current password is incorrect.</value>
+  </data>
+  <data name="LastNameError" xml:space="preserve">
+    <value>You must enter the last name.</value>
   </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
@@ -141,19 +180,55 @@
   <data name="LoginError" xml:space="preserve">
     <value>Email or password incorrect</value>
   </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Close session</value>
+  </data>
+  <data name="ModifyUser" xml:space="preserve">
+    <value>Modify User</value>
+  </data>
+  <data name="NewPasswordError" xml:space="preserve">
+    <value>You must enter the new password.</value>
+  </data>
+  <data name="OccupationError" xml:space="preserve">
+    <value>You must enter an Occupation.</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>
   <data name="PasswordError" xml:space="preserve">
     <value>You must enter a password</value>
   </data>
+  <data name="PasswordLengthError" xml:space="preserve">
+    <value>The password must have at least 6 characters length.</value>
+  </data>
+  <data name="PasswordNotMatch" xml:space="preserve">
+    <value>The password and confirm does not match.</value>
+  </data>
   <data name="PasswordPlaceHolder" xml:space="preserve">
     <value>Enter your password</value>
+  </data>
+  <data name="PhoneNumberError" xml:space="preserve">
+    <value>You must enter a phone number.</value>
   </data>
   <data name="RegisterNewUser" xml:space="preserve">
     <value>New User</value>
   </data>
   <data name="Remember" xml:space="preserve">
     <value>Remember me in this device</value>
+  </data>
+  <data name="Setup" xml:space="preserve">
+    <value>Setup</value>
+  </data>
+  <data name="UpdatedUser" xml:space="preserve">
+    <value>User updated!</value>
+  </data>
+  <data name="ValidEmailError" xml:space="preserve">
+    <value>You must enter a valid email.</value>
+  </data>
+  <data name="VoteRegistered" xml:space="preserve">
+    <value>Your vote has been registered</value>
   </data>
 </root>

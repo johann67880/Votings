@@ -9,6 +9,7 @@ using System.Windows.Input;
 using Votings.Common.Helpers;
 using Votings.Common.Models;
 using Votings.Common.Services;
+using Votings.UI.Helpers;
 using Votings.UI.Views;
 using Xamarin.Forms;
 
@@ -101,9 +102,9 @@ namespace Votings.UI.ViewModels
             if (!response.IsSuccess)
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
+                    Languages.Error,
                     response.Message,
-                    "Accept");
+                    Languages.Accept);
                 return;
             }
 
@@ -128,60 +129,58 @@ namespace Votings.UI.ViewModels
         }
 
         private async void Save()
-        {
-            ////TODO: Change static text to Multilanguage
-            
+        {            
             if (string.IsNullOrEmpty(this.User.FirstName))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter the first name.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.FirstNameError,
+                    Languages.Accept);
                 return;
             }
 
             if (string.IsNullOrEmpty(this.User.LastName))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter the last name.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.LastNameError,
+                    Languages.Accept);
                 return;
             }
 
             if (this.Country == null)
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must select a country.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.CountryError,
+                    Languages.Accept);
                 return;
             }
 
             if (this.City == null)
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must select a city.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.CityError,
+                    Languages.Accept);
                 return;
             }
 
             if (string.IsNullOrEmpty(this.User.Occupation))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter an Occupation.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.OccupationError,
+                    Languages.Accept);
                 return;
             }
 
             if (string.IsNullOrEmpty(this.User.PhoneNumber))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter a phone number.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.PhoneNumberError,
+                    Languages.Accept);
                 return;
             }
 
@@ -203,9 +202,9 @@ namespace Votings.UI.ViewModels
             if (!response.IsSuccess)
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
+                    Languages.Error,
                     response.Message,
-                    "Accept");
+                    Languages.Accept);
                 return;
             }
 
@@ -213,9 +212,9 @@ namespace Votings.UI.ViewModels
             Settings.User = JsonConvert.SerializeObject(this.User);
 
             await Application.Current.MainPage.DisplayAlert(
-                "Ok",
-                "User updated!",
-                "Accept");
+                Languages.Ok,
+                Languages.UpdatedUser,
+                Languages.Accept);
             await App.Navigator.PopAsync();
         }
 

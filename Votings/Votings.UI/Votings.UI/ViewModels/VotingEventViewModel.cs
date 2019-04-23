@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Input;
 using Votings.Common.Models;
 using Votings.Common.Services;
+using Votings.UI.Helpers;
 using Xamarin.Forms;
 
 namespace Votings.UI.ViewModels
@@ -73,9 +74,9 @@ namespace Votings.UI.ViewModels
             if (!response.IsSuccess)
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
+                    Languages.Error,
                     response.Message,
-                    "Accept");
+                    Languages.Accept);
                 return;
             }
 

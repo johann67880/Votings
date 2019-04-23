@@ -8,6 +8,7 @@ using System.Windows.Input;
 using Votings.Common.Helpers;
 using Votings.Common.Models;
 using Votings.Common.Services;
+using Votings.UI.Helpers;
 using Xamarin.Forms;
 
 namespace Votings.UI.ViewModels
@@ -108,9 +109,9 @@ namespace Votings.UI.ViewModels
             if (!response.IsSuccess)
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
+                    Languages.Error,
                     response.Message,
-                    "Accept");
+                    Languages.Accept);
                 return;
             }
 
@@ -119,114 +120,112 @@ namespace Votings.UI.ViewModels
         }
 
         private async void Register()
-        {
-            ////TODO: Change static text to multilanguage
-            
+        {            
             if (string.IsNullOrEmpty(this.FirstName))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter the first name.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.FirstNameError,
+                    Languages.Accept);
                 return;
             }
 
             if (string.IsNullOrEmpty(this.LastName))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter the last name.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.LastNameError,
+                    Languages.Accept);
                 return;
             }
 
             if (string.IsNullOrEmpty(this.Email))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter an email.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.EmailError,
+                    Languages.Accept);
                 return;
             }
 
             if (!RegexHelper.IsValidEmail(this.Email))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter a valid email.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.ValidEmailError,
+                    Languages.Accept);
                 return;
             }
 
             if (this.Country == null)
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must select a country.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.CountryError,
+                    Languages.Accept);
                 return;
             }
 
             if (this.City == null)
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must select a city.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.CityError,
+                    Languages.Accept);
                 return;
             }
 
             if (string.IsNullOrEmpty(this.Occupation))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter an Occupation.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.OccupationError,
+                    Languages.Accept);
                 return;
             }
 
             if (string.IsNullOrEmpty(this.Phone))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter a phone number.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.PhoneNumberError,
+                    Languages.Accept);
                 return;
             }
 
             if (string.IsNullOrEmpty(this.Password))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter a password.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.PasswordError,
+                    Languages.Accept);
                 return;
             }
 
             if (this.Password.Length < 6)
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You password must be at mimimun 6 characters.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.PasswordLengthError,
+                    Languages.Accept);
                 return;
             }
 
             if (string.IsNullOrEmpty(this.Confirm))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter a password confirm.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.ConfirmPasswordError
+                    Languages.Accept);
                 return;
             }
 
             if (!this.Password.Equals(this.Confirm))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "The password and the confirm do not match.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.PasswordNotMatch,
+                    Languages.Accept);
                 return;
             }
 
@@ -260,16 +259,16 @@ namespace Votings.UI.ViewModels
             if (!response.IsSuccess)
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
+                    Languages.Error,
                     response.Message,
-                    "Accept");
+                    Languages.Accept);
                 return;
             }
 
             await Application.Current.MainPage.DisplayAlert(
-                "Ok",
+                Languages.Ok,
                 response.Message,
-                "Accept");
+                Languages.Accept);
 
             await Application.Current.MainPage.Navigation.PopAsync();
         }

@@ -26,10 +26,10 @@ namespace Votings.UI.ViewModels
             var candidate = (Candidate)this;
 
             var confirm = await Application.Current.MainPage.DisplayAlert(
-                "Confirmation",
-                $"Are you sure you want to vote for: {candidate.Name} ?",
+                Languages.Confirmation,
+                $"{Languages.EventConfirmation} {candidate.Name} ?",
                 Languages.Accept,
-                "Cancel");
+                Languages.Cancel);
 
             if (!confirm)
             {
@@ -57,16 +57,16 @@ namespace Votings.UI.ViewModels
             if (!response.IsSuccess)
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
+                    Languages.Error,
                     response.Message,
-                    "Accept");
+                    Languages.Accept);
 
                 return;
             }
 
             await Application.Current.MainPage.DisplayAlert(
-                "Confirmation",
-                $"Your vote has been registered.",
+                Languages.Confirmation,
+                Languages.VoteRegistered,
                 Languages.Accept);
 
             await App.Navigator.PopAsync();

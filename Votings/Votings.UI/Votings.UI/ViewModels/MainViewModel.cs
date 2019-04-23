@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using Votings.Common.Models;
+using Votings.UI.Helpers;
 
 namespace Votings.UI.ViewModels
 {
@@ -43,28 +44,28 @@ namespace Votings.UI.ViewModels
                 {
                     Icon = "ic_info",
                     PageName = "AboutPage",
-                    Title = "About"
+                    Title = Languages.About
                 },
 
                 new Menu
                 {
                     Icon = "ic_person",
                     PageName = "ProfilePage",
-                    Title = "Modify User"
+                    Title = Languages.ModifyUser
                 },
 
                 new Menu
                 {
                     Icon = "ic_setting",
                     PageName = "SetupPage",
-                    Title = "Setup"
+                    Title = Languages.Setup
                 },
 
                 new Menu
                 {
                     Icon = "ic_logout",
                     PageName = "LoginPage",
-                    Title = "Close session"
+                    Title = Languages.Logout
                 }
             };
 

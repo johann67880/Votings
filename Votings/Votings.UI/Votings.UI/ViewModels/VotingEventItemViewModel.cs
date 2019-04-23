@@ -30,7 +30,7 @@ namespace Votings.UI.ViewModels
             {
                 await Application.Current.MainPage.DisplayAlert(
                     Languages.Error,
-                    "Event has not started yet",
+                    Languages.EventNotStarted,
                     Languages.Accept);
 
                 return;
@@ -40,7 +40,7 @@ namespace Votings.UI.ViewModels
             {
                 await Application.Current.MainPage.DisplayAlert(
                     Languages.Error,
-                    "Event has finished. You are not allowed to vote for this event.",
+                    Languages.EventFinished,
                     Languages.Accept);
 
                 return;

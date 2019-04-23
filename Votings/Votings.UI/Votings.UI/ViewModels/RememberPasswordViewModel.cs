@@ -6,6 +6,7 @@ using System.Windows.Input;
 using Votings.Common.Helpers;
 using Votings.Common.Models;
 using Votings.Common.Services;
+using Votings.UI.Helpers;
 using Xamarin.Forms;
 
 namespace Votings.UI.ViewModels
@@ -43,18 +44,18 @@ namespace Votings.UI.ViewModels
             if (string.IsNullOrEmpty(this.Email))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter an email.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.EmailError,
+                    Languages.Accept);
                 return;
             }
 
             if (!RegexHelper.IsValidEmail(this.Email))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter a valid email.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.ValidEmailError,
+                    Languages.Accept);
                 return;
             }
 
@@ -79,16 +80,16 @@ namespace Votings.UI.ViewModels
             if (!response.IsSuccess)
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
+                    Languages.Error,
                     response.Message,
-                    "Accept");
+                    Languages.Accept);
                 return;
             }
 
             await Application.Current.MainPage.DisplayAlert(
-                "Ok",
+                Languages.Ok,
                 response.Message,
-                "Accept");
+                Languages.Accept);
 
             await Application.Current.MainPage.Navigation.PopAsync();
         }
