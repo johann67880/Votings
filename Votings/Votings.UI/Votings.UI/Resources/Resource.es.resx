@@ -156,4 +156,79 @@
   <data name="Remember" xml:space="preserve">
     <value>Recuérdame en este dispositivo!</value>
   </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>Confirmación</value>
+  </data>
+  <data name="EventFinished" xml:space="preserve">
+    <value>El evento ha terminado. No tienes permitido votar por este evento.</value>
+  </data>
+  <data name="EventNotStarted" xml:space="preserve">
+    <value>¡El evento aún no ha comenzado!</value>
+  </data>
+  <data name="EventConfirmation" xml:space="preserve">
+    <value>Confirmación</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="VoteRegistered" xml:space="preserve">
+    <value>¡Tu voto ha sido registrado!</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Cerrar sesión</value>
+  </data>
+  <data name="Setup" xml:space="preserve">
+    <value>Configuración</value>
+  </data>
+  <data name="ModifyUser" xml:space="preserve">
+    <value>Modificar usuario</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>Acerca de</value>
+  </data>
+  <data name="CurrentPasswordError" xml:space="preserve">
+    <value>Debe introducir su contraseña actual.</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>La contraseña actual es incorrecta</value>
+  </data>
+  <data name="NewPasswordError" xml:space="preserve">
+    <value>Debe ingresar la nueva contraseña.</value>
+  </data>
+  <data name="PasswordLengthError" xml:space="preserve">
+    <value>La contraseña debe tener al menos 6 caracteres.</value>
+  </data>
+  <data name="ConfirmPasswordError" xml:space="preserve">
+    <value>Debes introducir la contraseña confirmar.</value>
+  </data>
+  <data name="PasswordNotMatch" xml:space="preserve">
+    <value>La nueva contraseña y la confirmación de contraseña no son iguales.</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="FirstNameError" xml:space="preserve">
+    <value>Debe introducir el nombre</value>
+  </data>
+  <data name="LastNameError" xml:space="preserve">
+    <value>Debe introducir el apellido</value>
+  </data>
+  <data name="CountryError" xml:space="preserve">
+    <value>Debe seleccionar un país.</value>
+  </data>
+  <data name="CityError" xml:space="preserve">
+    <value>Debes seleccionar una ciudad.</value>
+  </data>
+  <data name="OccupationError" xml:space="preserve">
+    <value>Debes ingresar una Ocupación.</value>
+  </data>
+  <data name="PhoneNumberError" xml:space="preserve">
+    <value>Debes poner un número de teléfono</value>
+  </data>
+  <data name="UpdatedUser" xml:space="preserve">
+    <value>Usuario actualizado</value>
+  </data>
+  <data name="ValidEmailError" xml:space="preserve">
+    <value>Hay que introducir una dirección de correo válida.</value>
+  </data>
 </root>
