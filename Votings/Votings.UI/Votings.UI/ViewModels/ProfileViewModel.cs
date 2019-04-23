@@ -117,6 +117,7 @@ namespace Votings.UI.ViewModels
             foreach (var country in this.myCountries)
             {
                 var city = country.Cities.Where(c => c.Id == this.User.CityId).FirstOrDefault();
+
                 if (city != null)
                 {
                     this.Country = country;

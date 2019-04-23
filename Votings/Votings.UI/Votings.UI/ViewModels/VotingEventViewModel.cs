@@ -64,7 +64,7 @@ namespace Votings.UI.ViewModels
             var response = await this.apiService.GetListAsync<VotingEvent>(
                 url,
                 "/api",
-                "/VotingEvent",
+                "/VotingEvent/All",
                 "bearer",
                 MainViewModel.GetInstance().Token.Token);
 
