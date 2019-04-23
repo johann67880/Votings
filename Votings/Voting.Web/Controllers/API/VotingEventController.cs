@@ -47,7 +47,7 @@ namespace Voting.Web.Controllers.API
         }
 
         [HttpPost]
-        [Route("save")]
+        [Route("Save")]
         public async Task<IActionResult> SaveUserVote([FromBody] Vote vote)
         {
             if (!ModelState.IsValid)

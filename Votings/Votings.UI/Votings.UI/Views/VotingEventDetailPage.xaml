@@ -8,6 +8,29 @@
         <StackLayout
             BindingContext="{Binding VotingEventDetail}"
             Padding="8">
+            <Label
+                Margin="0,20,0,0"
+                VerticalOptions="CenterAndExpand"
+                FontAttributes="Bold"
+                FontSize="Medium"
+                Text="{Binding votingEvent.Name}"
+                TextColor="Black">
+            </Label>
+            <Label
+                VerticalOptions="StartAndExpand"
+                FontSize="Small"
+                Text="{Binding votingEvent.Description}"
+                TextColor="Black">
+            </Label>
+            <Label
+                Text="{Binding votingEvent.StartDate, StringFormat='Started: \{0:d}'}"
+                TextColor="Blue">
+            </Label>
+            <Label
+                Margin="0,0,0,20"
+                Text="{Binding votingEvent.EndDate, StringFormat='Finished: \{0:d}'}"
+                TextColor="Blue">
+            </Label>
             <ListView
                 HasUnevenRows="True"
                 ItemsSource="{Binding Items}">
@@ -24,22 +47,30 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <StackLayout Grid.Column="1" VerticalOptions="Center">
+
+                                <StackLayout Grid.Column="1" VerticalOptions="Center" Spacing="1">
+                                <Image
+                                    Margin="0,20,0,0"
+                                    VerticalOptions="StartAndExpand"
+                                    HeightRequest="100"
+                                    Source="{Binding ImageFullPath}">
+                                </Image>
+                                
                                 <Label
+                                    VerticalOptions="StartAndExpand"
                                     FontAttributes="Bold"
                                     FontSize="Medium"
                                     Text="{Binding Name}"
                                     TextColor="Black">
                                 </Label>
+                                
                                 <Label
+                                    VerticalOptions="StartAndExpand"
                                     FontSize="Small"
+                                    Margin="0,0,0,20"
                                     Text="{Binding Proposal}"
                                     TextColor="Black">
                                 </Label>
-                                <Image
-                                    HeightRequest="150"
-                                    Source="{Binding ImageFullPath}">
-                                </Image>
                             </StackLayout>
                         </Grid>
                     </ViewCell>

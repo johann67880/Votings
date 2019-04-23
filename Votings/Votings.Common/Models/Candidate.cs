@@ -7,18 +7,17 @@ namespace Votings.Common.Models
 {
     public class Candidate
     {
-        [JsonProperty("id")]
         public int Id { get; set; }
 
-        [JsonProperty("name")]
+        [JsonProperty("Name")]
         public string Name { get; set; }
 
-        [JsonProperty("proposal")]
+        [JsonProperty("Proposal")]
         public string Proposal { get; set; }
 
-        [JsonProperty("imageFullPath")]
-        public string ImageFullPath { get; set; }
+        [JsonProperty("Image")]
+        public string Image { get; set; }
 
-        public byte[] ImageArray { get; set; }
+        public string ImageFullPath { get; set; }
     }
 }
