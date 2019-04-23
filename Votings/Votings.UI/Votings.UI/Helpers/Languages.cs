@@ -60,32 +60,32 @@ namespace Votings.UI.Helpers
 
         public static string CurrentPasswordError => Resource.CurrentPasswordError;
 
-        public static string IncorrectPassword => Languages.IncorrectPassword;
+        public static string IncorrectPassword => Resource.IncorrectPassword;
 
-        public static string NewPasswordError => Languages.NewPasswordError;
+        public static string NewPasswordError => Resource.NewPasswordError;
 
-        public static string PasswordLengthError => Languages.PasswordLengthError;
+        public static string PasswordLengthError => Resource.PasswordLengthError;
 
-        public static string ConfirmPasswordError => Languages.ConfirmPasswordError;
+        public static string ConfirmPasswordError => Resource.ConfirmPasswordError;
 
-        public static string PasswordNotMatch => Languages.PasswordNotMatch;
+        public static string PasswordNotMatch => Resource.PasswordNotMatch;
 
-        public static string Ok => Languages.Ok;
+        public static string Ok => Resource.Ok;
 
-        public static string FirstNameError => Languages.FirstNameError;
+        public static string FirstNameError => Resource.FirstNameError;
 
-        public static string LastNameError => Languages.LastNameError;
+        public static string LastNameError => Resource.LastNameError;
 
-        public static string CountryError => Languages.CountryError;
+        public static string CountryError => Resource.CountryError;
 
-        public static string CityError => Languages.CityError;
+        public static string CityError => Resource.CityError;
 
-        public static string OccupationError => Languages.OccupationError;
+        public static string OccupationError => Resource.OccupationError;
 
-        public static string PhoneNumberError => Languages.PhoneNumberError;
+        public static string PhoneNumberError => Resource.PhoneNumberError;
 
-        public static string UpdatedUser => Languages.UpdatedUser;
+        public static string UpdatedUser => Resource.UpdatedUser;
 
-        public static string ValidEmailError => Languages.ValidEmailError;
+        public static string ValidEmailError => Resource.ValidEmailError;
     }
 }

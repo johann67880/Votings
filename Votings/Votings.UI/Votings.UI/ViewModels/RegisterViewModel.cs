@@ -215,7 +215,7 @@ namespace Votings.UI.ViewModels
             {
                 await Application.Current.MainPage.DisplayAlert(
                     Languages.Error,
-                    Languages.ConfirmPasswordError
+                    Languages.ConfirmPasswordError,
                     Languages.Accept);
                 return;
             }
