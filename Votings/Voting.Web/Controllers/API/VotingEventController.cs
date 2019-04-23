@@ -62,7 +62,14 @@ namespace Voting.Web.Controllers.API
                 return this.BadRequest("Invalid user");
             }
 
-            var newVote = await this.voteRepository.CreateAsync(vote);
+            var userVote = new Vote();
+            userVote.VotingEvent = this.votingEventRepository.GetVotingEvent(vote.VotingEvent.Id);
+            userVote.Candidate = await this.candidateRepository.GetByIdAsync(vote.Candidate.Id);
+            userVote.User = await this.userHelper.GetUserByIdAsync(vote.User.Id);
+            userVote.Id = 0;
+            userVote.RegistrationDate = DateTime.UtcNow;
+            
+            var newVote = await this.voteRepository.CreateAsync(userVote);
             return Ok(newVote);
         }
     }
