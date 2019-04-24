@@ -87,5 +87,8 @@ namespace Votings.UI.Helpers
         public static string Start => Resource.Start;
         public static string Finish => Resource.Finish;
         public static string VotingEvents => Resource.VotingEvents;
+        public static string BirthDate => Resource.BirthDate;
+        public static string Female => Resource.Female;
+        public static string Male => Resource.Male;
     }
 }

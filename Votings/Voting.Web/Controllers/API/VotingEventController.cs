@@ -50,11 +50,6 @@ namespace Voting.Web.Controllers.API
         [Route("Save")]
         public async Task<IActionResult> SaveUserVote([FromBody] Vote vote)
         {
-            if (!ModelState.IsValid)
-            {
-                return this.BadRequest(ModelState);
-            }
-
             var user = await this.userHelper.GetUserByEmailAsync(vote.User.UserName);
 
             if (user == null)

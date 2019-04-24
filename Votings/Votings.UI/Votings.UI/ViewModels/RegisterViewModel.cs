@@ -250,7 +250,7 @@ namespace Votings.UI.ViewModels
             var response = await this.apiService.RegisterUserAsync(
                 url,
                 "/api",
-                "/Account",
+                "/Account/SaveUser",
                 request);
 
             this.IsRunning = false;

@@ -345,4 +345,13 @@
   <data name="Total" xml:space="preserve">
     <value>Total: {0}</value>
   </data>
+  <data name="BirthDate" xml:space="preserve">
+    <value>Birthdate</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Male</value>
+  </data>
 </root>

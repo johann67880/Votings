@@ -24,5 +24,8 @@ namespace Votings.Common.Models
         public List<Vote> Votes { get; set; }
 
         public int TotalVotes { get { return this.Votes == null ? 0 : this.Votes.Count(); } }
+
+        [JsonIgnore]
+        public bool IsFinished { get; set; }
     }
 }

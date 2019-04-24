@@ -354,7 +354,8 @@
 
         public IActionResult RecoverPassword()
         {
-            return this.View();
+            RecoverPasswordViewModel viewModel = new RecoverPasswordViewModel();
+            return this.View("RecoverPassword", viewModel);
         }
 
         [HttpPost]

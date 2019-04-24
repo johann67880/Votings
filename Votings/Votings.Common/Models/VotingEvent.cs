@@ -35,14 +35,16 @@ namespace Votings.Common.Models
         [JsonProperty("totalVotes")]
         public int TotalVotes { get { return this.Votes == null ? 0 : this.Votes.Count(); } }
 
+        [JsonIgnore]
         public bool IsFinished
         {
             get
             {
-                return DateTime.UtcNow.ToLocalTime() > this.EndDate;
+                return DateTime.UtcNow.ToLocalTime() > this.EndDate.AddDays(1).AddTicks(-1);
             }
         }
 
+        [JsonIgnore]
         public bool IsEnabled
         {
             get
@@ -51,11 +53,12 @@ namespace Votings.Common.Models
             }
         }
 
+        [JsonIgnore]
         public bool IsStarted
         {
             get
             {
-                return DateTime.UtcNow.ToLocalTime() >= this.StartDate;
+                return DateTime.UtcNow.ToLocalTime() >= this.StartDate.AddDays(1).AddTicks(-1);
             }
         }
     }

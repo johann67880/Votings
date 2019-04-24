@@ -42,12 +42,24 @@
                     <Label
                         Grid.Column="0"
                         Grid.Row="2"
+                        Text="{i18n:Translate BirthDate}"
+                        VerticalOptions="Center">
+                    </Label>
+                    <DatePicker
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Format="dd/MM/yyyy"
+                        Date="{Binding User.Birthdate}">
+                    </DatePicker>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="3"
                         Text="{i18n:Translate CountryLabel}"
                         VerticalOptions="Center">
                     </Label>
                     <Picker
                         Grid.Column="1"
-                        Grid.Row="2"
+                        Grid.Row="3"
                         ItemDisplayBinding="{Binding Name}"
                         ItemsSource="{Binding Countries}"
                         SelectedItem="{Binding Country}"
@@ -55,13 +67,13 @@
                     </Picker>
                     <Label
                         Grid.Column="0"
-                        Grid.Row="3"
+                        Grid.Row="4"
                         Text="{i18n:Translate CityLabel}"
                         VerticalOptions="Center">
                     </Label>
                     <Picker
                         Grid.Column="1"
-                        Grid.Row="3"
+                        Grid.Row="4"
                         ItemDisplayBinding="{Binding Name}"
                         ItemsSource="{Binding Cities}"
                         SelectedItem="{Binding City}"
@@ -69,25 +81,55 @@
                     </Picker>
                     <Label
                         Grid.Column="0"
-                        Grid.Row="4"
-                        Text="{i18n:Translate AddressLabel}"
+                        Grid.Row="5"
+                        Text="{i18n:Translate Gender}"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Picker
+                        Grid.Column="1"
+                        Grid.Row="5"
+                        ItemDisplayBinding="{Binding User.Gender}"
+                        SelectedItem="{Binding User.Gender}"
+                        Title="{i18n:Translate Gender}">
+                        <Picker.Items>
+                            <i18n:Translate Text="Male"></i18n:Translate>
+                            <i18n:Translate Text="Female"></i18n:Translate>
+                        </Picker.Items>
+                    </Picker>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="6"
+                        Text="{i18n:Translate OccupationLabel}"
                         VerticalOptions="Center">
                     </Label>
                     <Entry
                         Grid.Column="1"
-                        Grid.Row="4"
-                        Placeholder="{i18n:Translate AddressPlaceHolder}"
-                        Text="{Binding User.Address}">
+                        Grid.Row="6"
+                        Placeholder="{i18n:Translate OccupationPlaceHolder}"
+                        Text="{Binding User.Occupation}">
                     </Entry>
                     <Label
                         Grid.Column="0"
-                        Grid.Row="5"
+                        Grid.Row="7"
+                        Text="{i18n:Translate Stratum}"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="1"
+                        Grid.Row="7"
+                        Keyboard="Numeric"
+                        Placeholder="{i18n:Translate Stratum}"
+                        Text="{Binding User.Stratum}">
+                    </Entry>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="8"
                         Text="{i18n:Translate PhoneNumberLabel}"
                         VerticalOptions="Center">
                     </Label>
                     <Entry
                         Grid.Column="1"
-                        Grid.Row="5"
+                        Grid.Row="8"
                         Keyboard="Telephone"
                         Placeholder="{i18n:Translate PhoneNumberPlaceHolder}"
                         Text="{Binding User.PhoneNumber}">

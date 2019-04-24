@@ -83,16 +83,15 @@
                     <Label
                         Grid.Column="0"
                         Grid.Row="5"
-                        Text="{i18n:Translate AddressLabel}"
+                        Text="{i18n:Translate BirthDate}"
                         VerticalOptions="Center">
                     </Label>
-                    <Entry
+                    <DatePicker
                         Grid.Column="1"
                         Grid.Row="5"
-                        Keyboard="Email"
-                        Placeholder="{i18n:Translate AddressPlaceHolder}"
-                        Text="{Binding Address}">
-                    </Entry>
+                        Format="dd/MM/yyyy"
+                        Date="{Binding Birthdate}">
+                    </DatePicker>
                     <Label
                         Grid.Column="0"
                         Grid.Row="6"
@@ -137,12 +136,17 @@
                         Text="{i18n:Translate Gender}"
                         VerticalOptions="Center">
                     </Label>
-                    <Entry
+                    <Picker
                         Grid.Column="1"
                         Grid.Row="9"
-                        Placeholder="{i18n:Translate Gender}"
-                        Text="{Binding Gender}">
-                    </Entry>
+                        ItemDisplayBinding="{Binding Gender}"
+                        SelectedItem="{Binding Gender}"
+                        Title="{i18n:Translate Gender}">
+                        <Picker.Items>
+                            <i18n:Translate Text="Male"></i18n:Translate>
+                            <i18n:Translate Text="Female"></i18n:Translate>
+                        </Picker.Items>
+                    </Picker>
                     <Label
                         Grid.Column="0"
                         Grid.Row="10"
