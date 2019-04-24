@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
-             Title="You already vote for"
+             xmlns:i18n="clr-namespace:Votings.UI.Helpers"
+             Title="{i18n:Translate VoteMadeTitle}"
              x:Class="Votings.UI.Views.UserVotePage">
     <ContentPage.Content>
         <StackLayout

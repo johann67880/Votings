@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
-             Title="Register New User"
+             xmlns:i18n="clr-namespace:Votings.UI.Helpers"
+             Title="{i18n:Translate RegisterUser}"
              x:Class="Votings.UI.Views.RegisterPage">
     <ContentPage.Content>
         <ScrollView
@@ -12,49 +13,49 @@
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="3*"/>
                     </Grid.ColumnDefinitions>
                     <Label
                         Grid.Column="0"
                         Grid.Row="0"
-                        Text="First name"
+                        Text="{i18n:Translate FirstNameLabel}"
                         VerticalOptions="Center">
                     </Label>
                     <Entry
                         Grid.Column="1"
                         Grid.Row="0"
-                        Placeholder="First name..."
+                        Placeholder="{i18n:Translate FirstNamePlaceHolder}"
                         Text="{Binding FirstName}">
                     </Entry>
                     <Label
                         Grid.Column="0"
                         Grid.Row="1"
-                        Text="Last name"
+                        Text="{i18n:Translate LastNameLabel}"
                         VerticalOptions="Center">
                     </Label>
                     <Entry
                         Grid.Column="1"
                         Grid.Row="1"
-                        Placeholder="Last name..."
+                        Placeholder="{i18n:Translate LastNamePlaceHolder}"
                         Text="{Binding LastName}">
                     </Entry>
                     <Label
                         Grid.Column="0"
                         Grid.Row="2"
-                        Text="Email"
+                        Text="{i18n:Translate Email}"
                         VerticalOptions="Center">
                     </Label>
                     <Entry
                         Grid.Column="1"
                         Grid.Row="2"
                         Keyboard="Email"
-                        Placeholder="Email..."
+                        Placeholder="{i18n:Translate EmailPlaceHolder}"
                         Text="{Binding Email}">
                     </Entry>
                     <Label
                         Grid.Column="0"
                         Grid.Row="3"
-                        Text="Country"
+                        Text="{i18n:Translate CountryLabel}"
                         VerticalOptions="Center">
                     </Label>
                     <Picker
@@ -63,12 +64,12 @@
                         ItemDisplayBinding="{Binding Name}"
                         ItemsSource="{Binding Countries}"
                         SelectedItem="{Binding Country}"
-                        Title="Select a country...">
+                        Title="{i18n:Translate CountryPlaceHolder}">
                     </Picker>
                     <Label
                         Grid.Column="0"
                         Grid.Row="4"
-                        Text="City"
+                        Text="{i18n:Translate CityLabel}"
                         VerticalOptions="Center">
                     </Label>
                     <Picker
@@ -77,95 +78,95 @@
                         ItemDisplayBinding="{Binding Name}"
                         ItemsSource="{Binding Cities}"
                         SelectedItem="{Binding City}"
-                        Title="Select a city...">
+                        Title="{i18n:Translate CityPlaceHolder}">
                     </Picker>
                     <Label
                         Grid.Column="0"
                         Grid.Row="5"
-                        Text="Address"
+                        Text="{i18n:Translate AddressLabel}"
                         VerticalOptions="Center">
                     </Label>
                     <Entry
                         Grid.Column="1"
                         Grid.Row="5"
                         Keyboard="Email"
-                        Placeholder="Address..."
+                        Placeholder="{i18n:Translate AddressPlaceHolder}"
                         Text="{Binding Address}">
                     </Entry>
                     <Label
                         Grid.Column="0"
                         Grid.Row="6"
-                        Text="Telephone"
+                        Text="{i18n:Translate PhoneNumberLabel}"
                         VerticalOptions="Center">
                     </Label>
                     <Entry
                         Grid.Column="1"
                         Grid.Row="6"
                         Keyboard="Telephone"
-                        Placeholder="Phone number..."
+                        Placeholder="{i18n:Translate PhoneNumberPlaceHolder}"
                         Text="{Binding Phone}">
                     </Entry>
                     <Label
                         Grid.Column="0"
                         Grid.Row="7"
-                        Text="Occupation"
+                        Text="{i18n:Translate OccupationLabel}"
                         VerticalOptions="Center">
                     </Label>
                     <Entry
                         Grid.Column="1"
                         Grid.Row="7"
-                        Placeholder="Occupation..."
+                        Placeholder="{i18n:Translate OccupationPlaceHolder}"
                         Text="{Binding Occupation}">
                     </Entry>
                     <Label
                         Grid.Column="0"
                         Grid.Row="8"
-                        Text="Stratum"
+                        Text="{i18n:Translate Stratum}"
                         VerticalOptions="Center">
                     </Label>
                     <Entry
                         Grid.Column="1"
                         Grid.Row="8"
                         Keyboard="Numeric"
-                        Placeholder="Stratum..."
+                        Placeholder="{i18n:Translate Stratum}"
                         Text="{Binding Stratum}">
                     </Entry>
                     <Label
                         Grid.Column="0"
                         Grid.Row="9"
-                        Text="Gender"
+                        Text="{i18n:Translate Gender}"
                         VerticalOptions="Center">
                     </Label>
                     <Entry
                         Grid.Column="1"
                         Grid.Row="9"
-                        Placeholder="Gender..."
+                        Placeholder="{i18n:Translate Gender}"
                         Text="{Binding Gender}">
                     </Entry>
                     <Label
                         Grid.Column="0"
                         Grid.Row="10"
-                        Text="Password"
+                        Text="{i18n:Translate Password}"
                         VerticalOptions="Center">
                     </Label>
                     <Entry
                         Grid.Column="1"
                         Grid.Row="10"
                         IsPassword="True"
-                        Placeholder="Password..."
+                        Placeholder="{i18n:Translate Password}"
                         Text="{Binding Password}">
                     </Entry>
                     <Label
                         Grid.Column="0"
                         Grid.Row="11"
-                        Text="Password confirm"
+                        Text="{i18n:Translate ConfirmPassword}"
                         VerticalOptions="Center">
                     </Label>
                     <Entry
                         Grid.Column="1"
                         Grid.Row="11"
                         IsPassword="True"
-                        Placeholder="Confirm Password..."
+                        Placeholder="{i18n:Translate ConfirmPassword}"
                         Text="{Binding Confirm}">
                     </Entry>
                 </Grid>
@@ -180,7 +181,7 @@
                     HeightRequest="46"
                     HorizontalOptions="FillAndExpand"
                     IsEnabled="{Binding IsEnabled}"
-                    Text="Register New User"
+                    Text="{i18n:Translate RegisterUser}"
                     TextColor="White">
                 </Button>
             </StackLayout>

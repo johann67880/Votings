@@ -79,11 +79,38 @@ namespace Votings.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Address.
+        /// </summary>
+        internal static string AddressLabel {
+            get {
+                return ResourceManager.GetString("AddressLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter your address.
+        /// </summary>
+        internal static string AddressPlaceHolder {
+            get {
+                return ResourceManager.GetString("AddressPlaceHolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         internal static string Cancel {
             get {
                 return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change password.
+        /// </summary>
+        internal static string ChangePassword {
+            get {
+                return ResourceManager.GetString("ChangePassword", resourceCulture);
             }
         }
         
@@ -97,11 +124,38 @@ namespace Votings.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to City.
+        /// </summary>
+        internal static string CityLabel {
+            get {
+                return ResourceManager.GetString("CityLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select a city.
+        /// </summary>
+        internal static string CityPlaceHolder {
+            get {
+                return ResourceManager.GetString("CityPlaceHolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Confirmation.
         /// </summary>
         internal static string Confirmation {
             get {
                 return ResourceManager.GetString("Confirmation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm password.
+        /// </summary>
+        internal static string ConfirmPassword {
+            get {
+                return ResourceManager.GetString("ConfirmPassword", resourceCulture);
             }
         }
         
@@ -115,6 +169,24 @@ namespace Votings.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Confirm new password.
+        /// </summary>
+        internal static string ConfirmPasswordLabel {
+            get {
+                return ResourceManager.GetString("ConfirmPasswordLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Re-enter the new password.
+        /// </summary>
+        internal static string ConfirmPasswordPlaceHolder {
+            get {
+                return ResourceManager.GetString("ConfirmPasswordPlaceHolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You must select a country..
         /// </summary>
         internal static string CountryError {
@@ -124,11 +196,56 @@ namespace Votings.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Country.
+        /// </summary>
+        internal static string CountryLabel {
+            get {
+                return ResourceManager.GetString("CountryLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select a country.
+        /// </summary>
+        internal static string CountryPlaceHolder {
+            get {
+                return ResourceManager.GetString("CountryPlaceHolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You must enter the current password..
         /// </summary>
         internal static string CurrentPasswordError {
             get {
                 return ResourceManager.GetString("CurrentPasswordError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current Password.
+        /// </summary>
+        internal static string CurrentPasswordLabel {
+            get {
+                return ResourceManager.GetString("CurrentPasswordLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter your current password.
+        /// </summary>
+        internal static string CurrentPasswordPlaceHolder {
+            get {
+                return ResourceManager.GetString("CurrentPasswordPlaceHolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        internal static string Details {
+            get {
+                return ResourceManager.GetString("Details", resourceCulture);
             }
         }
         
@@ -196,6 +313,15 @@ namespace Votings.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Finish: {0:dd/MM/yyyy}.
+        /// </summary>
+        internal static string Finish {
+            get {
+                return ResourceManager.GetString("Finish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You must enter the first name..
         /// </summary>
         internal static string FirstNameError {
@@ -205,11 +331,38 @@ namespace Votings.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to First name.
+        /// </summary>
+        internal static string FirstNameLabel {
+            get {
+                return ResourceManager.GetString("FirstNameLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter your first name.
+        /// </summary>
+        internal static string FirstNamePlaceHolder {
+            get {
+                return ResourceManager.GetString("FirstNamePlaceHolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Forgot my password?.
         /// </summary>
         internal static string Forgot {
             get {
                 return ResourceManager.GetString("Forgot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gender.
+        /// </summary>
+        internal static string Gender {
+            get {
+                return ResourceManager.GetString("Gender", resourceCulture);
             }
         }
         
@@ -228,6 +381,24 @@ namespace Votings.UI.Resources {
         internal static string LastNameError {
             get {
                 return ResourceManager.GetString("LastNameError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last name.
+        /// </summary>
+        internal static string LastNameLabel {
+            get {
+                return ResourceManager.GetString("LastNameLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter your last name.
+        /// </summary>
+        internal static string LastNamePlaceHolder {
+            get {
+                return ResourceManager.GetString("LastNamePlaceHolder", resourceCulture);
             }
         }
         
@@ -259,6 +430,24 @@ namespace Votings.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Menu.
+        /// </summary>
+        internal static string MenuTitle {
+            get {
+                return ResourceManager.GetString("MenuTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Modify Password.
+        /// </summary>
+        internal static string ModifyPassword {
+            get {
+                return ResourceManager.GetString("ModifyPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Modify User.
         /// </summary>
         internal static string ModifyUser {
@@ -277,11 +466,47 @@ namespace Votings.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New Password.
+        /// </summary>
+        internal static string NewPasswordLabel {
+            get {
+                return ResourceManager.GetString("NewPasswordLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter the new password.
+        /// </summary>
+        internal static string NewPasswordPlaceHolder {
+            get {
+                return ResourceManager.GetString("NewPasswordPlaceHolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You must enter an Occupation..
         /// </summary>
         internal static string OccupationError {
             get {
                 return ResourceManager.GetString("OccupationError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Occupation.
+        /// </summary>
+        internal static string OccupationLabel {
+            get {
+                return ResourceManager.GetString("OccupationLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Occupation.
+        /// </summary>
+        internal static string OccupationPlaceHolder {
+            get {
+                return ResourceManager.GetString("OccupationPlaceHolder", resourceCulture);
             }
         }
         
@@ -349,11 +574,65 @@ namespace Votings.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Phone number.
+        /// </summary>
+        internal static string PhoneNumberLabel {
+            get {
+                return ResourceManager.GetString("PhoneNumberLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter your phone number.
+        /// </summary>
+        internal static string PhoneNumberPlaceHolder {
+            get {
+                return ResourceManager.GetString("PhoneNumberPlaceHolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Modify User.
+        /// </summary>
+        internal static string ProfileTitle {
+            get {
+                return ResourceManager.GetString("ProfileTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter email to recover the password.
+        /// </summary>
+        internal static string RecoverEmailDescription {
+            get {
+                return ResourceManager.GetString("RecoverEmailDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recover password.
+        /// </summary>
+        internal static string RecoverPassword {
+            get {
+                return ResourceManager.GetString("RecoverPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New User.
         /// </summary>
         internal static string RegisterNewUser {
             get {
                 return ResourceManager.GetString("RegisterNewUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register New User.
+        /// </summary>
+        internal static string RegisterUser {
+            get {
+                return ResourceManager.GetString("RegisterUser", resourceCulture);
             }
         }
         
@@ -367,11 +646,38 @@ namespace Votings.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        internal static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Setup.
         /// </summary>
         internal static string Setup {
             get {
                 return ResourceManager.GetString("Setup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start: {0:dd/MM/yyyy}.
+        /// </summary>
+        internal static string Start {
+            get {
+                return ResourceManager.GetString("Start", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stratum.
+        /// </summary>
+        internal static string Stratum {
+            get {
+                return ResourceManager.GetString("Stratum", resourceCulture);
             }
         }
         
@@ -394,11 +700,38 @@ namespace Votings.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You already voted for.
+        /// </summary>
+        internal static string VoteMadeTitle {
+            get {
+                return ResourceManager.GetString("VoteMadeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your vote has been registered.
         /// </summary>
         internal static string VoteRegistered {
             get {
                 return ResourceManager.GetString("VoteRegistered", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Voting Events.
+        /// </summary>
+        internal static string VotingEvents {
+            get {
+                return ResourceManager.GetString("VotingEvents", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome: {0}.
+        /// </summary>
+        internal static string Welcome {
+            get {
+                return ResourceManager.GetString("Welcome", resourceCulture);
             }
         }
     }

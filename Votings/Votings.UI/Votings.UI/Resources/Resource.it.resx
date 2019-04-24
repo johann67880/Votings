@@ -231,4 +231,115 @@
   <data name="ValidEmailError" xml:space="preserve">
     <value>Si deve inserire un indirizzo email valido.</value>
   </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Cambia password</value>
+  </data>
+  <data name="CurrentPasswordPlaceHolder" xml:space="preserve">
+    <value>Inserisci la password attuale</value>
+  </data>
+  <data name="ConfirmPasswordLabel" xml:space="preserve">
+    <value>Conferma nuova password</value>
+  </data>
+  <data name="ConfirmPasswordPlaceHolder" xml:space="preserve">
+    <value>Re-inserisci la nuova Password</value>
+  </data>
+  <data name="CurrentPasswordLabel" xml:space="preserve">
+    <value>Password Attuale</value>
+  </data>
+  <data name="NewPasswordLabel" xml:space="preserve">
+    <value>Nuova password</value>
+  </data>
+  <data name="NewPasswordPlaceHolder" xml:space="preserve">
+    <value>Inserisci la nuova password!</value>
+  </data>
+  <data name="MenuTitle" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Benvenuto</value>
+  </data>
+  <data name="FirstNameLabel" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="FirstNamePlaceHolder" xml:space="preserve">
+    <value>Inserisci il tuo nome</value>
+  </data>
+  <data name="ProfileTitle" xml:space="preserve">
+    <value>Modifica utente</value>
+  </data>
+  <data name="LastNameLabel" xml:space="preserve">
+    <value>Cognome</value>
+  </data>
+  <data name="LastNamePlaceHolder" xml:space="preserve">
+    <value>Inserisci il tuo cognome</value>
+  </data>
+  <data name="CountryLabel" xml:space="preserve">
+    <value>Paese</value>
+  </data>
+  <data name="CountryPlaceHolder" xml:space="preserve">
+    <value>Seleziona un paese</value>
+  </data>
+  <data name="CityLabel" xml:space="preserve">
+    <value>Città</value>
+  </data>
+  <data name="CityPlaceHolder" xml:space="preserve">
+    <value>Seleziona la Città</value>
+  </data>
+  <data name="AddressLabel" xml:space="preserve">
+    <value>Indirizzo</value>
+  </data>
+  <data name="AddressPlaceHolder" xml:space="preserve">
+    <value>Inserisci il tuo indirizzo</value>
+  </data>
+  <data name="PhoneNumberLabel" xml:space="preserve">
+    <value>Numero di telefono</value>
+  </data>
+  <data name="PhoneNumberPlaceHolder" xml:space="preserve">
+    <value>Inserisci il tuo numero di telefono</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salva</value>
+  </data>
+  <data name="ModifyPassword" xml:space="preserve">
+    <value>Modifica password</value>
+  </data>
+  <data name="RegisterUser" xml:space="preserve">
+    <value>Registra una nuova utenza</value>
+  </data>
+  <data name="OccupationLabel" xml:space="preserve">
+    <value>Professione</value>
+  </data>
+  <data name="OccupationPlaceHolder" xml:space="preserve">
+    <value>Professione</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Conferma password</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Genere</value>
+  </data>
+  <data name="Stratum" xml:space="preserve">
+    <value>Giacimento</value>
+  </data>
+  <data name="RecoverEmailDescription" xml:space="preserve">
+    <value>Inserisci l'email per recuperare la password!</value>
+  </data>
+  <data name="RecoverPassword" xml:space="preserve">
+    <value>Recupera password</value>
+  </data>
+  <data name="VoteMadeTitle" xml:space="preserve">
+    <value>Hai già votato per</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Dettagli</value>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>Fine: {0:dd/MM/yyyy}</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Inizio: {0:dd/MM/yyyy}</value>
+  </data>
+  <data name="VotingEvents" xml:space="preserve">
+    <value>Voto degli eventi</value>
+  </data>
 </root>

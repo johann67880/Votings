@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              BackgroundColor="Gainsboro"
-             Title="Menu"
+             xmlns:i18n="clr-namespace:Votings.UI.Helpers"
+             Title="{i18n:Translate MenuTitle}"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              x:Class="Votings.UI.Views.MenuPage">
     <ContentPage.Content>
@@ -15,7 +16,7 @@
             <Label
                 FontAttributes="Bold"
                 FontSize="Large"
-                Text="{Binding User.FullName, StringFormat='Welcome: {0}'}"
+                Text="{Binding User.FullName, StringFormat={i18n:Translate Welcome}}"
                 TextColor="Black">
             </Label>
 

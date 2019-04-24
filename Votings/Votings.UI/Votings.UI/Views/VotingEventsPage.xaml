@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
-             Title="Voting Events"
+             xmlns:i18n="clr-namespace:Votings.UI.Helpers"
+             Title="{i18n:Translate VotingEvents}"
              x:Class="Votings.UI.Views.VotingEventsPage">
     <ContentPage.Content>
         <StackLayout
@@ -42,12 +43,12 @@
                                         TextColor="Black">
                                     </Label>
                                     <Label
-                                        Text="{Binding StartDate, StringFormat='Started: \{0:d}'}"
+                                        Text="{Binding StartDate, StringFormat={i18n:Translate Start}}"
                                         TextColor="Blue">
                                     </Label>
                                     <Label
                                         Margin="0,0,0,20"
-                                        Text="{Binding EndDate, StringFormat='Finished: \{0:d}'}"
+                                        Text="{Binding EndDate, StringFormat={i18n:Translate Finish}}"
                                         TextColor="Blue">
                                     </Label>
                                 </StackLayout>

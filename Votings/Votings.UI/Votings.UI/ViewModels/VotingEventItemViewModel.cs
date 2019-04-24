@@ -26,7 +26,7 @@ namespace Votings.UI.ViewModels
             var votingEvent = (VotingEvent)this;
             var currentDate = DateTime.UtcNow.ToLocalTime();
 
-            if (currentDate < votingEvent.StartDate.ToLocalTime())
+            if (currentDate < votingEvent.StartDate)
             {
                 await Application.Current.MainPage.DisplayAlert(
                     Languages.Error,
@@ -36,7 +36,7 @@ namespace Votings.UI.ViewModels
                 return;
             }
 
-            if (currentDate > votingEvent.EndDate.ToLocalTime())
+            if (currentDate > votingEvent.EndDate)
             {
                 await Application.Current.MainPage.DisplayAlert(
                     Languages.Error,
