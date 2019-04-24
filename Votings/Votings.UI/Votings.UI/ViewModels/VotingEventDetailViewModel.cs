@@ -78,7 +78,8 @@ namespace Votings.UI.ViewModels
                     Id = p.Id,
                     Name = p.Name,
                     ImageFullPath = p.ImageFullPath,
-                    Proposal = p.Proposal
+                    Proposal = p.Proposal,
+                    Votes = p.Votes
                 })
             .OrderBy(p => p.Name)
             .ToList());

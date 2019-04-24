@@ -342,4 +342,7 @@
   <data name="VotingEvents" xml:space="preserve">
     <value>Eventos de votación</value>
   </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total: {0}</value>
+  </data>
 </root>

@@ -682,6 +682,15 @@ namespace Votings.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Total: {0}.
+        /// </summary>
+        internal static string Total {
+            get {
+                return ResourceManager.GetString("Total", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to User updated!.
         /// </summary>
         internal static string UpdatedUser {

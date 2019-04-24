@@ -34,5 +34,21 @@ namespace Votings.Common.Models
 
         [JsonProperty("totalVotes")]
         public int TotalVotes { get { return this.Votes == null ? 0 : this.Votes.Count(); } }
+
+        public bool IsFinished
+        {
+            get
+            {
+                return DateTime.UtcNow.ToLocalTime() > this.EndDate;
+            }
+        }
+
+        public bool IsStarted
+        {
+            get
+            {
+                return DateTime.UtcNow.ToLocalTime() >= this.StartDate;
+            }
+        }
     }
 }

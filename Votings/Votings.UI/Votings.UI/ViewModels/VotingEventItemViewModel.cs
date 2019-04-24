@@ -24,9 +24,9 @@ namespace Votings.UI.ViewModels
         private async void SelectVotingEvent()
         {
             var votingEvent = (VotingEvent)this;
-            var currentDate = DateTime.UtcNow.ToLocalTime();
 
-            if (currentDate < votingEvent.StartDate)
+            //If Event has not started yet
+            if (!votingEvent.IsStarted)
             {
                 await Application.Current.MainPage.DisplayAlert(
                     Languages.Error,
@@ -36,13 +36,12 @@ namespace Votings.UI.ViewModels
                 return;
             }
 
-            if (currentDate > votingEvent.EndDate)
+            //If Event finished, then show candidates with results
+            if (votingEvent.IsFinished)
             {
-                await Application.Current.MainPage.DisplayAlert(
-                    Languages.Error,
-                    Languages.EventFinished,
-                    Languages.Accept);
-
+                //Otherwise, navigate to Voting Event Details
+                MainViewModel.GetInstance().VotingEventDetail = new VotingEventDetailViewModel((VotingEvent)this);
+                await App.Navigator.PushAsync(new VotingEventDetailPage());
                 return;
             }
 

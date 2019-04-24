@@ -64,7 +64,11 @@
                                     Text="{Binding Name}"
                                     TextColor="Black">
                                 </Label>
-                                
+                                <Label
+                                    Text="{Binding TotalVotes, StringFormat={i18n:Translate Total}}"
+                                    IsVisible="{Binding IsFinished}"
+                                    TextColor="Red">
+                                </Label>
                                 <Label
                                     VerticalOptions="StartAndExpand"
                                     FontSize="Small"
