@@ -43,6 +43,14 @@ namespace Votings.Common.Models
             }
         }
 
+        public bool IsEnabled
+        {
+            get
+            {
+                return !IsFinished;
+            }
+        }
+
         public bool IsStarted
         {
             get

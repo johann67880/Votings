@@ -52,6 +52,10 @@
                                         TextColor="Blue">
                                     </Label>
                                 </StackLayout>
+                                <Image
+                                    Grid.Column="2"
+                                    Source="ic_arrow_right">
+                                </Image>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
