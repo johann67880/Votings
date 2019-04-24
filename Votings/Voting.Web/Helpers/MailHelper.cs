@@ -34,6 +34,7 @@ namespace Voting.Web.Helpers
 
             using (var client = new SmtpClient())
             {
+                client.ServerCertificateValidationCallback = (s, c, h, e) => true;
                 client.Connect(smtp, int.Parse(port), false);
                 client.Authenticate(from, password);
                 client.Send(message);

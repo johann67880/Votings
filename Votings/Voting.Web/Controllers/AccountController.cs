@@ -352,14 +352,13 @@
             return View();
         }
 
-        public IActionResult RecoverPassword()
+        public IActionResult RecoverPasswordWeb()
         {
-            RecoverPasswordViewModel viewModel = new RecoverPasswordViewModel();
-            return this.View("RecoverPassword", viewModel);
+            return this.View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> RecoverPassword(RecoverPasswordViewModel model)
+        public async Task<IActionResult> RecoverPasswordWeb(RecoverPasswordViewModel model)
         {
             if (this.ModelState.IsValid)
             {
