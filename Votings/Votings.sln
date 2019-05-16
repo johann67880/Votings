@@ -7,13 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{B206
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{6C554CA0-0B28-449C-B4EB-C8E6427464DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Voting.Web", "Voting.Web\Voting.Web.csproj", "{8FC3E433-275B-43FE-ACAE-BB777241533F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Voting.Web", "Voting.Web\Voting.Web.csproj", "{8FC3E433-275B-43FE-ACAE-BB777241533F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Votings.Common", "Votings.Common\Votings.Common.csproj", "{099BC3C9-7E94-4B3B-A45C-C54C26C5DEBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Votings.Common", "Votings.Common\Votings.Common.csproj", "{099BC3C9-7E94-4B3B-A45C-C54C26C5DEBB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Votings.UI.Android", "Votings.UI\Votings.UI.Android\Votings.UI.Android.csproj", "{E55A8CF6-0CFA-42F5-9F71-9929B7E659B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Votings.UI", "Votings.UI\Votings.UI\Votings.UI.csproj", "{22336289-4710-438C-BE8A-BC3A5AB74D45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Votings.UI", "Votings.UI\Votings.UI\Votings.UI.csproj", "{22336289-4710-438C-BE8A-BC3A5AB74D45}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MvvmCross", "MvvmCross", "{A8FB4C4F-4D13-40E5-B7E8-AB99F835A830}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Votings.UICross.Android", "Votings.UICross.Android\Votings.UICross.Android.csproj", "{D93A9FAC-D463-4ACD-86A9-9814BCA8434B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,12 @@ Global
 		{22336289-4710-438C-BE8A-BC3A5AB74D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22336289-4710-438C-BE8A-BC3A5AB74D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22336289-4710-438C-BE8A-BC3A5AB74D45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D93A9FAC-D463-4ACD-86A9-9814BCA8434B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D93A9FAC-D463-4ACD-86A9-9814BCA8434B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D93A9FAC-D463-4ACD-86A9-9814BCA8434B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D93A9FAC-D463-4ACD-86A9-9814BCA8434B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D93A9FAC-D463-4ACD-86A9-9814BCA8434B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D93A9FAC-D463-4ACD-86A9-9814BCA8434B}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -47,6 +57,7 @@ Global
 		{8FC3E433-275B-43FE-ACAE-BB777241533F} = {B2068BAB-6E44-4486-BC4F-E1BB40FE352E}
 		{E55A8CF6-0CFA-42F5-9F71-9929B7E659B1} = {6C554CA0-0B28-449C-B4EB-C8E6427464DF}
 		{22336289-4710-438C-BE8A-BC3A5AB74D45} = {6C554CA0-0B28-449C-B4EB-C8E6427464DF}
+		{D93A9FAC-D463-4ACD-86A9-9814BCA8434B} = {A8FB4C4F-4D13-40E5-B7E8-AB99F835A830}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A7FA29B6-923E-476B-9DB3-647B88B9099B}

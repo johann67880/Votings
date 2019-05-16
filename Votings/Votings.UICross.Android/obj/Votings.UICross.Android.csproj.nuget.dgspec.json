@@ -1,0 +1,136 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\JOHANN\\Temp\\Votings\\Votings\\Votings.UICross.Android\\Votings.UICross.Android.csproj": {}
+  },
+  "projects": {
+    "D:\\JOHANN\\Temp\\Votings\\Votings\\Votings.Common\\Votings.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\JOHANN\\Temp\\Votings\\Votings\\Votings.Common\\Votings.Common.csproj",
+        "projectName": "Votings.Common",
+        "projectPath": "D:\\JOHANN\\Temp\\Votings\\Votings\\Votings.Common\\Votings.Common.csproj",
+        "packagesPath": "C:\\Users\\Flia Jimenez Vargas\\.nuget\\packages\\",
+        "outputPath": "D:\\JOHANN\\Temp\\Votings\\Votings\\Votings.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\ProgramData\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Flia Jimenez Vargas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "MvvmCross": {
+              "target": "Package",
+              "version": "[6.3.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Xam.Plugins.Settings": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\JOHANN\\Temp\\Votings\\Votings\\Votings.UICross.Android\\Votings.UICross.Android.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\JOHANN\\Temp\\Votings\\Votings\\Votings.UICross.Android\\Votings.UICross.Android.csproj",
+        "projectName": "Votings.UICross.Android",
+        "projectPath": "D:\\JOHANN\\Temp\\Votings\\Votings\\Votings.UICross.Android\\Votings.UICross.Android.csproj",
+        "packagesPath": "C:\\Users\\Flia Jimenez Vargas\\.nuget\\packages\\",
+        "outputPath": "D:\\JOHANN\\Temp\\Votings\\Votings\\Votings.UICross.Android\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\ProgramData\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Flia Jimenez Vargas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid81"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid81": {
+            "projectReferences": {
+              "D:\\JOHANN\\Temp\\Votings\\Votings\\Votings.Common\\Votings.Common.csproj": {
+                "projectPath": "D:\\JOHANN\\Temp\\Votings\\Votings\\Votings.Common\\Votings.Common.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid81": {
+          "dependencies": {
+            "MvvmCross": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "MvvmCross.Plugin.Visibility": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "Xamarin.Android.Support.Core.Utils": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Android.Support.CustomTabs": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Android.Support.Design": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}
