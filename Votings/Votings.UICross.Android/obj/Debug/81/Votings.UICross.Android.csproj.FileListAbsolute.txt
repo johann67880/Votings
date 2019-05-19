@@ -232,6 +232,3 @@ D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\stamp\_CopyI
 D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\stamp\_CopyMdbFiles.stamp
 D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\stamp\_CopyPdbFiles.stamp
 D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\stamp\_ResolveLibraryProjectImports.stamp
-D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\android\assets\machine.config
-D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\stamp\_CompileToDalvik.stamp
-D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\stamp\_GeneratePackageManagerJava.stamp

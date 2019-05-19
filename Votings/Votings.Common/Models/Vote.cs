@@ -19,6 +19,8 @@ namespace Votings.Common.Models
         [JsonProperty("user")]
         public User User { get; set; }
 
+        public string UserName { get; set; }
+
         [JsonProperty("registrationDate")]
         public DateTime RegistrationDate { get; set; } = DateTime.UtcNow;
     }

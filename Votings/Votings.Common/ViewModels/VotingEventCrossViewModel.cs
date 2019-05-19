@@ -55,6 +55,38 @@ namespace Votings.Common.ViewModels
 
         private async void OnItemClickCommand(VotingEvent votingEvent)
         {
+            //If Event has not started yet
+            if (!votingEvent.IsStarted)
+            {
+                this.dialogService.Alert("Error", "Event has not started yet.", "Accept");
+                return;
+            }
+
+            //If Event finished, then show candidates with results
+            if (votingEvent.IsFinished)
+            {
+                //Otherwise, navigate to Voting Event Details
+                await this.navigationService.Navigate<VotingDetailCrossViewModel, NavigationArgs>(
+                new NavigationArgs { VotingEvent = votingEvent });
+                return;
+            }
+
+            var response = await this.apiService.GetSingleAsync<Vote>(
+                "https://betoappservice.azurewebsites.net",
+                "/api",
+                $"/VotingEvent/UserVote2/{votingEvent.Id}/{Settings.User}",
+                "bearer",
+                Settings.Token);
+
+            //If user voted, then Navigate to Anothe content page
+            if (response.Result != null && response.IsSuccess)
+            {
+                await this.navigationService.Navigate<UserVoteCrossViewModel, NavigationArgs>(
+                new NavigationArgs { VotingEvent = votingEvent });
+                return;
+            }
+
+            //Otherwise, navigate to Voting Event Details
             await this.navigationService.Navigate<VotingDetailCrossViewModel, NavigationArgs>(
                 new NavigationArgs { VotingEvent = votingEvent });
         }

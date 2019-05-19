@@ -29,5 +29,6 @@ namespace Votings.Common.Services
         Task<Response> RecoverPasswordAsync(string urlBase, string servicePrefix, string controller, RecoverPasswordRequest recoverPasswordRequest);
 
         Task<Response> RegisterUserAsync(string urlBase, string servicePrefix, string controller, NewUserRequest newUserRequest);
+        Task<Response> GetSingleAsync<T>(string urlBase, string servicePrefix, string controller, string tokenType, string accessToken);
     }
 }

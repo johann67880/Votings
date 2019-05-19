@@ -24,5 +24,14 @@ namespace Voting.Web.Data.Repositories
                 .Where(v => v.VotingEvent.Id == votingEventId && v.User.Id == userId)
                 .FirstOrDefault();
         }
+
+        public Vote GetUserVoteByVotingEventAndUserName(int votingEventId, string userName)
+        {
+            return this.context.Votes
+                .Include(v => v.VotingEvent)
+                .Include(v => v.Candidate)
+                .Where(v => v.VotingEvent.Id == votingEventId && v.User.UserName == userName)
+                .FirstOrDefault();
+        }
     }
 }

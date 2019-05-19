@@ -81,5 +81,19 @@ namespace Voting.Web.Controllers.API
 
             return Ok(result);
         }
+
+        [HttpGet]
+        [Route("UserVote2/{id:int}/{userName}")]
+        public IActionResult GetUserVoteByVotingEventIdAndUserName(int id, string userName)
+        {
+            var result = this.voteRepository.GetUserVoteByVotingEventAndUserName(id, userName);
+
+            if (result == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(result);
+        }
     }
 }
