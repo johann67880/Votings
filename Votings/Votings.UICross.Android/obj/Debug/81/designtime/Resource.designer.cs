@@ -26,6 +26,24 @@ namespace Votings.UICross.Android
 		
 		public static void UpdateIdValues()
 		{
+			global::MvvmCross.Resource.Attribute.MvxBind = global::Votings.UICross.Android.Resource.Attribute.MvxBind;
+			global::MvvmCross.Resource.Attribute.MvxDropDownItemTemplate = global::Votings.UICross.Android.Resource.Attribute.MvxDropDownItemTemplate;
+			global::MvvmCross.Resource.Attribute.MvxGroupItemTemplate = global::Votings.UICross.Android.Resource.Attribute.MvxGroupItemTemplate;
+			global::MvvmCross.Resource.Attribute.MvxItemTemplate = global::Votings.UICross.Android.Resource.Attribute.MvxItemTemplate;
+			global::MvvmCross.Resource.Attribute.MvxLang = global::Votings.UICross.Android.Resource.Attribute.MvxLang;
+			global::MvvmCross.Resource.Attribute.MvxTemplate = global::Votings.UICross.Android.Resource.Attribute.MvxTemplate;
+			global::MvvmCross.Resource.Id.MvvmCrossTagId = global::Votings.UICross.Android.Resource.Id.MvvmCrossTagId;
+			global::MvvmCross.Resource.Id.MvxBindingTagUnique = global::Votings.UICross.Android.Resource.Id.MvxBindingTagUnique;
+			global::MvvmCross.Resource.Styleable.MvxBinding = global::Votings.UICross.Android.Resource.Styleable.MvxBinding;
+			global::MvvmCross.Resource.Styleable.MvxBinding_MvxBind = global::Votings.UICross.Android.Resource.Styleable.MvxBinding_MvxBind;
+			global::MvvmCross.Resource.Styleable.MvxBinding_MvxLang = global::Votings.UICross.Android.Resource.Styleable.MvxBinding_MvxLang;
+			global::MvvmCross.Resource.Styleable.MvxControl = global::Votings.UICross.Android.Resource.Styleable.MvxControl;
+			global::MvvmCross.Resource.Styleable.MvxControl_MvxTemplate = global::Votings.UICross.Android.Resource.Styleable.MvxControl_MvxTemplate;
+			global::MvvmCross.Resource.Styleable.MvxExpandableListView = global::Votings.UICross.Android.Resource.Styleable.MvxExpandableListView;
+			global::MvvmCross.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate = global::Votings.UICross.Android.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate;
+			global::MvvmCross.Resource.Styleable.MvxListView = global::Votings.UICross.Android.Resource.Styleable.MvxListView;
+			global::MvvmCross.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::Votings.UICross.Android.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
+			global::MvvmCross.Resource.Styleable.MvxListView_MvxItemTemplate = global::Votings.UICross.Android.Resource.Styleable.MvxListView_MvxItemTemplate;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::Votings.UICross.Android.Resource.Attribute.font;
 			global::Xamarin.Essentials.Resource.Attribute.fontProviderAuthority = global::Votings.UICross.Android.Resource.Attribute.fontProviderAuthority;
 			global::Xamarin.Essentials.Resource.Attribute.fontProviderCerts = global::Votings.UICross.Android.Resource.Attribute.fontProviderCerts;
@@ -833,6 +851,24 @@ namespace Votings.UICross.Android
 			
 			// aapt resource value: 0x7F0400D0
 			public const int multiChoiceItemLayout = 2130968784;
+			
+			// aapt resource value: 0x7F070002
+			public const int MvxBind = 2131165186;
+			
+			// aapt resource value: 0x7F070006
+			public const int MvxDropDownItemTemplate = 2131165190;
+			
+			// aapt resource value: 0x7F070007
+			public const int MvxGroupItemTemplate = 2131165191;
+			
+			// aapt resource value: 0x7F070005
+			public const int MvxItemTemplate = 2131165189;
+			
+			// aapt resource value: 0x7F070003
+			public const int MvxLang = 2131165187;
+			
+			// aapt resource value: 0x7F070004
+			public const int MvxTemplate = 2131165188;
 			
 			// aapt resource value: 0x7F0400D1
 			public const int navigationContentDescription = 2130968785;
@@ -2617,6 +2653,12 @@ namespace Votings.UICross.Android
 			
 			// aapt resource value: 0x7F0C0046
 			public const int multiply = 2131492934;
+			
+			// aapt resource value: 0x7F050002
+			public const int MvvmCrossTagId = 2131034114;
+			
+			// aapt resource value: 0x7F050003
+			public const int MvxBindingTagUnique = 2131034115;
 			
 			// aapt resource value: 0x7F0C0047
 			public const int navigation_header_container = 2131492935;
@@ -4449,11 +4491,11 @@ namespace Votings.UICross.Android
 			public static int[] ActionBarLayout = new int[] {
 					16842931};
 			
-			// aapt resource value: 0x7F050047
-			public const int ActionBarLayout_android_layout_gravity = 2131034183;
+			// aapt resource value: 0x7F060057
+			public const int ActionBarLayout_android_layout_gravity = 2131099735;
 			
-			// aapt resource value: 0x7F050017
-			public const int ActionBar_background = 2131034135;
+			// aapt resource value: 0x7F060027
+			public const int ActionBar_background = 2131099687;
 			
 			// aapt resource value: 0x1
 			public const int ActionBar_backgroundSplit = 1;
@@ -4542,8 +4584,8 @@ namespace Votings.UICross.Android
 			public static int[] ActionMenuItemView = new int[] {
 					16843071};
 			
-			// aapt resource value: 0x7F050049
-			public const int ActionMenuItemView_android_minWidth = 2131034185;
+			// aapt resource value: 0x7F060059
+			public const int ActionMenuItemView_android_minWidth = 2131099737;
 			
 			public static int[] ActionMode = new int[] {
 					2130968626,
@@ -4553,8 +4595,8 @@ namespace Votings.UICross.Android
 					2130968847,
 					2130968901};
 			
-			// aapt resource value: 0x7F050051
-			public const int ActionMode_background = 2131034193;
+			// aapt resource value: 0x7F060061
+			public const int ActionMode_background = 2131099745;
 			
 			// aapt resource value: 0x1
 			public const int ActionMode_backgroundSplit = 1;
@@ -4575,8 +4617,8 @@ namespace Votings.UICross.Android
 					2130968704,
 					2130968746};
 			
-			// aapt resource value: 0x7F050058
-			public const int ActivityChooserView_expandActivityOverflowButtonDrawable = 2131034200;
+			// aapt resource value: 0x7F060068
+			public const int ActivityChooserView_expandActivityOverflowButtonDrawable = 2131099752;
 			
 			// aapt resource value: 0x1
 			public const int ActivityChooserView_initialActivityCount = 1;
@@ -4590,8 +4632,8 @@ namespace Votings.UICross.Android
 					2130968828,
 					2130968829};
 			
-			// aapt resource value: 0x7F050061
-			public const int AlertDialog_android_layout = 2131034209;
+			// aapt resource value: 0x7F060071
+			public const int AlertDialog_android_layout = 2131099761;
 			
 			// aapt resource value: 0x1
 			public const int AlertDialog_buttonPanelSideLayout = 1;
@@ -4622,14 +4664,14 @@ namespace Votings.UICross.Android
 					2130968838,
 					2130968839};
 			
-			// aapt resource value: 0x7F050075
-			public const int AppBarLayoutStates_state_collapsed = 2131034229;
+			// aapt resource value: 0x7F060085
+			public const int AppBarLayoutStates_state_collapsed = 2131099781;
 			
 			// aapt resource value: 0x1
 			public const int AppBarLayoutStates_state_collapsible = 1;
 			
-			// aapt resource value: 0x7F050069
-			public const int AppBarLayout_android_background = 2131034217;
+			// aapt resource value: 0x7F060079
+			public const int AppBarLayout_android_background = 2131099769;
 			
 			// aapt resource value: 0x1
 			public const int AppBarLayout_android_keyboardNavigationCluster = 1;
@@ -4647,8 +4689,8 @@ namespace Votings.UICross.Android
 					2130968765,
 					2130968766};
 			
-			// aapt resource value: 0x7F050078
-			public const int AppBarLayout_Layout_layout_scrollFlags = 2131034232;
+			// aapt resource value: 0x7F060088
+			public const int AppBarLayout_Layout_layout_scrollFlags = 2131099784;
 			
 			// aapt resource value: 0x1
 			public const int AppBarLayout_Layout_layout_scrollInterpolator = 1;
@@ -4659,8 +4701,8 @@ namespace Votings.UICross.Android
 					2130968889,
 					2130968890};
 			
-			// aapt resource value: 0x7F050081
-			public const int AppCompatImageView_android_src = 2131034241;
+			// aapt resource value: 0x7F060091
+			public const int AppCompatImageView_android_src = 2131099793;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatImageView_srcCompat = 1;
@@ -4677,8 +4719,8 @@ namespace Votings.UICross.Android
 					2130968887,
 					2130968888};
 			
-			// aapt resource value: 0x7F050086
-			public const int AppCompatSeekBar_android_thumb = 2131034246;
+			// aapt resource value: 0x7F060096
+			public const int AppCompatSeekBar_android_thumb = 2131099798;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatSeekBar_tickMark = 1;
@@ -4698,8 +4740,8 @@ namespace Votings.UICross.Android
 					16843117,
 					16842804};
 			
-			// aapt resource value: 0x7F050091
-			public const int AppCompatTextHelper_android_drawableBottom = 2131034257;
+			// aapt resource value: 0x7F060101
+			public const int AppCompatTextHelper_android_drawableBottom = 2131099905;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatTextHelper_android_drawableEnd = 1;
@@ -4729,8 +4771,8 @@ namespace Votings.UICross.Android
 					2130968720,
 					2130968869};
 			
-			// aapt resource value: 0x7F050099
-			public const int AppCompatTextView_android_textAppearance = 2131034265;
+			// aapt resource value: 0x7F060109
+			public const int AppCompatTextView_android_textAppearance = 2131099913;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatTextView_autoSizeMaxTextSize = 1;
@@ -4874,8 +4916,8 @@ namespace Votings.UICross.Android
 					2130968921,
 					2130968922};
 			
-			// aapt resource value: 0x7F050108
-			public const int AppCompatTheme_actionBarDivider = 2131034376;
+			// aapt resource value: 0x7F060118
+			public const int AppCompatTheme_actionBarDivider = 2131099928;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatTheme_actionBarItemBackground = 1;
@@ -5238,8 +5280,8 @@ namespace Votings.UICross.Android
 					2130968753,
 					2130968783};
 			
-			// aapt resource value: 0x7F050228
-			public const int BottomNavigationView_elevation = 2131034664;
+			// aapt resource value: 0x7F060238
+			public const int BottomNavigationView_elevation = 2131100216;
 			
 			// aapt resource value: 0x1
 			public const int BottomNavigationView_itemBackground = 1;
@@ -5258,8 +5300,8 @@ namespace Votings.UICross.Android
 					2130968635,
 					2130968636};
 			
-			// aapt resource value: 0x7F050234
-			public const int BottomSheetBehavior_Layout_behavior_hideable = 2131034676;
+			// aapt resource value: 0x7F060244
+			public const int BottomSheetBehavior_Layout_behavior_hideable = 2131100228;
 			
 			// aapt resource value: 0x1
 			public const int BottomSheetBehavior_Layout_behavior_peekHeight = 1;
@@ -5270,8 +5312,8 @@ namespace Votings.UICross.Android
 			public static int[] ButtonBarLayout = new int[] {
 					2130968615};
 			
-			// aapt resource value: 0x7F050238
-			public const int ButtonBarLayout_allowStacking = 2131034680;
+			// aapt resource value: 0x7F060248
+			public const int ButtonBarLayout_allowStacking = 2131100232;
 			
 			public static int[] CollapsingToolbarLayout = new int[] {
 					2130968658,
@@ -5291,8 +5333,8 @@ namespace Votings.UICross.Android
 					2130968892,
 					2130968902};
 			
-			// aapt resource value: 0x7F050240
-			public const int CollapsingToolbarLayout_collapsedTitleGravity = 2131034688;
+			// aapt resource value: 0x7F060250
+			public const int CollapsingToolbarLayout_collapsedTitleGravity = 2131100240;
 			
 			// aapt resource value: 0x1
 			public const int CollapsingToolbarLayout_collapsedTitleTextAppearance = 1;
@@ -5325,8 +5367,8 @@ namespace Votings.UICross.Android
 					2130968760,
 					2130968761};
 			
-			// aapt resource value: 0x7F050257
-			public const int CollapsingToolbarLayout_Layout_layout_collapseMode = 2131034711;
+			// aapt resource value: 0x7F060267
+			public const int CollapsingToolbarLayout_Layout_layout_collapseMode = 2131100263;
 			
 			// aapt resource value: 0x1
 			public const int CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = 1;
@@ -5354,8 +5396,8 @@ namespace Votings.UICross.Android
 					16843551,
 					16843173};
 			
-			// aapt resource value: 0x7F050260
-			public const int ColorStateListItem_alpha = 2131034720;
+			// aapt resource value: 0x7F060270
+			public const int ColorStateListItem_alpha = 2131100272;
 			
 			// aapt resource value: 0x1
 			public const int ColorStateListItem_android_alpha = 1;
@@ -5368,8 +5410,8 @@ namespace Votings.UICross.Android
 					2130968650,
 					2130968651};
 			
-			// aapt resource value: 0x7F050264
-			public const int CompoundButton_android_button = 2131034724;
+			// aapt resource value: 0x7F060274
+			public const int CompoundButton_android_button = 2131100276;
 			
 			// aapt resource value: 0x1
 			public const int CompoundButton_buttonTint = 1;
@@ -5381,8 +5423,8 @@ namespace Votings.UICross.Android
 					2130968754,
 					2130968840};
 			
-			// aapt resource value: 0x7F050268
-			public const int CoordinatorLayout_keylines = 2131034728;
+			// aapt resource value: 0x7F060278
+			public const int CoordinatorLayout_keylines = 2131100280;
 			
 			public static int[] CoordinatorLayout_Layout = new int[] {
 					16842931,
@@ -5393,8 +5435,8 @@ namespace Votings.UICross.Android
 					2130968763,
 					2130968764};
 			
-			// aapt resource value: 0x7F050271
-			public const int CoordinatorLayout_Layout_android_layout_gravity = 2131034737;
+			// aapt resource value: 0x7F060281
+			public const int CoordinatorLayout_Layout_android_layout_gravity = 2131100289;
 			
 			// aapt resource value: 0x1
 			public const int CoordinatorLayout_Layout_layout_anchor = 1;
@@ -5422,8 +5464,8 @@ namespace Votings.UICross.Android
 					2130968640,
 					2130968879};
 			
-			// aapt resource value: 0x7F050279
-			public const int DesignTheme_bottomSheetDialogTheme = 2131034745;
+			// aapt resource value: 0x7F060289
+			public const int DesignTheme_bottomSheetDialogTheme = 2131100297;
 			
 			// aapt resource value: 0x1
 			public const int DesignTheme_bottomSheetStyle = 1;
@@ -5441,8 +5483,8 @@ namespace Votings.UICross.Android
 					2130968831,
 					2130968882};
 			
-			// aapt resource value: 0x7F050283
-			public const int DrawerArrowToggle_arrowHeadLength = 2131034755;
+			// aapt resource value: 0x7F060293
+			public const int DrawerArrowToggle_arrowHeadLength = 2131100307;
 			
 			// aapt resource value: 0x1
 			public const int DrawerArrowToggle_arrowShaftLength = 1;
@@ -5475,8 +5517,8 @@ namespace Votings.UICross.Android
 					2130968816,
 					2130968911};
 			
-			// aapt resource value: 0x7F050292
-			public const int FloatingActionButton_backgroundTint = 2131034770;
+			// aapt resource value: 0x7F060302
+			public const int FloatingActionButton_backgroundTint = 2131100418;
 			
 			// aapt resource value: 0x1
 			public const int FloatingActionButton_backgroundTintMode = 1;
@@ -5484,8 +5526,8 @@ namespace Votings.UICross.Android
 			public static int[] FloatingActionButton_Behavior_Layout = new int[] {
 					2130968632};
 			
-			// aapt resource value: 0x7F050301
-			public const int FloatingActionButton_Behavior_Layout_behavior_autoHide = 2131034881;
+			// aapt resource value: 0x7F060311
+			public const int FloatingActionButton_Behavior_Layout_behavior_autoHide = 2131100433;
 			
 			// aapt resource value: 0x2
 			public const int FloatingActionButton_borderWidth = 2;
@@ -5521,8 +5563,8 @@ namespace Votings.UICross.Android
 					2130968584,
 					2130968585};
 			
-			// aapt resource value: 0x7F050010
-			public const int FontFamilyFont_android_font = 2131034128;
+			// aapt resource value: 0x7F060020
+			public const int FontFamilyFont_android_font = 2131099680;
 			
 			// aapt resource value: 0x1
 			public const int FontFamilyFont_android_fontStyle = 1;
@@ -5539,8 +5581,8 @@ namespace Votings.UICross.Android
 			// aapt resource value: 0x5
 			public const int FontFamilyFont_fontWeight = 5;
 			
-			// aapt resource value: 0x7F050003
-			public const int FontFamily_fontProviderAuthority = 2131034115;
+			// aapt resource value: 0x7F060013
+			public const int FontFamily_fontProviderAuthority = 2131099667;
 			
 			// aapt resource value: 0x1
 			public const int FontFamily_fontProviderCerts = 1;
@@ -5562,8 +5604,8 @@ namespace Votings.UICross.Android
 					16843264,
 					2130968729};
 			
-			// aapt resource value: 0x7F050303
-			public const int ForegroundLinearLayout_android_foreground = 2131034883;
+			// aapt resource value: 0x7F060313
+			public const int ForegroundLinearLayout_android_foreground = 2131100435;
 			
 			// aapt resource value: 0x1
 			public const int ForegroundLinearLayout_android_foregroundGravity = 1;
@@ -5582,8 +5624,8 @@ namespace Votings.UICross.Android
 					2130968782,
 					2130968826};
 			
-			// aapt resource value: 0x7F050307
-			public const int LinearLayoutCompat_android_baselineAligned = 2131034887;
+			// aapt resource value: 0x7F060317
+			public const int LinearLayoutCompat_android_baselineAligned = 2131100439;
 			
 			// aapt resource value: 0x1
 			public const int LinearLayoutCompat_android_baselineAlignedChildIndex = 1;
@@ -5609,8 +5651,8 @@ namespace Votings.UICross.Android
 					16843137,
 					16842996};
 			
-			// aapt resource value: 0x7F050317
-			public const int LinearLayoutCompat_Layout_android_layout_gravity = 2131034903;
+			// aapt resource value: 0x7F060327
+			public const int LinearLayoutCompat_Layout_android_layout_gravity = 2131100455;
 			
 			// aapt resource value: 0x1
 			public const int LinearLayoutCompat_Layout_android_layout_height = 1;
@@ -5631,8 +5673,8 @@ namespace Votings.UICross.Android
 					16843436,
 					16843437};
 			
-			// aapt resource value: 0x7F050322
-			public const int ListPopupWindow_android_dropDownHorizontalOffset = 2131034914;
+			// aapt resource value: 0x7F060332
+			public const int ListPopupWindow_android_dropDownHorizontalOffset = 2131100466;
 			
 			// aapt resource value: 0x1
 			public const int ListPopupWindow_android_dropDownVerticalOffset = 1;
@@ -5645,8 +5687,8 @@ namespace Votings.UICross.Android
 					16843231,
 					16843156};
 			
-			// aapt resource value: 0x7F050325
-			public const int MenuGroup_android_checkableBehavior = 2131034917;
+			// aapt resource value: 0x7F060335
+			public const int MenuGroup_android_checkableBehavior = 2131100469;
 			
 			// aapt resource value: 0x1
 			public const int MenuGroup_android_enabled = 1;
@@ -5688,8 +5730,8 @@ namespace Votings.UICross.Android
 					2130968825,
 					2130968907};
 			
-			// aapt resource value: 0x7F050332
-			public const int MenuItem_actionLayout = 2131034930;
+			// aapt resource value: 0x7F060342
+			public const int MenuItem_actionLayout = 2131100482;
 			
 			// aapt resource value: 0x1
 			public const int MenuItem_actionProviderClass = 1;
@@ -5768,8 +5810,8 @@ namespace Votings.UICross.Android
 					2130968805,
 					2130968842};
 			
-			// aapt resource value: 0x7F050356
-			public const int MenuView_android_headerBackground = 2131034966;
+			// aapt resource value: 0x7F060366
+			public const int MenuView_android_headerBackground = 2131100518;
 			
 			// aapt resource value: 0x1
 			public const int MenuView_android_horizontalDivider = 1;
@@ -5795,6 +5837,38 @@ namespace Votings.UICross.Android
 			// aapt resource value: 0x8
 			public const int MenuView_subMenuArrow = 8;
 			
+			public static int[] MvxBinding = new int[] {
+					0,
+					0};
+			
+			// aapt resource value: 0x7F060002
+			public const int MvxBinding_MvxBind = 2131099650;
+			
+			// aapt resource value: 0x7F060003
+			public const int MvxBinding_MvxLang = 2131099651;
+			
+			public static int[] MvxControl = new int[] {
+					0};
+			
+			// aapt resource value: 0x7F060005
+			public const int MvxControl_MvxTemplate = 2131099653;
+			
+			public static int[] MvxExpandableListView = new int[] {
+					0};
+			
+			// aapt resource value: 0x7F060010
+			public const int MvxExpandableListView_MvxGroupItemTemplate = 2131099664;
+			
+			public static int[] MvxListView = new int[] {
+					0,
+					0};
+			
+			// aapt resource value: 0x7F060008
+			public const int MvxListView_MvxDropDownItemTemplate = 2131099656;
+			
+			// aapt resource value: 0x7F060007
+			public const int MvxListView_MvxItemTemplate = 2131099655;
+			
 			public static int[] NavigationView = new int[] {
 					16842964,
 					16842973,
@@ -5807,8 +5881,8 @@ namespace Votings.UICross.Android
 					2130968753,
 					2130968783};
 			
-			// aapt resource value: 0x7F050366
-			public const int NavigationView_android_background = 2131034982;
+			// aapt resource value: 0x7F060376
+			public const int NavigationView_android_background = 2131100534;
 			
 			// aapt resource value: 0x1
 			public const int NavigationView_android_fitsSystemWindows = 1;
@@ -5845,11 +5919,11 @@ namespace Votings.UICross.Android
 			public static int[] PopupWindowBackgroundState = new int[] {
 					2130968837};
 			
-			// aapt resource value: 0x7F050381
-			public const int PopupWindowBackgroundState_state_above_anchor = 2131035009;
+			// aapt resource value: 0x7F060391
+			public const int PopupWindowBackgroundState_state_above_anchor = 2131100561;
 			
-			// aapt resource value: 0x7F050377
-			public const int PopupWindow_android_popupAnimationStyle = 2131034999;
+			// aapt resource value: 0x7F060387
+			public const int PopupWindow_android_popupAnimationStyle = 2131100551;
 			
 			// aapt resource value: 0x1
 			public const int PopupWindow_android_popupBackground = 1;
@@ -5861,8 +5935,8 @@ namespace Votings.UICross.Android
 					2130968790,
 					2130968793};
 			
-			// aapt resource value: 0x7F050383
-			public const int RecycleListView_paddingBottomNoButtons = 2131035011;
+			// aapt resource value: 0x7F060393
+			public const int RecycleListView_paddingBottomNoButtons = 2131100563;
 			
 			// aapt resource value: 0x1
 			public const int RecycleListView_paddingTopNoTitle = 1;
@@ -5880,8 +5954,8 @@ namespace Votings.UICross.Android
 					2130968830,
 					2130968836};
 			
-			// aapt resource value: 0x7F050386
-			public const int RecyclerView_android_descendantFocusability = 2131035014;
+			// aapt resource value: 0x7F060396
+			public const int RecyclerView_android_descendantFocusability = 2131100566;
 			
 			// aapt resource value: 0x1
 			public const int RecyclerView_android_orientation = 1;
@@ -5916,14 +5990,14 @@ namespace Votings.UICross.Android
 			public static int[] ScrimInsetsFrameLayout = new int[] {
 					2130968747};
 			
-			// aapt resource value: 0x7F050398
-			public const int ScrimInsetsFrameLayout_insetForeground = 2131035032;
+			// aapt resource value: 0x7F060408
+			public const int ScrimInsetsFrameLayout_insetForeground = 2131100680;
 			
 			public static int[] ScrollingViewBehavior_Layout = new int[] {
 					2130968634};
 			
-			// aapt resource value: 0x7F050400
-			public const int ScrollingViewBehavior_Layout_behavior_overlapTop = 2131035136;
+			// aapt resource value: 0x7F060410
+			public const int ScrollingViewBehavior_Layout_behavior_overlapTop = 2131100688;
 			
 			public static int[] SearchView = new int[] {
 					16842970,
@@ -5944,8 +6018,8 @@ namespace Votings.UICross.Android
 					2130968848,
 					2130968912};
 			
-			// aapt resource value: 0x7F050402
-			public const int SearchView_android_focusable = 2131035138;
+			// aapt resource value: 0x7F060412
+			public const int SearchView_android_focusable = 2131100690;
 			
 			// aapt resource value: 0x1
 			public const int SearchView_android_imeOptions = 1;
@@ -6000,8 +6074,8 @@ namespace Votings.UICross.Android
 					2130968701,
 					2130968780};
 			
-			// aapt resource value: 0x7F050420
-			public const int SnackbarLayout_android_maxWidth = 2131035168;
+			// aapt resource value: 0x7F060430
+			public const int SnackbarLayout_android_maxWidth = 2131100720;
 			
 			// aapt resource value: 0x1
 			public const int SnackbarLayout_elevation = 1;
@@ -6016,8 +6090,8 @@ namespace Votings.UICross.Android
 					16843131,
 					2130968803};
 			
-			// aapt resource value: 0x7F050424
-			public const int Spinner_android_dropDownWidth = 2131035172;
+			// aapt resource value: 0x7F060434
+			public const int Spinner_android_dropDownWidth = 2131100724;
 			
 			// aapt resource value: 0x1
 			public const int Spinner_android_entries = 1;
@@ -6047,8 +6121,8 @@ namespace Votings.UICross.Android
 					2130968909,
 					2130968910};
 			
-			// aapt resource value: 0x7F050430
-			public const int SwitchCompat_android_textOff = 2131035184;
+			// aapt resource value: 0x7F060440
+			public const int SwitchCompat_android_textOff = 2131100736;
 			
 			// aapt resource value: 0x1
 			public const int SwitchCompat_android_textOn = 1;
@@ -6094,8 +6168,8 @@ namespace Votings.UICross.Android
 					16842994,
 					16843087};
 			
-			// aapt resource value: 0x7F050445
-			public const int TabItem_android_icon = 2131035205;
+			// aapt resource value: 0x7F060455
+			public const int TabItem_android_icon = 2131100757;
 			
 			// aapt resource value: 0x1
 			public const int TabItem_android_layout = 1;
@@ -6121,8 +6195,8 @@ namespace Votings.UICross.Android
 					2130968867,
 					2130968868};
 			
-			// aapt resource value: 0x7F050449
-			public const int TabLayout_tabBackground = 2131035209;
+			// aapt resource value: 0x7F060459
+			public const int TabLayout_tabBackground = 2131100761;
 			
 			// aapt resource value: 0x1
 			public const int TabLayout_tabContentStart = 1;
@@ -6184,8 +6258,8 @@ namespace Votings.UICross.Android
 					2130968720,
 					2130968869};
 			
-			// aapt resource value: 0x7F050466
-			public const int TextAppearance_android_fontFamily = 2131035238;
+			// aapt resource value: 0x7F060476
+			public const int TextAppearance_android_fontFamily = 2131100790;
 			
 			// aapt resource value: 0x1
 			public const int TextAppearance_android_shadowColor = 1;
@@ -6241,8 +6315,8 @@ namespace Votings.UICross.Android
 					2130968800,
 					2130968801};
 			
-			// aapt resource value: 0x7F050480
-			public const int TextInputLayout_android_hint = 2131035264;
+			// aapt resource value: 0x7F060490
+			public const int TextInputLayout_android_hint = 2131100816;
 			
 			// aapt resource value: 0x1
 			public const int TextInputLayout_android_textColorHint = 1;
@@ -6320,8 +6394,8 @@ namespace Votings.UICross.Android
 					2130968899,
 					2130968900};
 			
-			// aapt resource value: 0x7F050497
-			public const int Toolbar_android_gravity = 2131035287;
+			// aapt resource value: 0x7F060507
+			public const int Toolbar_android_gravity = 2131100935;
 			
 			// aapt resource value: 0x1
 			public const int Toolbar_android_minHeight = 1;
@@ -6419,8 +6493,8 @@ namespace Votings.UICross.Android
 					2130968629,
 					2130968630};
 			
-			// aapt resource value: 0x7F050533
-			public const int ViewBackgroundHelper_android_background = 2131035443;
+			// aapt resource value: 0x7F060543
+			public const int ViewBackgroundHelper_android_background = 2131100995;
 			
 			// aapt resource value: 0x1
 			public const int ViewBackgroundHelper_backgroundTint = 1;
@@ -6433,8 +6507,8 @@ namespace Votings.UICross.Android
 					16842995,
 					16842994};
 			
-			// aapt resource value: 0x7F050537
-			public const int ViewStubCompat_android_id = 2131035447;
+			// aapt resource value: 0x7F060547
+			public const int ViewStubCompat_android_id = 2131100999;
 			
 			// aapt resource value: 0x1
 			public const int ViewStubCompat_android_inflatedId = 1;
@@ -6442,8 +6516,8 @@ namespace Votings.UICross.Android
 			// aapt resource value: 0x2
 			public const int ViewStubCompat_android_layout = 2;
 			
-			// aapt resource value: 0x7F050527
-			public const int View_android_focusable = 2131035431;
+			// aapt resource value: 0x7F060537
+			public const int View_android_focusable = 2131100983;
 			
 			// aapt resource value: 0x1
 			public const int View_android_theme = 1;
@@ -6470,8 +6544,8 @@ namespace Votings.UICross.Android
 		public partial class Xml
 		{
 			
-			// aapt resource value: 0x7F060002
-			public const int xamarin_essentials_fileprovider_file_paths = 2131099650;
+			// aapt resource value: 0x7F080002
+			public const int xamarin_essentials_fileprovider_file_paths = 2131230722;
 			
 			static Xml()
 			{

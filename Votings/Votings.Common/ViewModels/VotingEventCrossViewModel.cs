@@ -20,11 +20,21 @@ namespace Votings.Common.ViewModels
         private readonly IApiService apiService;
         private readonly IDialogService dialogService;
         private readonly IMvxNavigationService navigationService;
+        private MvxCommand<VotingEvent> itemClickCommand;
 
         public List<VotingEvent> VotingEvents
         {
             get => this.votingEvents;
             set => this.SetProperty(ref this.votingEvents, value);
+        }
+
+        public ICommand ItemClickCommand
+        {
+            get
+            {
+                this.itemClickCommand = new MvxCommand<VotingEvent>(this.OnItemClickCommand);
+                return itemClickCommand;
+            }
         }
 
         public VotingEventCrossViewModel(
@@ -35,7 +45,18 @@ namespace Votings.Common.ViewModels
             this.apiService = apiService;
             this.dialogService = dialogService;
             this.navigationService = navigationService;
+        }
+
+        public override void ViewAppeared()
+        {
+            base.ViewAppeared();
             this.LoadVotingEvents();
+        }
+
+        private async void OnItemClickCommand(VotingEvent votingEvent)
+        {
+            await this.navigationService.Navigate<VotingDetailCrossViewModel, NavigationArgs>(
+                new NavigationArgs { VotingEvent = votingEvent });
         }
 
         private async void LoadVotingEvents()
