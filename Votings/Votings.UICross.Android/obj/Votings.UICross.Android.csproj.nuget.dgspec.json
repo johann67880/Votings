@@ -108,6 +108,14 @@
               "target": "Package",
               "version": "[6.2.3, )"
             },
+            "MvvmCross.Droid.Support.V7.AppCompat": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "MvvmCross.Droid.Support.V7.RecyclerView": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
             "MvvmCross.Plugin.Visibility": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -134,7 +142,7 @@
             },
             "Xamarin.FFImageLoading": {
               "target": "Package",
-              "version": "[2.4.10.972, )"
+              "version": "[2.4.9.961, )"
             }
           }
         }
