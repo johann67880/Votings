@@ -17,7 +17,7 @@ namespace Votings.UICross.Android.Views
     [Activity(
         Label = "@string/app_name",
         MainLauncher = true,
-        Icon = "@drawable/icon",
+        Icon = "@drawable/splash",
         Theme = "@style/Theme.Splash",
         NoHistory = true,
         ScreenOrientation = ScreenOrientation.Portrait)]
