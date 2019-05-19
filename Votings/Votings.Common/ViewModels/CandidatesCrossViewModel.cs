@@ -19,6 +19,7 @@ namespace Votings.Common.ViewModels
         private readonly IMvxNavigationService navigationService;
         private MvxCommand<Candidate> itemClickCommand;
         private VotingEvent votingEvent;
+        private List<Candidate> candidates;
 
         public ICommand ItemClickCommand
         {
@@ -27,6 +28,12 @@ namespace Votings.Common.ViewModels
                 this.itemClickCommand =  this.itemClickCommand ?? new MvxCommand<Candidate>(this.SelectCandidate);
                 return this.itemClickCommand;
             }
+        }
+
+        public List<Candidate> Candidates
+        {
+            get => this.candidates;
+            set => this.SetProperty(ref this.candidates, value);
         }
 
         public CandidatesCrossViewModel(

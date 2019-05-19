@@ -110,7 +110,8 @@ public class MonoPackageManager {
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "Votings.UICross.Android.dll" comes first in this list. */
-		"Votings.UICross.Android.dll",
+		"FFImageLoading.dll",
+		"FFImageLoading.Platform.dll",
 		"MvvmCross.dll",
 		"MvvmCross.Plugin.Visibility.dll",
 		"Plugin.Settings.Abstractions.dll",
@@ -122,6 +123,8 @@ class MonoPackageManager_Resources {
 		"Xamarin.Android.Support.Animated.Vector.Drawable.dll",
 		"Xamarin.Android.Support.Annotations.dll",
 		"Xamarin.Android.Support.Compat.dll",
+		"Xamarin.Android.Support.Constraint.Layout.dll",
+		"Xamarin.Android.Support.Constraint.Layout.Solver.dll",
 		"Xamarin.Android.Support.Core.UI.dll",
 		"Xamarin.Android.Support.Core.Utils.dll",
 		"Xamarin.Android.Support.CustomTabs.dll",

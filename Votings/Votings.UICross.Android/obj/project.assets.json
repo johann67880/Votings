@@ -139,6 +139,27 @@
           "build/monoandroid81/Xamarin.Android.Support.Compat.targets": {}
         }
       },
+      "Xamarin.Android.Support.Constraint.Layout/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.Constraint.Layout.Solver": "[1.1.2]"
+        },
+        "compile": {
+          "lib/MonoAndroid70/Xamarin.Android.Support.Constraint.Layout.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid70/Xamarin.Android.Support.Constraint.Layout.dll": {}
+        }
+      },
+      "Xamarin.Android.Support.Constraint.Layout.Solver/1.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/MonoAndroid70/Xamarin.Android.Support.Constraint.Layout.Solver.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid70/Xamarin.Android.Support.Constraint.Layout.Solver.dll": {}
+        }
+      },
       "Xamarin.Android.Support.Core.UI/28.0.0.1": {
         "type": "package",
         "dependencies": {
@@ -327,6 +348,17 @@
         },
         "runtime": {
           "lib/monoandroid81/Xamarin.Essentials.dll": {}
+        }
+      },
+      "Xamarin.FFImageLoading/2.4.10.972": {
+        "type": "package",
+        "compile": {
+          "lib/MonoAndroid10/FFImageLoading.Platform.dll": {},
+          "lib/MonoAndroid10/FFImageLoading.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/FFImageLoading.Platform.dll": {},
+          "lib/MonoAndroid10/FFImageLoading.dll": {}
         }
       },
       "Votings.Common/1.0.0": {
@@ -676,6 +708,32 @@
         "xamarin.android.support.compat.nuspec"
       ]
     },
+    "Xamarin.Android.Support.Constraint.Layout/1.1.2": {
+      "sha512": "sn0QY7UuobzgjfHtLkJKy7P4QTF7zLnl/2MoSrES2k/qvgWgc8a7u4lk6OlI7DgbOE9cEw/yVD3cAf+r0k+e6Q==",
+      "type": "package",
+      "path": "xamarin.android.support.constraint.layout/1.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/MonoAndroid70/Xamarin.Android.Support.Constraint.Layout.dll",
+        "xamarin.android.support.constraint.layout.1.1.2.nupkg.sha512",
+        "xamarin.android.support.constraint.layout.nuspec"
+      ]
+    },
+    "Xamarin.Android.Support.Constraint.Layout.Solver/1.1.2": {
+      "sha512": "aPvrm64U2lNAJBV2hg5jNA+e7WSK/iKj8XYLa+FJLVq2qXqLS3dZ6GSdKWsTARY4z9iWrt7f7E1ODnbPgkkDBw==",
+      "type": "package",
+      "path": "xamarin.android.support.constraint.layout.solver/1.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/MonoAndroid70/Xamarin.Android.Support.Constraint.Layout.Solver.dll",
+        "xamarin.android.support.constraint.layout.solver.1.1.2.nupkg.sha512",
+        "xamarin.android.support.constraint.layout.solver.nuspec"
+      ]
+    },
     "Xamarin.Android.Support.Core.UI/28.0.0.1": {
       "sha512": "Eutx87/y/Rh2wFTfDsOwm2x6YgLABG4C4HepjJhO3xKhbhwdB1c3YOtfYwLGjoa8q2CWIzZ7WKnF8EkGj6rEew==",
       "type": "package",
@@ -949,6 +1007,69 @@
         "xamarin.essentials.nuspec"
       ]
     },
+    "Xamarin.FFImageLoading/2.4.10.972": {
+      "sha512": "AeTBDcgRXnCFqseeRqiEo2pq/HSPOV+cEbTQyLAnSPcIgEiP9Nt0fhLI3rWGiU2bra70+xxcOP/REK5PXSPZVQ==",
+      "type": "package",
+      "path": "xamarin.ffimageloading/2.4.10.972",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/FFImageLoading.Platform.dll",
+        "lib/MonoAndroid10/FFImageLoading.Platform.pdb",
+        "lib/MonoAndroid10/FFImageLoading.Platform.xml",
+        "lib/MonoAndroid10/FFImageLoading.dll",
+        "lib/MonoAndroid10/FFImageLoading.pdb",
+        "lib/MonoAndroid10/FFImageLoading.xml",
+        "lib/Xamarin.Mac20/FFImageLoading.Platform.dll",
+        "lib/Xamarin.Mac20/FFImageLoading.Platform.pdb",
+        "lib/Xamarin.Mac20/FFImageLoading.Platform.xml",
+        "lib/Xamarin.Mac20/FFImageLoading.dll",
+        "lib/Xamarin.Mac20/FFImageLoading.pdb",
+        "lib/Xamarin.Mac20/FFImageLoading.xml",
+        "lib/Xamarin.iOS10/FFImageLoading.Platform.dll",
+        "lib/Xamarin.iOS10/FFImageLoading.Platform.pdb",
+        "lib/Xamarin.iOS10/FFImageLoading.Platform.xml",
+        "lib/Xamarin.iOS10/FFImageLoading.dll",
+        "lib/Xamarin.iOS10/FFImageLoading.pdb",
+        "lib/Xamarin.iOS10/FFImageLoading.xml",
+        "lib/netstandard1.0/FFImageLoading.Platform.dll",
+        "lib/netstandard1.0/FFImageLoading.Platform.xml",
+        "lib/netstandard1.0/FFImageLoading.dll",
+        "lib/netstandard1.0/FFImageLoading.pdb",
+        "lib/netstandard1.0/FFImageLoading.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.Platform.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.Platform.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.pdb",
+        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.xml",
+        "lib/tizen40/FFImageLoading.Platform.dll",
+        "lib/tizen40/FFImageLoading.Platform.pdb",
+        "lib/tizen40/FFImageLoading.Platform.xml",
+        "lib/tizen40/FFImageLoading.dll",
+        "lib/tizen40/FFImageLoading.pdb",
+        "lib/tizen40/FFImageLoading.xml",
+        "lib/uap/FFImageLoading.Platform.dll",
+        "lib/uap/FFImageLoading.Platform.pdb",
+        "lib/uap/FFImageLoading.Platform.xml",
+        "lib/uap/FFImageLoading.dll",
+        "lib/uap/FFImageLoading.pdb",
+        "lib/uap/FFImageLoading.xml",
+        "lib/win81/FFImageLoading.Platform.dll",
+        "lib/win81/FFImageLoading.Platform.pdb",
+        "lib/win81/FFImageLoading.Platform.xml",
+        "lib/win81/FFImageLoading.dll",
+        "lib/win81/FFImageLoading.pdb",
+        "lib/win81/FFImageLoading.xml",
+        "lib/wpa81/FFImageLoading.Platform.dll",
+        "lib/wpa81/FFImageLoading.Platform.pdb",
+        "lib/wpa81/FFImageLoading.Platform.xml",
+        "lib/wpa81/FFImageLoading.dll",
+        "lib/wpa81/FFImageLoading.pdb",
+        "lib/wpa81/FFImageLoading.xml",
+        "xamarin.ffimageloading.2.4.10.972.nupkg.sha512",
+        "xamarin.ffimageloading.nuspec"
+      ]
+    },
     "Votings.Common/1.0.0": {
       "type": "project",
       "path": "../Votings.Common/Votings.Common.csproj",
@@ -960,10 +1081,12 @@
       "MvvmCross >= 6.2.3",
       "MvvmCross.Plugin.Visibility >= 6.2.3",
       "Votings.Common >= 1.0.0",
+      "Xamarin.Android.Support.Constraint.Layout >= 1.1.2",
       "Xamarin.Android.Support.Core.Utils >= 28.0.0.1",
       "Xamarin.Android.Support.CustomTabs >= 28.0.0.1",
       "Xamarin.Android.Support.Design >= 28.0.0.1",
-      "Xamarin.Essentials >= 1.1.0"
+      "Xamarin.Essentials >= 1.1.0",
+      "Xamarin.FFImageLoading >= 2.4.10.972"
     ]
   },
   "packageFolders": {
@@ -1016,6 +1139,10 @@
             "target": "Package",
             "version": "[6.2.3, )"
           },
+          "Xamarin.Android.Support.Constraint.Layout": {
+            "target": "Package",
+            "version": "[1.1.2, )"
+          },
           "Xamarin.Android.Support.Core.Utils": {
             "target": "Package",
             "version": "[28.0.0.1, )"
@@ -1031,6 +1158,10 @@
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.1.0, )"
+          },
+          "Xamarin.FFImageLoading": {
+            "target": "Package",
+            "version": "[2.4.10.972, )"
           }
         }
       }
