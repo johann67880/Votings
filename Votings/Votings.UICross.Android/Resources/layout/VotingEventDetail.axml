@@ -10,6 +10,7 @@
     android:paddingTop="15dp">
 
     <LinearLayout
+        android:id="@+id/header_layout"
         android:paddingTop="10dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
@@ -26,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="VotingEvent Name"
-            local:MvxBind="Text Name" />
+            local:MvxBind="Text VotingEvent.Name" />
 
         <TextView
             android:id="@+id/descriptionTextView"
@@ -36,7 +37,7 @@
             android:textSize="16dp"
             tools:text="VotingEvent Description"
             local:layout_constraintTop_toBottomOf="@+id/nameTextView"
-            local:MvxBind="Text Description" />
+            local:MvxBind="Text VotingEvent.Description" />
 
         <TextView
             android:id="@+id/startDateTextView"
@@ -47,7 +48,7 @@
             tools:text="VotingEvent StartDate"
             android:textColor="@android:color/holo_blue_dark"
             local:layout_constraintTop_toBottomOf="@+id/descriptionTextView"
-            local:MvxBind="Text StartDate" />
+            local:MvxBind="Text VotingEvent.StartDate" />
 
         <TextView
             android:id="@+id/endDateTextView"
@@ -58,7 +59,26 @@
             android:textColor="@android:color/holo_blue_dark"
             tools:text="VotingEvent EndDate"
             local:layout_constraintTop_toBottomOf="@+id/startDateTextView"
-            local:MvxBind="Text EndDate" />
+            local:MvxBind="Text VotingEvent.EndDate" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        local:layout_constraintTop_toBottomOf="@+id/header_layout">
+
+        <mvvmcross.droid.support.v7.recyclerview.MvxRecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            local:MvxItemTemplate="@layout/candidaterow"
+            local:MvxBind="ItemsSource Candidates;ItemClick ItemClickCommand;"/>
 
     </LinearLayout>
 

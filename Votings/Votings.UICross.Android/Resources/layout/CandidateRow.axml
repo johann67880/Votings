@@ -24,10 +24,11 @@
         <TextView
             android:id="@+id/nameTextView"
             android:textStyle="bold"
-            android:textSize="20dp"
+            android:textSize="16dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Product Description"
             local:layout_constraintLeft_toRightOf="@+id/productImageView"
             local:MvxBind="Text Name" />
 
@@ -35,13 +36,28 @@
             android:id="@+id/proposalTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:textStyle="italic"
             android:layout_marginTop="6dp"
-            android:textSize="16dp"
-            tools:text="$16.99"
+            android:textSize="12dp"
             local:layout_constraintTop_toBottomOf="@+id/nameTextView"
             local:layout_constraintLeft_toRightOf="@+id/productImageView"
             local:MvxBind="Text Proposal" />
+
+        <TextView
+            android:id="@+id/totalVotesTextView"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            local:layout_constraintTop_toBottomOf="@+id/proposalTextView"
+            local:layout_constraintLeft_toRightOf="@+id/productImageView"
+            android:textColor="@android:color/holo_blue_dark"
+            tools:text="Total Votes:"
+            local:MvxBind="Text TotalVotes" />
 
     </android.support.constraint.ConstraintLayout>
 

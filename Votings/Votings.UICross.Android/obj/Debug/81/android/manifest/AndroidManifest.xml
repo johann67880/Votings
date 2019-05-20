@@ -15,6 +15,7 @@
       </intent-filter>
     </activity>
     <activity android:label="@string/app_name" android:name="md58a78947c3d4c69ebe19a7485c61553d2.UserVoteView" />
+    <activity android:label="@string/app_name" android:name="md58a78947c3d4c69ebe19a7485c61553d2.VotingDetailView" />
     <activity android:label="@string/app_name" android:name="md58a78947c3d4c69ebe19a7485c61553d2.VotingEventsView" />
     <service android:name="md5dcb6eccdc824e0677ffae8ccdde42930.KeepAliveService" />
     <receiver android:enabled="true" android:exported="false" android:label="Essentials Battery Broadcast Receiver" android:name="md5d630c3d3bfb5f5558520331566132d97.BatteryBroadcastReceiver" />

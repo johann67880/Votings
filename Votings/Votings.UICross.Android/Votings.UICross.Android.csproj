@@ -69,6 +69,7 @@
     <Compile Include="Views\RegisterView.cs" />
     <Compile Include="Views\SplashView.cs" />
     <Compile Include="Views\UserVoteView.cs" />
+    <Compile Include="Views\VotingDetailView.cs" />
     <Compile Include="Views\VotingEventsView.cs" />
   </ItemGroup>
   <ItemGroup>

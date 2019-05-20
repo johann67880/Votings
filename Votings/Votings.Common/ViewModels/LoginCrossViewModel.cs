@@ -114,6 +114,7 @@
             var token = (TokenResponse)response.Result;
             Settings.UserEmail = this.Email;
             Settings.Token = JsonConvert.SerializeObject(token);
+            Settings.StrToken = token.Token;
             this.IsLoading = false;
             await this.navigationService.Navigate<VotingEventCrossViewModel>();
         }

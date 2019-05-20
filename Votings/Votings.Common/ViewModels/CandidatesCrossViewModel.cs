@@ -17,24 +17,7 @@ namespace Votings.Common.ViewModels
         private readonly IApiService apiService;
         private readonly IDialogService dialogService;
         private readonly IMvxNavigationService navigationService;
-        private MvxCommand<Candidate> itemClickCommand;
         private VotingEvent votingEvent;
-        private List<Candidate> candidates;
-
-        public ICommand ItemClickCommand
-        {
-            get
-            {
-                this.itemClickCommand =  this.itemClickCommand ?? new MvxCommand<Candidate>(this.SelectCandidate);
-                return this.itemClickCommand;
-            }
-        }
-
-        public List<Candidate> Candidates
-        {
-            get => this.candidates;
-            set => this.SetProperty(ref this.candidates, value);
-        }
 
         public CandidatesCrossViewModel(
             IApiService apiService,
@@ -49,34 +32,6 @@ namespace Votings.Common.ViewModels
         public override void Prepare(NavigationArgs parameter)
         {
             this.votingEvent = parameter.VotingEvent;
-        }
-
-        private async void SelectCandidate(Candidate candidate)
-        {
-            var vote = new Vote()
-            {
-                Candidate = candidate,
-                RegistrationDate = DateTime.Now,
-                UserName = Settings.User,
-                VotingEvent = this.votingEvent
-            };
-
-            var response = await this.apiService.PostAsync<Vote>(
-                "https://betoappservice.azurewebsites.net",
-                "/api",
-                "/VotingEvent/Save",
-                vote,
-                "bearer",
-                Settings.Token);
-
-            if (!response.IsSuccess)
-            {
-                this.dialogService.Alert("Error", "An error has occurred saving your vote. Try again", "Accept");
-
-                return;
-            }
-
-            await this.navigationService.Close(this);
         }
     }
 }

@@ -40,6 +40,7 @@ LinearLayout;obj\Debug\81\res\layout\splashpage.xml
 LinearLayout;obj\Debug\81\res\layout\uservotepage.xml
 LinearLayout;obj\Debug\81\res\layout\votingeventdetail.xml
 mvvmcross.droid.support.v7.recyclerview.MvxRecyclerView;obj\Debug\81\res\layout\candidatepage.xml
+mvvmcross.droid.support.v7.recyclerview.MvxRecyclerView;obj\Debug\81\res\layout\votingeventdetail.xml
 mvvmcross.droid.support.v7.recyclerview.MvxRecyclerView;obj\Debug\81\res\layout\votingeventpage.xml
 mvvmcross.platforms.android.binding.views.MvxSpinner;obj\Debug\81\res\layout\registerpage.xml
 paths;D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\lp\32\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
