@@ -36,6 +36,7 @@ D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\android\asse
 D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\android\assets\Xamarin.Android.Support.Media.Compat.dll
 D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\android\assets\Xamarin.Android.Support.Transition.dll
 D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\android\assets\Xamarin.Android.Support.v7.AppCompat.dll
+D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\android\assets\Xamarin.Android.Support.v7.CardView.dll
 D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\android\assets\Xamarin.Android.Support.v7.RecyclerView.dll
 D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\android\assets\Xamarin.Android.Support.Vector.Drawable.dll
 D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\android\assets\Xamarin.Essentials.dll

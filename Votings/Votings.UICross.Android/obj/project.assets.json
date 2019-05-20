@@ -389,6 +389,21 @@
           "build/monoandroid81/Xamarin.Android.Support.v7.AppCompat.targets": {}
         }
       },
+      "Xamarin.Android.Support.v7.CardView/28.0.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.Annotations": "[28.0.0.1]"
+        },
+        "compile": {
+          "lib/monoandroid81/Xamarin.Android.Support.v7.CardView.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid81/Xamarin.Android.Support.v7.CardView.dll": {}
+        },
+        "build": {
+          "build/monoandroid81/Xamarin.Android.Support.v7.CardView.targets": {}
+        }
+      },
       "Xamarin.Android.Support.v7.RecyclerView/28.0.0.1": {
         "type": "package",
         "dependencies": {
@@ -461,7 +476,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "MvvmCross": "6.3.0",
+          "MvvmCross": "6.2.3",
           "Xam.Plugins.Settings": "3.1.1"
         },
         "compile": {
@@ -1077,6 +1092,27 @@
         "xamarin.android.support.v7.appcompat.nuspec"
       ]
     },
+    "Xamarin.Android.Support.v7.CardView/28.0.0.1": {
+      "sha512": "cQxnwu8OWrGRz0Z300TA3NPr7ofsQ4I7tMw1NLFdKbfgPscLmPmiJiJsMcchCL/T9SVz4/3eRoUh6V1fg8iAqA==",
+      "type": "package",
+      "path": "xamarin.android.support.v7.cardview/28.0.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/monoandroid71/Xamarin.Android.Support.v7.CardView.targets",
+        "build/monoandroid80/Xamarin.Android.Support.v7.CardView.targets",
+        "build/monoandroid81/Xamarin.Android.Support.v7.CardView.targets",
+        "build/monoandroid90/Xamarin.Android.Support.v7.CardView.targets",
+        "lib/monoandroid60/Xamarin.Android.Support.v7.CardView.dll",
+        "lib/monoandroid70/Xamarin.Android.Support.v7.CardView.dll",
+        "lib/monoandroid71/Xamarin.Android.Support.v7.CardView.dll",
+        "lib/monoandroid80/Xamarin.Android.Support.v7.CardView.dll",
+        "lib/monoandroid81/Xamarin.Android.Support.v7.CardView.dll",
+        "lib/monoandroid90/Xamarin.Android.Support.v7.CardView.dll",
+        "xamarin.android.support.v7.cardview.28.0.0.1.nupkg.sha512",
+        "xamarin.android.support.v7.cardview.nuspec"
+      ]
+    },
     "Xamarin.Android.Support.v7.RecyclerView/28.0.0.1": {
       "sha512": "tLMRB4+6pGI6wDEju+agdX3QSUsgzh0EBoXNV517Zy3FMhxF9SAOvLr5u4b2RNaF8E0JdNfzDKBORn116FgGYw==",
       "type": "package",
@@ -1271,6 +1307,7 @@
       "Xamarin.Android.Support.Core.Utils >= 28.0.0.1",
       "Xamarin.Android.Support.CustomTabs >= 28.0.0.1",
       "Xamarin.Android.Support.Design >= 28.0.0.1",
+      "Xamarin.Android.Support.v7.CardView >= 28.0.0.1",
       "Xamarin.Essentials >= 1.1.0",
       "Xamarin.FFImageLoading >= 2.4.9.961"
     ]
@@ -1349,6 +1386,10 @@
             "target": "Package",
             "version": "[28.0.0.1, )"
           },
+          "Xamarin.Android.Support.v7.CardView": {
+            "target": "Package",
+            "version": "[28.0.0.1, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.1.0, )"
@@ -1360,17 +1401,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package downgrade: MvvmCross from 6.3.0 to 6.2.3. Reference the package directly from the project to select a different version. \r\n Votings.UICross.Android -> Votings.Common -> MvvmCross (>= 6.3.0) \r\n Votings.UICross.Android -> MvvmCross (>= 6.2.3)",
-      "libraryId": "MvvmCross",
-      "targetGraphs": [
-        "MonoAndroid,Version=v8.1"
-      ]
-    }
-  ]
+  }
 }

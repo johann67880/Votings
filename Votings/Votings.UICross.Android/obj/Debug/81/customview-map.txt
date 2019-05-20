@@ -15,7 +15,7 @@ background;obj\Debug\81\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Debug\81\res\mipmap-anydpi-v26\ic_launcher_round.xml
 Button;obj\Debug\81\res\layout\loginpage.xml
 Button;obj\Debug\81\res\layout\registerpage.xml
-cache-path;D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\lp\31\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+cache-path;D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\lp\32\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Debug\81\res\values\colors.xml
 color;obj\Debug\81\res\values\ic_launcher_background.xml
 corners;obj\Debug\81\res\drawable\danger_button.xml
@@ -25,8 +25,8 @@ declare-styleable;D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Deb
 declare-styleable;D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\lp\7\jl\res\values\mvxrecyclerviewbindingattributes.xml
 EditText;obj\Debug\81\res\layout\loginpage.xml
 EditText;obj\Debug\81\res\layout\registerpage.xml
-external-cache-path;D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\lp\31\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-external-path;D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\lp\31\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-cache-path;D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\lp\32\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\lp\32\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 ffimageloading.cross.MvxCachedImageView;obj\Debug\81\res\layout\candidaterow.xml
 foreground;obj\Debug\81\res\mipmap-anydpi-v26\ic_launcher.xml
 foreground;obj\Debug\81\res\mipmap-anydpi-v26\ic_launcher_round.xml
@@ -42,7 +42,7 @@ LinearLayout;obj\Debug\81\res\layout\votingeventdetail.xml
 mvvmcross.droid.support.v7.recyclerview.MvxRecyclerView;obj\Debug\81\res\layout\candidatepage.xml
 mvvmcross.droid.support.v7.recyclerview.MvxRecyclerView;obj\Debug\81\res\layout\votingeventpage.xml
 mvvmcross.platforms.android.binding.views.MvxSpinner;obj\Debug\81\res\layout\registerpage.xml
-paths;D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\lp\31\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+paths;D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\lp\32\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 ProgressBar;obj\Debug\81\res\layout\loginpage.xml
 resources;D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\lp\2\jl\res\values\ids.xml
 resources;D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\lp\2\jl\res\values\mvxbindingattributes.xml

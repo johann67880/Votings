@@ -45,7 +45,7 @@
           "dependencies": {
             "MvvmCross": {
               "target": "Package",
-              "version": "[6.3.0, )"
+              "version": "[6.2.3, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -133,6 +133,10 @@
               "version": "[28.0.0.1, )"
             },
             "Xamarin.Android.Support.Design": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Android.Support.v7.CardView": {
               "target": "Package",
               "version": "[28.0.0.1, )"
             },
