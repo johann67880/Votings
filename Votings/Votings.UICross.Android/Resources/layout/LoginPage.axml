@@ -10,34 +10,51 @@
     android:paddingRight="15dp"
     android:paddingTop="15dp">
 
-    <TextView
-        android:id="@+id/textViewEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email"/>
-
-    <EditText
-        android:id="@+id/editTextEmail"
-        android:inputType="textEmailAddress"
+    <LinearLayout
+        android:id="@+id/email_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        local:MvxBind="Text Email"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEmail"/>
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textViewPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmail"/>
+        <TextView
+            android:id="@+id/textViewEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"/>
 
-    <EditText
-        android:id="@+id/editTextPassword"
-        android:inputType="textEmailAddress"
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            local:MvxBind="Text Email"
+            app:layout_constraintTop_toBottomOf="@+id/textViewEmail"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/password_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        local:MvxBind="Text Password"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPassword"/>
+        android:orientation="vertical"
+        local:layout_constraintTop_toBottomOf="@+id/email_layout">
+
+        <TextView
+            android:id="@+id/textViewPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            app:layout_constraintTop_toBottomOf="@+id/editTextEmail"/>
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            local:MvxBind="Text Password"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPassword"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/buttonContainer"
@@ -76,7 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         app:layout_constraintTop_toTopOf="@+id/buttonContainer"
-        app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
+        app:layout_constraintBottom_toTopOf="@+id/password_layout"
         local:MvxBind="Visibility Visibility(IsLoading)"
         android:indeterminateOnly="true"
         android:keepScreenOn="true"/>

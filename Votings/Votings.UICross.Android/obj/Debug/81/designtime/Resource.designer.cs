@@ -6685,8 +6685,8 @@ namespace Votings.UICross.Android
 			// aapt resource value: 0x7F0C0015
 			public const int add = 2131492885;
 			
-			// aapt resource value: 0x7F030018
-			public const int addressName_layout = 2130903064;
+			// aapt resource value: 0x7F030020
+			public const int addressName_layout = 2130903072;
 			
 			// aapt resource value: 0x7F0C0016
 			public const int alertTitle = 2131492886;
@@ -6700,8 +6700,8 @@ namespace Votings.UICross.Android
 			// aapt resource value: 0x7F02000E
 			public const int barrier = 2130837518;
 			
-			// aapt resource value: 0x7F030022
-			public const int birthDateName_layout = 2130903074;
+			// aapt resource value: 0x7F030024
+			public const int birthDateName_layout = 2130903076;
 			
 			// aapt resource value: 0x7F0C0007
 			public const int blocking = 2131492871;
@@ -6709,8 +6709,8 @@ namespace Votings.UICross.Android
 			// aapt resource value: 0x7F020000
 			public const int bottom = 2130837504;
 			
-			// aapt resource value: 0x7F030009
-			public const int buttonContainer = 2130903049;
+			// aapt resource value: 0x7F030011
+			public const int buttonContainer = 2130903057;
 			
 			// aapt resource value: 0x7F0C001B
 			public const int buttonPanel = 2131492891;
@@ -6730,11 +6730,11 @@ namespace Votings.UICross.Android
 			// aapt resource value: 0x7F0C0008
 			public const int chronometer = 2131492872;
 			
-			// aapt resource value: 0x7F030017
-			public const int cityName_layout = 2130903063;
+			// aapt resource value: 0x7F030019
+			public const int cityName_layout = 2130903065;
 			
-			// aapt resource value: 0x7F030024
-			public const int confirmName_layout = 2130903076;
+			// aapt resource value: 0x7F030026
+			public const int confirmName_layout = 2130903078;
 			
 			// aapt resource value: 0x7F0C0020
 			public const int container = 2131492896;
@@ -6745,8 +6745,8 @@ namespace Votings.UICross.Android
 			// aapt resource value: 0x7F0C0022
 			public const int coordinator = 2131492898;
 			
-			// aapt resource value: 0x7F030016
-			public const int countryName_layout = 2130903062;
+			// aapt resource value: 0x7F030018
+			public const int countryName_layout = 2130903064;
 			
 			// aapt resource value: 0x7F0C0023
 			public const int custom = 2131492899;
@@ -6760,8 +6760,8 @@ namespace Votings.UICross.Android
 			// aapt resource value: 0x7F0C0026
 			public const int default_activity_button = 2131492902;
 			
-			// aapt resource value: 0x7F030025
-			public const int descriptionTextView = 2130903077;
+			// aapt resource value: 0x7F030027
+			public const int descriptionTextView = 2130903079;
 			
 			// aapt resource value: 0x7F0C0027
 			public const int design_bottom_sheet = 2131492903;
@@ -6784,23 +6784,26 @@ namespace Votings.UICross.Android
 			// aapt resource value: 0x7F020011
 			public const int direct = 2130837521;
 			
-			// aapt resource value: 0x7F030006
-			public const int editTextEmail = 2130903046;
+			// aapt resource value: 0x7F030007
+			public const int editTextEmail = 2130903047;
 			
-			// aapt resource value: 0x7F030008
-			public const int editTextPassword = 2130903048;
+			// aapt resource value: 0x7F030010
+			public const int editTextPassword = 2130903056;
 			
 			// aapt resource value: 0x7F0C002C
 			public const int edit_query = 2131492908;
 			
-			// aapt resource value: 0x7F030015
-			public const int emailName_layout = 2130903061;
+			// aapt resource value: 0x7F030017
+			public const int emailName_layout = 2130903063;
+			
+			// aapt resource value: 0x7F030005
+			public const int email_layout = 2130903045;
 			
 			// aapt resource value: 0x7F020001
 			public const int end = 2130837505;
 			
-			// aapt resource value: 0x7F030027
-			public const int endDateTextView = 2130903079;
+			// aapt resource value: 0x7F030029
+			public const int endDateTextView = 2130903081;
 			
 			// aapt resource value: 0x7F0C002E
 			public const int end_padder = 2131492910;
@@ -6814,14 +6817,14 @@ namespace Votings.UICross.Android
 			// aapt resource value: 0x7F0C0031
 			public const int fill = 2131492913;
 			
-			// aapt resource value: 0x7F030013
-			public const int firstName_layout = 2130903059;
+			// aapt resource value: 0x7F030015
+			public const int firstName_layout = 2130903061;
 			
 			// aapt resource value: 0x7F0C0032
 			public const int @fixed = 2131492914;
 			
-			// aapt resource value: 0x7F030014
-			public const int flastName_layout = 2130903060;
+			// aapt resource value: 0x7F030016
+			public const int flastName_layout = 2130903062;
 			
 			// aapt resource value: 0x7F0C0009
 			public const int forever = 2131492873;
@@ -6874,8 +6877,8 @@ namespace Votings.UICross.Android
 			// aapt resource value: 0x7F0C0041
 			public const int list_item = 2131492929;
 			
-			// aapt resource value: 0x7F030010
-			public const int loginButton = 2130903056;
+			// aapt resource value: 0x7F030012
+			public const int loginButton = 2130903058;
 			
 			// aapt resource value: 0x7F0C0042
 			public const int masked = 2131492930;
@@ -6892,11 +6895,11 @@ namespace Votings.UICross.Android
 			// aapt resource value: 0x7F0C0046
 			public const int multiply = 2131492934;
 			
-			// aapt resource value: 0x7F030028
-			public const int MvvmCrossTagId = 2130903080;
+			// aapt resource value: 0x7F030030
+			public const int MvvmCrossTagId = 2130903088;
 			
-			// aapt resource value: 0x7F030029
-			public const int MvxBindingTagUnique = 2130903081;
+			// aapt resource value: 0x7F030031
+			public const int MvxBindingTagUnique = 2130903089;
 			
 			// aapt resource value: 0x7F030003
 			public const int nameTextView = 2130903043;
@@ -6904,8 +6907,8 @@ namespace Votings.UICross.Android
 			// aapt resource value: 0x7F0C0047
 			public const int navigation_header_container = 2131492935;
 			
-			// aapt resource value: 0x7F030011
-			public const int newUserButton = 2130903057;
+			// aapt resource value: 0x7F030013
+			public const int newUserButton = 2130903059;
 			
 			// aapt resource value: 0x7F020012
 			public const int none = 2130837522;
@@ -6922,8 +6925,8 @@ namespace Votings.UICross.Android
 			// aapt resource value: 0x7F0C0013
 			public const int notification_main_column_container = 2131492883;
 			
-			// aapt resource value: 0x7F030021
-			public const int occupationName_layout = 2130903073;
+			// aapt resource value: 0x7F030023
+			public const int occupationName_layout = 2130903075;
 			
 			// aapt resource value: 0x7F02000C
 			public const int packed = 2130837516;
@@ -6940,14 +6943,17 @@ namespace Votings.UICross.Android
 			// aapt resource value: 0x7F0C004F
 			public const int parent_matrix = 2131492943;
 			
-			// aapt resource value: 0x7F030023
-			public const int passwordName_layout = 2130903075;
+			// aapt resource value: 0x7F030025
+			public const int passwordName_layout = 2130903077;
+			
+			// aapt resource value: 0x7F030008
+			public const int password_layout = 2130903048;
 			
 			// aapt resource value: 0x7F020009
 			public const int percent = 2130837513;
 			
-			// aapt resource value: 0x7F030019
-			public const int phoneName_layout = 2130903065;
+			// aapt resource value: 0x7F030021
+			public const int phoneName_layout = 2130903073;
 			
 			// aapt resource value: 0x7F0C0050
 			public const int pin = 2131492944;
@@ -7072,14 +7078,14 @@ namespace Votings.UICross.Android
 			// aapt resource value: 0x7F020004
 			public const int start = 2130837508;
 			
-			// aapt resource value: 0x7F030026
-			public const int startDateTextView = 2130903078;
+			// aapt resource value: 0x7F030028
+			public const int startDateTextView = 2130903080;
 			
 			// aapt resource value: 0x7F0C0074
 			public const int status_bar_latest_event_content = 2131492980;
 			
-			// aapt resource value: 0x7F030020
-			public const int stratumName_layout = 2130903072;
+			// aapt resource value: 0x7F030022
+			public const int stratumName_layout = 2130903074;
 			
 			// aapt resource value: 0x7F0C0075
 			public const int submenuarrow = 2131492981;
@@ -7111,11 +7117,11 @@ namespace Votings.UICross.Android
 			// aapt resource value: 0x7F0C007C
 			public const int textSpacerNoTitle = 2131492988;
 			
-			// aapt resource value: 0x7F030005
-			public const int textViewEmail = 2130903045;
+			// aapt resource value: 0x7F030006
+			public const int textViewEmail = 2130903046;
 			
-			// aapt resource value: 0x7F030007
-			public const int textViewPassword = 2130903047;
+			// aapt resource value: 0x7F030009
+			public const int textViewPassword = 2130903049;
 			
 			// aapt resource value: 0x7F0C007D
 			public const int text_input_password_toggle = 2131492989;
@@ -7132,8 +7138,8 @@ namespace Votings.UICross.Android
 			// aapt resource value: 0x7F0C0083
 			public const int title_template = 2131492995;
 			
-			// aapt resource value: 0x7F030012
-			public const int title_textView = 2130903058;
+			// aapt resource value: 0x7F030014
+			public const int title_textView = 2130903060;
 			
 			// aapt resource value: 0x7F020005
 			public const int top = 2130837509;

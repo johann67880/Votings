@@ -1,23 +1,21 @@
-﻿using MvvmCross.Commands;
-using MvvmCross.Navigation;
-using MvvmCross.ViewModels;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Input;
-using Votings.Common.Helpers;
-using Votings.Common.Interfaces;
-using Votings.Common.Models;
-using Votings.Common.Services;
-
-namespace Votings.Common.ViewModels
+﻿namespace Votings.Common.ViewModels
 {
+    using System.Windows.Input;
+    using Interfaces;
+    using Models;
+    using MvvmCross.Commands;
+    using MvvmCross.Navigation;
+    using MvvmCross.ViewModels;
+    using Services;
+    using Common.Helpers;
+    using Newtonsoft.Json;
+
     public class LoginCrossViewModel : MvxViewModel
     {
         private string email;
         private string password;
         private MvxCommand loginCommand;
+        private MvxCommand registerCommand;
         private readonly IApiService apiService;
         private readonly IDialogService dialogService;
         private readonly IMvxNavigationService navigationService;
@@ -50,6 +48,15 @@ namespace Votings.Common.ViewModels
             }
         }
 
+        public ICommand RegisterCommand
+        {
+            get
+            {
+                this.registerCommand = this.registerCommand ?? new MvxCommand(this.DoRegisterCommand);
+                return this.registerCommand;
+            }
+        }
+
         public LoginCrossViewModel(
             IApiService apiService,
             IDialogService dialogService,
@@ -62,6 +69,11 @@ namespace Votings.Common.ViewModels
             this.Email = "johaljicar@hotmail.com";
             this.Password = "123456";
             this.IsLoading = false;
+        }
+
+        private async void DoRegisterCommand()
+        {
+            await this.navigationService.Navigate<RegisterCrossViewModel>();
         }
 
         private async void DoLoginCommand()
