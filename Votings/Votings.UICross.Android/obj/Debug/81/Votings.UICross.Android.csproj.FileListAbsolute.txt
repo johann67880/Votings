@@ -315,3 +315,4 @@ D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\android\asse
 D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\android\assets\machine.config
 D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\stamp\_CompileToDalvik.stamp
 D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\stamp\_GeneratePackageManagerJava.stamp
+D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\res\layout\toolbar.xml

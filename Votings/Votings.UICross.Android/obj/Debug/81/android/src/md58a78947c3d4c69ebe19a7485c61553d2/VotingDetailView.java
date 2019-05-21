@@ -2,7 +2,7 @@ package md58a78947c3d4c69ebe19a7485c61553d2;
 
 
 public class VotingDetailView
-	extends md5231beb04e46a1dc811e36737109a7a02.MvxActivity_1
+	extends md5716162e2cd7f7ce01364d7c5d961f40b.MvxAppCompatActivity_1
 	implements
 		mono.android.IGCUserPeer
 {
@@ -11,6 +11,7 @@ public class VotingDetailView
 	static {
 		__md_methods = 
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
+			"n_onOptionsItemSelected:(Landroid/view/MenuItem;)Z:GetOnOptionsItemSelected_Landroid_view_MenuItem_Handler\n" +
 			"";
 		mono.android.Runtime.register ("Votings.UICross.Android.Views.VotingDetailView, Votings.UICross.Android", VotingDetailView.class, __md_methods);
 	}
@@ -30,6 +31,14 @@ public class VotingDetailView
 	}
 
 	private native void n_onCreate (android.os.Bundle p0);
+
+
+	public boolean onOptionsItemSelected (android.view.MenuItem p0)
+	{
+		return n_onOptionsItemSelected (p0);
+	}
+
+	private native boolean n_onOptionsItemSelected (android.view.MenuItem p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

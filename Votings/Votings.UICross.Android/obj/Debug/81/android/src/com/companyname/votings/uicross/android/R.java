@@ -3772,7 +3772,7 @@ containing a value of this type.
         public static final int customPanel=0x7f09007b;
         public static final int decor_content_parent=0x7f090089;
         public static final int default_activity_button=0x7f09006f;
-        public static final int descriptionTextView=0x7f0900d8;
+        public static final int descriptionTextView=0x7f0900d9;
         public static final int design_bottom_sheet=0x7f0900a4;
         public static final int design_menu_item_action_area=0x7f0900ab;
         public static final int design_menu_item_action_area_stub=0x7f0900aa;
@@ -3787,7 +3787,7 @@ containing a value of this type.
         public static final int emailName_layout=0x7f0900cc;
         public static final int email_layout=0x7f0900ad;
         public static final int end=0x7f090032;
-        public static final int endDateTextView=0x7f0900da;
+        public static final int endDateTextView=0x7f0900db;
         public static final int end_padder=0x7f0900c8;
         public static final int enterAlways=0x7f090041;
         public static final int enterAlwaysCollapsed=0x7f090042;
@@ -3803,7 +3803,7 @@ containing a value of this type.
         public static final int forever=0x7f090067;
         public static final int ghost_view=0x7f09000a;
         public static final int gone=0x7f090058;
-        public static final int header_layout=0x7f0900d7;
+        public static final int header_layout=0x7f0900d8;
         public static final int home=0x7f090005;
         public static final int homeAsUp=0x7f090023;
         public static final int icon=0x7f090071;
@@ -3821,9 +3821,9 @@ containing a value of this type.
         public static final int listMode=0x7f09001f;
         public static final int list_item=0x7f090070;
         public static final int loginButton=0x7f0900b4;
-        public static final int masked=0x7f0900dc;
+        public static final int masked=0x7f0900dd;
         public static final int media_actions=0x7f0900bc;
-        public static final int message=0x7f0900d6;
+        public static final int message=0x7f0900d7;
         public static final int middle=0x7f090033;
         public static final int mini=0x7f090055;
         public static final int multiply=0x7f09002a;
@@ -3892,7 +3892,7 @@ containing a value of this type.
         public static final int src_over=0x7f09002e;
         public static final int standard=0x7f090064;
         public static final int start=0x7f09004d;
-        public static final int startDateTextView=0x7f0900d9;
+        public static final int startDateTextView=0x7f0900da;
         public static final int status_bar_latest_event_content=0x7f0900bb;
         public static final int stratumName_layout=0x7f0900d1;
         public static final int submenuarrow=0x7f090085;
@@ -3913,6 +3913,7 @@ containing a value of this type.
         public static final int titleDividerNoCustom=0x7f090080;
         public static final int title_template=0x7f09007e;
         public static final int title_textView=0x7f0900c9;
+        public static final int toolbar=0x7f0900d6;
         public static final int toolbar_cross=0x7f09009a;
         public static final int top=0x7f090040;
         public static final int topPanel=0x7f09007d;
@@ -3927,7 +3928,7 @@ containing a value of this type.
         public static final int up=0x7f090009;
         public static final int useLogo=0x7f090028;
         public static final int view_offset_helper=0x7f090016;
-        public static final int visible=0x7f0900db;
+        public static final int visible=0x7f0900dc;
         public static final int withText=0x7f09003e;
         public static final int wrap=0x7f09005d;
         public static final int wrap_content=0x7f090030;
@@ -4009,11 +4010,12 @@ containing a value of this type.
         public static final int select_dialog_singlechoice_material=0x7f04003d;
         public static final int splashpage=0x7f04003e;
         public static final int support_simple_spinner_dropdown_item=0x7f04003f;
-        public static final int tooltip=0x7f040040;
-        public static final int uservotepage=0x7f040041;
-        public static final int votingeventdetail=0x7f040042;
-        public static final int votingeventpage=0x7f040043;
-        public static final int votingeventrow=0x7f040044;
+        public static final int toolbar=0x7f040040;
+        public static final int tooltip=0x7f040041;
+        public static final int uservotepage=0x7f040042;
+        public static final int votingeventdetail=0x7f040043;
+        public static final int votingeventpage=0x7f040044;
+        public static final int votingeventrow=0x7f040045;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
@@ -4073,6 +4075,7 @@ containing a value of this type.
         public static final int Animation_AppCompat_Tooltip=0x7f0a009d;
         public static final int Animation_Design_BottomSheetDialog=0x7f0a0163;
         /**  Base application theme. 
+<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
          */
         public static final int AppTheme=0x7f0a0185;
         public static final int Base_AlertDialog_AppCompat=0x7f0a009e;

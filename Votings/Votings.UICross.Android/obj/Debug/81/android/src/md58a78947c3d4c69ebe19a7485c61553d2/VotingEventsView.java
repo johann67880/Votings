@@ -2,7 +2,7 @@ package md58a78947c3d4c69ebe19a7485c61553d2;
 
 
 public class VotingEventsView
-	extends md5231beb04e46a1dc811e36737109a7a02.MvxActivity_1
+	extends md5716162e2cd7f7ce01364d7c5d961f40b.MvxAppCompatActivity_1
 	implements
 		mono.android.IGCUserPeer
 {
