@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using MvvmCross;
-using Votings.Common.Interfaces;
-using global::Android.App;
-using MvvmCross.Platforms.Android;
-
-namespace Votings.UICross.Android.Services
+﻿namespace Votings.UICross.Android.Services
 {
+    using System;
+    using MvvmCross;
+    using Votings.Common.Interfaces;
+    using global::Android.App;
+    using MvvmCross.Platforms.Android;
+
     public class DialogService : IDialogService
     {
         public void Alert(string title, string message, string okbtnText)
@@ -23,6 +18,33 @@ namespace Votings.UICross.Android.Services
             adb.SetMessage(message);
             adb.SetPositiveButton(okbtnText, (sender, args) => { /* some logic */ });
             adb.Create().Show();
+        }
+
+        public void Confirm(string title, string message, string okButtonTitle, string dismissButtonTitle, Action confirmed, Action dismissed)
+        {
+            AlertDialog.Builder builder = new AlertDialog.Builder(Mvx.Resolve<IMvxAndroidCurrentTopActivity>().Activity);
+            AlertDialog alertdialog = builder.Create();
+            builder.SetTitle(title);
+            builder.SetMessage(message);
+
+            builder.SetNegativeButton(dismissButtonTitle, (senderAlert, args) =>
+            {
+                if (dismissed != null)
+                {
+                    dismissed.Invoke();
+                }
+
+            });
+
+            builder.SetPositiveButton(okButtonTitle, (senderAlert, args) =>
+            {
+                if (confirmed != null)
+                {
+                    confirmed.Invoke();
+                }
+            });
+
+            builder.Show();
         }
     }
 }
