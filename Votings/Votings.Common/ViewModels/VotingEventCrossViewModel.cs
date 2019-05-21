@@ -22,6 +22,16 @@ namespace Votings.Common.ViewModels
         private readonly IMvxNavigationService navigationService;
         private MvxCommand<VotingEvent> itemClickCommand;
 
+        private INetworkProvider networkProvider;
+
+        public bool isConnetedToWIFI
+        {
+            get
+            {
+                return networkProvider.IsConnectedToWifi();
+            }
+        }
+
         public List<VotingEvent> VotingEvents
         {
             get => this.votingEvents;
@@ -40,11 +50,13 @@ namespace Votings.Common.ViewModels
         public VotingEventCrossViewModel(
             IApiService apiService,
             IDialogService dialogService,
-            IMvxNavigationService navigationService)
+            IMvxNavigationService navigationService,
+            INetworkProvider networkProvider)
         {
             this.apiService = apiService;
             this.dialogService = dialogService;
             this.navigationService = navigationService;
+            this.networkProvider = networkProvider;
         }
 
         public override void ViewAppeared()
@@ -55,6 +67,12 @@ namespace Votings.Common.ViewModels
 
         private async void OnItemClickCommand(VotingEvent votingEvent)
         {
+            if(!this.isConnetedToWIFI)
+            {
+                this.dialogService.Alert("Error", "You are not connected to internet. Please review and try again.", "Accept");
+                return;
+            }
+
             //If Event has not started yet
             if (!votingEvent.IsStarted)
             {
