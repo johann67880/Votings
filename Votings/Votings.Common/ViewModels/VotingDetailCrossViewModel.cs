@@ -1,6 +1,7 @@
 ﻿using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -18,16 +19,15 @@ namespace Votings.Common.ViewModels
         private readonly IDialogService dialogService;
         private readonly IMvxNavigationService navigationService;
         private VotingEvent votingEvent;
-        private MvxCommand<Candidate> itemClickCommand;
-
         private List<Candidate> candidates;
+        private MvxCommand<Candidate> itemClickCommand;
 
         public ICommand ItemClickCommand
         {
             get
             {
-                this.itemClickCommand = this.itemClickCommand ?? new MvxCommand<Candidate>(this.SelectCandidate);
-                return this.itemClickCommand;
+                this.itemClickCommand = new MvxCommand<Candidate>(this.OnItemClickCommand);
+                return itemClickCommand;
             }
         }
 
@@ -80,36 +80,44 @@ namespace Votings.Common.ViewModels
                 return;
             }
 
-            //this.candidates = (List<Candidate>)response.Result;
             var result = (VotingEvent)response.Result;
             this.Candidates = result.Candidates;
         }
-
-        private async void SelectCandidate(Candidate candidate)
+        private async void OnItemClickCommand(Candidate candidate)
         {
-            var vote = new Vote()
+            this.dialogService.Confirm("Confirm", $"Are you sure to vote for candidate {candidate.Name}?", "Accept", "Cancel", async () =>
             {
-                Candidate = candidate,
-                RegistrationDate = DateTime.Now,
-                UserName = Settings.User,
-                VotingEvent = this.votingEvent
-            };
+                var vote = new Vote()
+                {
+                    Candidate = candidate,
+                    RegistrationDate = DateTime.Now,
+                    UserName = Settings.User,
+                    VotingEvent = this.votingEvent,
+                    User = new User()
+                    {
+                        UserName = Settings.User
+                    }
+                };
 
-            var response = await this.apiService.PostAsync<Vote>(
-                "https://betoappservice.azurewebsites.net",
-                "/api",
-                "/VotingEvent/Save",
-                vote,
-                "bearer",
-                Settings.StrToken);
+                var test = JsonConvert.SerializeObject(vote);
 
-            if (!response.IsSuccess)
-            {
-                this.dialogService.Alert("Error", "An error has occurred saving your vote. Try again", "Accept");
-                return;
-            }
+                var response = await this.apiService.PostAsync<Vote>(
+                    "https://betoappservice.azurewebsites.net",
+                    "/api",
+                    "/VotingEvent/Save",
+                    vote,
+                    "bearer",
+                    Settings.StrToken);
 
-            await this.navigationService.Close(this);
+                if (!response.IsSuccess)
+                {
+                    this.dialogService.Alert("Error", "An error has occurred saving your vote. Try again", "Accept");
+                    return;
+                }
+
+                await this.navigationService.Close(this);
+
+            }, null);
         }
     }
 }

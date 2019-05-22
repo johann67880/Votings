@@ -1,8 +1,11 @@
-﻿using MvvmCross.Navigation;
+﻿using MvvmCross.Commands;
+using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
+using Votings.Common.Helpers;
 using Votings.Common.Interfaces;
 using Votings.Common.Models;
 using Votings.Common.Services;

@@ -60,7 +60,7 @@ namespace Voting.Web.Controllers.API
             var userVote = new Vote();
             userVote.VotingEvent = this.votingEventRepository.GetVotingEvent(vote.VotingEvent.Id);
             userVote.Candidate = await this.candidateRepository.GetByIdAsync(vote.Candidate.Id);
-            userVote.User = await this.userHelper.GetUserByIdAsync(vote.User.Id);
+            userVote.User = await this.userHelper.GetUserByIdAsync(user.Id);
             userVote.Id = 0;
             userVote.RegistrationDate = DateTime.UtcNow;
 
