@@ -99,8 +99,6 @@ namespace Votings.Common.ViewModels
                     }
                 };
 
-                var test = JsonConvert.SerializeObject(vote);
-
                 var response = await this.apiService.PostAsync<Vote>(
                     "https://betoappservice.azurewebsites.net",
                     "/api",
@@ -115,6 +113,7 @@ namespace Votings.Common.ViewModels
                     return;
                 }
 
+                this.dialogService.Alert("Confirmation", "Your vote has been registered.", "Accept");
                 await this.navigationService.Close(this);
 
             }, null);

@@ -94,13 +94,14 @@ namespace Votings.Common.ViewModels
                 "/api",
                 $"/VotingEvent/UserVote2/{votingEvent.Id}/{Settings.User}",
                 "bearer",
-                Settings.Token);
+                Settings.StrToken);
 
             //If user voted, then Navigate to Anothe content page
             if (response.Result != null && response.IsSuccess)
             {
+                var resultVotingEvent = (VotingEvent)((Vote)response.Result).VotingEvent;
                 await this.navigationService.Navigate<UserVoteCrossViewModel, NavigationArgs>(
-                new NavigationArgs { VotingEvent = votingEvent });
+                new NavigationArgs { VotingEvent = resultVotingEvent });
                 return;
             }
 

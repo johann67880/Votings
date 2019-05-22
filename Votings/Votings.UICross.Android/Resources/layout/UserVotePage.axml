@@ -1,7 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <include
+        layout="@layout/toolbar" />
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:local="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        local:cardElevation="5dp"
+        local:cardCornerRadius="6dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ffimageloading.cross.MvxCachedImageView
+                android:id="@+id/productImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                local:MvxBind="ImagePath Candidate.ImageFullPath" />
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                local:layout_constraintLeft_toRightOf="@+id/productImageView"
+                local:MvxBind="Text Candidate.Name" />
+
+            <TextView
+                android:id="@+id/proposalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="italic"
+                android:layout_marginTop="6dp"
+                android:textSize="12dp"
+                local:layout_constraintTop_toBottomOf="@+id/nameTextView"
+                local:layout_constraintLeft_toRightOf="@+id/productImageView"
+                local:MvxBind="Text Candidate.Proposal" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
 </LinearLayout>

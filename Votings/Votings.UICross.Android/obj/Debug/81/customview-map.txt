@@ -3,11 +3,13 @@ adaptive-icon;obj\Debug\81\res\mipmap-anydpi-v26\ic_launcher_round.xml
 android.support.constraint.ConstraintLayout;obj\Debug\81\res\layout\candidaterow.xml
 android.support.constraint.ConstraintLayout;obj\Debug\81\res\layout\loginpage.xml
 android.support.constraint.ConstraintLayout;obj\Debug\81\res\layout\registerpage.xml
+android.support.constraint.ConstraintLayout;obj\Debug\81\res\layout\uservotepage.xml
 android.support.constraint.ConstraintLayout;obj\Debug\81\res\layout\votingeventdetail.xml
 android.support.constraint.ConstraintLayout;obj\Debug\81\res\layout\votingeventrow.xml
 android.support.design.widget.CoordinatorLayout;obj\Debug\81\res\layout\candidatepage.xml
 android.support.design.widget.CoordinatorLayout;obj\Debug\81\res\layout\votingeventpage.xml
 android.support.v7.widget.CardView;obj\Debug\81\res\layout\candidaterow.xml
+android.support.v7.widget.CardView;obj\Debug\81\res\layout\uservotepage.xml
 android.support.v7.widget.CardView;obj\Debug\81\res\layout\votingeventrow.xml
 android.support.v7.widget.Toolbar;obj\Debug\81\res\layout\toolbar.xml
 attr;D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\lp\2\jl\res\values\mvxbindingattributes.xml
@@ -29,8 +31,10 @@ EditText;obj\Debug\81\res\layout\registerpage.xml
 external-cache-path;D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\lp\32\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 external-path;D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\lp\32\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 ffimageloading.cross.MvxCachedImageView;obj\Debug\81\res\layout\candidaterow.xml
+ffimageloading.cross.MvxCachedImageView;obj\Debug\81\res\layout\uservotepage.xml
 foreground;obj\Debug\81\res\mipmap-anydpi-v26\ic_launcher.xml
 foreground;obj\Debug\81\res\mipmap-anydpi-v26\ic_launcher_round.xml
+include;obj\Debug\81\res\layout\uservotepage.xml
 include;obj\Debug\81\res\layout\votingeventdetail.xml
 include;obj\Debug\81\res\layout\votingeventpage.xml
 item;D:\JOHANN\Temp\Votings\Votings\Votings.UICross.Android\obj\Debug\81\lp\2\jl\res\values\ids.xml
@@ -73,5 +77,6 @@ TextView;obj\Debug\81\res\layout\candidaterow.xml
 TextView;obj\Debug\81\res\layout\loginpage.xml
 TextView;obj\Debug\81\res\layout\registerpage.xml
 TextView;obj\Debug\81\res\layout\splashpage.xml
+TextView;obj\Debug\81\res\layout\uservotepage.xml
 TextView;obj\Debug\81\res\layout\votingeventdetail.xml
 TextView;obj\Debug\81\res\layout\votingeventrow.xml

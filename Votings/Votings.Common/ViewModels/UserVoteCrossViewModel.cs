@@ -3,6 +3,7 @@ using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using Votings.Common.Helpers;
@@ -18,6 +19,13 @@ namespace Votings.Common.ViewModels
         private readonly IDialogService dialogService;
         private readonly IMvxNavigationService navigationService;
         private VotingEvent votingEvent;
+        private Candidate candidate;
+
+        public Candidate Candidate
+        {
+            get => this.candidate;
+            set => this.SetProperty(ref this.candidate, value);
+        }
 
         public UserVoteCrossViewModel(
             IApiService apiService,
@@ -27,6 +35,12 @@ namespace Votings.Common.ViewModels
             this.apiService = apiService;
             this.dialogService = dialogService;
             this.navigationService = navigationService;
+        }
+
+        public override void ViewAppeared()
+        {
+            base.ViewAppeared();
+            this.Candidate = this.votingEvent.Candidates.FirstOrDefault();
         }
 
         public override void Prepare(NavigationArgs parameter)
